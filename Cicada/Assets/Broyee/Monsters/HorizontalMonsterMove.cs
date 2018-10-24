@@ -48,7 +48,7 @@ public class HorizontalMonsterMove : MonoBehaviour {
         {
             if (GetComponent<MonsterInfo>().basicMoving)
             {
-                Debug.Log("BasicMoving on");
+                //Debug.Log("BasicMoving on");
                 if (!turningBack)
                 {
                     if (GetComponent<MonsterInfo>().landMonster)
@@ -152,7 +152,7 @@ public class HorizontalMonsterMove : MonoBehaviour {
             grounded = true;
             GetComponent<MonsterInfo>().basicMoving = true;
         }
-        if (col.gameObject.CompareTag("Wall") || col.gameObject.CompareTag("Block") || col.gameObject.CompareTag("Mantis_Break"))
+        if (col.gameObject.CompareTag("Wall"))
         {
             if (turnBackEnabled)
             {

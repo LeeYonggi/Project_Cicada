@@ -25,7 +25,7 @@ public class PlayerController : PhysicsObject{
         Vector2 move = Vector2.zero;
 
         move.x = Input.GetAxis("Horizontal");
-        directionX = CrossPlatformInputManager.GetAxis("Horizontal");
+        directionX.x = CrossPlatformInputManager.GetAxis("Horizontal");
 
         if (Input.GetButtonDown("Jump") && grounded){
             velocity.y = jumpTakeOffSpeed;
@@ -55,6 +55,6 @@ public class PlayerController : PhysicsObject{
         m_Animator.SetBool("isJump", isJump);
         m_Animator.SetBool("grounded", grounded);
         m_Animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
-        targetVelocity = move * directionX * maxSpeed;
+        targetVelocity = move * maxSpeed;
 	}
 }

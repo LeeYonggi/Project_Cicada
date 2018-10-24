@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Player_Bottom
   - Ground
+  - Monster
+  - Wall
+  - BossMonster
   layers:
   - Default
   - TransparentFX
@@ -16,9 +19,9 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
+  - Monster
+  - MonsterCol
+  - Player
   - 
   - 
   - 
