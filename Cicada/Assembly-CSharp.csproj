@@ -70,6 +70,7 @@
     <Compile Include="Assets\2d-extras-master\Assets\Tilemap\Tiles\Rule Tile\Scripts\RuleTile.cs" />
     <Compile Include="Assets\2d-extras-master\Assets\Tilemap\Tiles\Terrain Tile\Scripts\TerrainTile.cs" />
     <Compile Include="Assets\2d-extras-master\Assets\Tilemap\Tiles\Weighted Random Tile\WeightedRandomTile.cs" />
+    <Compile Include="Assets\Broyee\MainMenu\GoToMainMenu.cs" />
     <Compile Include="Assets\Broyee\Monsters\BossMonsters\WildBoar\Blocks\BlockInfo.cs" />
     <Compile Include="Assets\Broyee\Monsters\BossMonsters\WildBoar\Blocks\HugeBlock.cs" />
     <Compile Include="Assets\Broyee\Monsters\BossMonsters\WildBoar\Blocks\RoundBlock.cs" />
@@ -98,6 +99,7 @@
     <Compile Include="Assets\Broyee\Monsters\Slime\SlimeAttack.cs" />
     <Compile Include="Assets\Broyee\Monsters\Slime\SlimeJump.cs" />
     <Compile Include="Assets\Broyee\Monsters\StoneGolem\StoneGolemAttack.cs" />
+    <Compile Include="Assets\Broyee\StageSelect\GoToStageSelect.cs" />
     <Compile Include="Assets\Broyee\StageSelect\StageButton.cs" />
     <Compile Include="Assets\Broyee\StageSelect\StageStart.cs" />
     <Compile Include="Assets\Script\CameraController.cs" />
