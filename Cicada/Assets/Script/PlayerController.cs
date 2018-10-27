@@ -5,6 +5,14 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerController : PhysicsObject{
 
+    enum DIRECTION
+    {
+        NONE,
+        LEFT,
+        RIGHT
+    }
+    private DIRECTION moveDirection;
+
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
 
@@ -13,6 +21,8 @@ public class PlayerController : PhysicsObject{
 
     Vector2 directionX;
     Rigidbody2D rb;
+    Vector2 move = Vector2.zero;
+    
 
     // Use this for initialization
     void Start () {
@@ -22,10 +32,10 @@ public class PlayerController : PhysicsObject{
 	
 	// Update is called once per frame
 	void Update () {
-        Vector2 move = Vector2.zero;
-
+        move = Vector2.zero;
         move.x = Input.GetAxis("Horizontal");
-        directionX.x = CrossPlatformInputManager.GetAxis("Horizontal");
+
+        SetDirection();
 
         if (Input.GetButtonDown("Jump") && grounded){
             velocity.y = jumpTakeOffSpeed;
@@ -57,4 +67,33 @@ public class PlayerController : PhysicsObject{
         m_Animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
         targetVelocity = move * maxSpeed;
 	}
+
+    void SetDirection()
+    {
+        if(moveDirection == DIRECTION.LEFT)
+        {
+            move = Vector2.left;
+        }
+        else if(moveDirection == DIRECTION.RIGHT)
+        {
+            move = Vector2.right;
+        }
+        else
+        {
+            move = Vector2.zero;
+        }
+    }
+
+    public void MoveLeft()
+    {
+        moveDirection = DIRECTION.LEFT;
+    }
+    public void MoveRight()
+    {
+        moveDirection = DIRECTION.RIGHT;
+    }
+    public void StopMove()
+    {
+        moveDirection = DIRECTION.NONE;
+    }
 }
