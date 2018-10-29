@@ -101,7 +101,7 @@ public class WildBoarAttack : MonoBehaviour {
     {
         if (charging)
         {
-            if (col.gameObject.CompareTag("Wall"))
+            if (col.gameObject.CompareTag("Ground"))
             {
                 if (((col.transform.position.x > transform.position.x) && (transform.localScale.x > 0)) || ((col.transform.position.x < transform.position.x) && (transform.localScale.x < 0)))
                 {

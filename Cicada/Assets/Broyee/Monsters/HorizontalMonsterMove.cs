@@ -58,6 +58,10 @@ public class HorizontalMonsterMove : MonoBehaviour {
                             GetComponent<Animator>().SetBool("Hitted", false);
                             transform.Translate(moveSpeed * direction * Time.deltaTime, 0, 0);
                         }
+                        else
+                        {
+                            StartCoroutine(TurnBack(0.0f));
+                        }
                     }
                     else
                     {
@@ -110,24 +114,24 @@ public class HorizontalMonsterMove : MonoBehaviour {
         Vector2 fallColStart = new Vector2(transform.position.x + (transform.lossyScale.x / 2 - (colDis * direction)), transform.position.y - transform.lossyScale.y / 2 + colDis);
         Vector2 fallColEnd = new Vector2(fallColStart.x + 0.001f, fallColStart.y - groundCheckHeight);
 
-        //Vector2 wallColStart = new Vector2(fallColStart.x, transform.position.y + (transform.lossyScale.y / 2));
-        //Vector2 wallColEnd = new Vector2(wallColStart.x + 0.001f, wallColStart.y - transform.lossyScale.y);
+        Vector2 wallColStart = new Vector2(fallColStart.x, transform.position.y + (transform.lossyScale.y / 2));
+        Vector2 wallColEnd = new Vector2(wallColStart.x + 0.001f, wallColStart.y - transform.lossyScale.y / 2);
 
-        //Instantiate(_fallColStart, wallColStart, Quaternion.identity);
-        //Instantiate(_fallColEnd, wallColEnd, Quaternion.identity);
+        Instantiate(_fallColStart, wallColStart, Quaternion.identity);
+        Instantiate(_fallColEnd, wallColEnd, Quaternion.identity);
 
-        //if (Physics2D.OverlapArea(wallColStart, wallColEnd, 0) != null)
-        //{
-        //    Collider2D[] wallObj = Physics2D.OverlapAreaAll(wallColStart, wallColEnd);
-        //    for (int i = 0; i < wallObj.Length; i++)
-        //    {
-        //        Debug.Log("WallObj tag : " + wallObj[i].tag);
-        //        if (wallObj[i].CompareTag("Wall") || wallObj[i].CompareTag("Block"))
-        //        {
-        //            return false;
-        //        }
-        //    }
-        //}
+        if (Physics2D.OverlapArea(wallColStart, wallColEnd, 0) != null)
+        {
+            Collider2D[] wallObj = Physics2D.OverlapAreaAll(wallColStart, wallColEnd);
+            for (int i = 0; i < wallObj.Length; i++)
+            {
+                Debug.Log("WallObj tag : " + wallObj[i].tag);
+                if (wallObj[i].CompareTag("Ground"))
+                {
+                    return false;
+                }
+            }
+        }
 
         if (Physics2D.OverlapArea(fallColStart, fallColEnd) != null)
         {
@@ -152,16 +156,16 @@ public class HorizontalMonsterMove : MonoBehaviour {
             grounded = true;
             GetComponent<MonsterInfo>().basicMoving = true;
         }
-        if (col.gameObject.CompareTag("Wall"))
-        {
-            if (turnBackEnabled)
-            {
-                if (gameObject.CompareTag("BossMonster") && col.gameObject.CompareTag("Block"))
-                    return;
+        //if (col.gameObject.CompareTag("Ground"))
+        //{
+        //    if (turnBackEnabled)
+        //    {
+        //        if (gameObject.CompareTag("BossMonster") && col.gameObject.CompareTag("Block"))
+        //            return;
 
-                StartCoroutine(TurnBack(0.0f));
-            }
-        }
+        //        StartCoroutine(TurnBack(0.0f));
+        //    }
+        //}
     }
 
     private void OnCollisionExit2D(Collision2D col)

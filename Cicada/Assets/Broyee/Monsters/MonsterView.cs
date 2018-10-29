@@ -30,7 +30,7 @@ public class MonsterView : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Wall"))
+        if (col.CompareTag("Ground"))
         {
             seeingWall = true;
         }
@@ -43,7 +43,7 @@ public class MonsterView : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D col)
     {
-        if (col.CompareTag("Wall"))
+        if (col.CompareTag("Ground"))
         {
             seeingWall = true;
         }
@@ -56,7 +56,7 @@ public class MonsterView : MonoBehaviour {
 
     private void OnTriggerExit2D(Collider2D col)
     {
-        if (col.CompareTag("Wall"))
+        if (col.CompareTag("Ground"))
         {
             seeingWall = false;
         }
