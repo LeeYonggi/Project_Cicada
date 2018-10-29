@@ -29,14 +29,14 @@ public class PhysicsObject : MonoBehaviour {
         rb2d = GetComponent<Rigidbody2D>();
     }
 
-    void Start () {
+    protected void Init () {
         contactFilter.useTriggers = false;
         contactFilter.SetLayerMask(Physics2D.GetLayerCollisionMask(gameObject.layer));
         contactFilter.useLayerMask = true;
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    protected void PysicsUpdate () {
         targetVelocity = Vector2.zero;
         ComputeVelocity();
 	}

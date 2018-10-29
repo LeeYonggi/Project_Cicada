@@ -27,6 +27,7 @@ public class PlayerController : PhysicsObject{
 
     // Use this for initialization
     void Start () {
+        Init();
         spriteRenderer = GetComponent<SpriteRenderer>();
         m_Animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
@@ -35,6 +36,7 @@ public class PlayerController : PhysicsObject{
 	
 	// Update is called once per frame
 	void Update () {
+        PysicsUpdate();
         Vector2 horizontal = Vector2.zero;
         horizontal.x = Input.GetAxis("Horizontal");
         if (horizontal.x != 0.0f)

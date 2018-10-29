@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/StageSelect.unity
-=======
 - path: Assets/Scenes/yg/MainGame.unity
->>>>>>> 72e8f598211ec153e4febbe1bf5e5dff34945d75
   isLoaded: 1
   isActive: 1
