@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 61517648534290452}
   - component: {fileID: 50360103541366082}
   - component: {fileID: 114489362660981750}
-  m_Layer: 12
+  m_Layer: 10
   m_Name: Col
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 114554208086433084}
   - component: {fileID: 114789598795869340}
   - component: {fileID: 95651671204728288}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Bat
   m_TagString: Monster
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1574037798191680}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -55.54586, y: 3.9374578, z: -0.011753822}
+  m_LocalPosition: {x: -1.01, y: 3.76, z: -0.011753822}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4343946000238890}
@@ -158,8 +158,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.66, y: 0.48}
-    newSize: {x: 0.66, y: 0.48}
+    oldSize: {x: 0.54, y: 0.46}
+    newSize: {x: 0.54, y: 0.46}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -276,15 +276,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 666332341
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 713594733a35a1147beae4826433c80d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.66, y: 0.48}
+  m_Size: {x: 0.54, y: 0.46}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
