@@ -47,22 +47,49 @@ public class PlayerController : PhysicsObject{
 
         if (Input.GetButtonDown("Jump") && grounded)
         {
-            velocity.y = jumpTakeOffSpeed;
-            isJump = true;
+            JumpStart();
         }
         else if(Input.GetButtonUp("Jump"))
         {
-            if(velocity.y > 0){
-                velocity.y = velocity.y * 0.5f;
-            }
+            JumpEnd();
+        }
+
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+            PlayerAttack();
         }
 
         m_Animator.SetBool("isJump", isJump);
         m_Animator.SetBool("grounded", grounded);
         m_Animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
-        
 	}
 
+    public void PlayerAttack()
+    {
+        StartCoroutine(AttackCoroutine());
+    }
+
+    IEnumerator AttackCoroutine()
+    {
+        m_Animator.SetBool("isAttack", true);
+
+        yield return new WaitForSeconds(0.5f);
+        m_Animator.SetBool("isAttack", false);
+    }
+    
+    public void JumpStart()
+    {
+        velocity.y = jumpTakeOffSpeed;
+        isJump = true;
+    }
+
+    public void JumpEnd()
+    {
+        if (velocity.y > 0)
+        {
+            velocity.y = velocity.y * 0.6f;
+        }
+    }
     void JumpPlayer()
     {
         rb.AddForce(Vector2.up * jumpTakeOffSpeed, ForceMode2D.Impulse);
@@ -86,6 +113,8 @@ public class PlayerController : PhysicsObject{
             }
         }
         targetVelocity = move * maxSpeed;
+        if (m_Animator.GetBool("isAttack"))
+            targetVelocity = Vector2.zero;
     }
 
     public void MoveLeft()

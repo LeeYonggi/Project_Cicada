@@ -48,7 +48,7 @@ public class Penetration_Tile : MonoBehaviour {
             float pVelocity = playerPhysics.GetComponent<PhysicsObject>().Velocity.y;
             tileResetTime = 10f;
             Vector3 objPos = collision.gameObject.transform.parent.transform.position;
-            if (pVelocity <= 0)
+            if (pVelocity <= 1)
             {
                 m_BoxCollider.isTrigger = false;
                 playerPhysics.GetComponent<PhysicsObject>().Grounded = true;
@@ -56,7 +56,7 @@ public class Penetration_Tile : MonoBehaviour {
             }
             //m_BoxCollider.isTrigger = false;
             //playerPhysics.GetComponent<PhysicsObject>().Grounded = true;
-            //Vector3 objPos = collision.gameObject.transform.parent.transform.position;
+            //Vector3 objPos = collision.gameObject.transform.parent.transform.position
             //collision.gameObject.transform.parent.transform.position = new Vector2(objPos.x, transform.position.y + 1.0f);
         }
     }
