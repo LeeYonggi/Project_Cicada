@@ -15,6 +15,7 @@ public class PlayerController : PhysicsObject{
 
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
+    private bool isAttack;
 
     private SpriteRenderer spriteRenderer;
     private Animator m_Animator;
@@ -26,14 +27,16 @@ public class PlayerController : PhysicsObject{
 
     // Use this for initialization
     void Start () {
+        Init();
         spriteRenderer = GetComponent<SpriteRenderer>();
         m_Animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-
+        isAttack = false;
     }
 	
 	// Update is called once per frame
 	void Update () {
+        PysicsUpdate();
         Vector2 horizontal = Vector2.zero;
         horizontal.x = Input.GetAxis("Horizontal");
         if (horizontal.x != 0.0f)
@@ -45,7 +48,7 @@ public class PlayerController : PhysicsObject{
         else
             MovePlayer();
 
-        if (Input.GetButtonDown("Jump") && grounded)
+        if (Input.GetButtonDown("Jump"))
         {
             JumpStart();
         }
@@ -62,23 +65,26 @@ public class PlayerController : PhysicsObject{
         m_Animator.SetBool("isJump", isJump);
         m_Animator.SetBool("grounded", grounded);
         m_Animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
-	}
+        m_Animator.SetBool("isAttack", isAttack);
+    }
 
     public void PlayerAttack()
     {
-        StartCoroutine(AttackCoroutine());
+        if(grounded)
+            StartCoroutine(AttackCoroutine());
     }
 
     IEnumerator AttackCoroutine()
     {
-        m_Animator.SetBool("isAttack", true);
+        isAttack = true;
 
         yield return new WaitForSeconds(0.5f);
-        m_Animator.SetBool("isAttack", false);
+        isAttack = false;
     }
     
     public void JumpStart()
     {
+        if (grounded == false || isAttack) return;
         velocity.y = jumpTakeOffSpeed;
         isJump = true;
     }
@@ -113,7 +119,7 @@ public class PlayerController : PhysicsObject{
             }
         }
         targetVelocity = move * maxSpeed;
-        if (m_Animator.GetBool("isAttack"))
+        if (isAttack)
             targetVelocity = Vector2.zero;
     }
 

@@ -22,7 +22,7 @@ TagManager:
   - Monster
   - MonsterCol
   - Player
-  - 
+  - Ground
   - 
   - 
   - 
@@ -60,6 +60,9 @@ TagManager:
     locked: 0
   - name: Ground
     uniqueID: 4155546509
+    locked: 0
+  - name: Wall
+    uniqueID: 1280236865
     locked: 0
   - name: BlockTile
     uniqueID: 1548747411

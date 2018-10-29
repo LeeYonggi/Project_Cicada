@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/yj/MainGame_yj.unity
+=======
+- path: Assets/Scenes/yg/MainGame.unity
+>>>>>>> 1c3af7dedbc644ac41dc70ad4a7007d4f4b0ec91
   isLoaded: 1
   isActive: 1
