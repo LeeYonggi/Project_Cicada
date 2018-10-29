@@ -103,18 +103,18 @@ TextureImporter:
       name: monster_flower_attack_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 6
         y: 0
-        width: 54
+        width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90723ed251253704dbb1c29748fcc336
+      spriteID: 3959cbd4c64b13f4fbb37420e65cf8f0
       vertices: []
       indices: 
       edges: []
@@ -123,18 +123,18 @@ TextureImporter:
       name: monster_flower_attack_1
       rect:
         serializedVersion: 2
-        x: 54
+        x: 63
         y: 0
-        width: 57
+        width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39999086f6a77fb44b893a6bb61189e6
+      spriteID: e671ab31830bf984494804bf67c8cf20
       vertices: []
       indices: 
       edges: []
@@ -143,18 +143,18 @@ TextureImporter:
       name: monster_flower_attack_2
       rect:
         serializedVersion: 2
-        x: 111
+        x: 121
         y: 0
-        width: 58
+        width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a69789dc28b84a4db6e2117e175f0d0
+      spriteID: 99896ed5703fc6b4c97c636a79cf2d6a
       vertices: []
       indices: 
       edges: []
@@ -163,18 +163,18 @@ TextureImporter:
       name: monster_flower_attack_3
       rect:
         serializedVersion: 2
-        x: 169
+        x: 179
         y: 0
-        width: 58
+        width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61039736e4c3e604eac789f14d2618da
+      spriteID: 7fb8ebc83ec633d4c9c2977dff4d7e35
       vertices: []
       indices: 
       edges: []
@@ -183,18 +183,18 @@ TextureImporter:
       name: monster_flower_attack_4
       rect:
         serializedVersion: 2
-        x: 227
+        x: 236
         y: 0
-        width: 57
+        width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 146360f97d8efda4a834a090f6ca6343
+      spriteID: abe80b19e428648488965f8650ad7309
       vertices: []
       indices: 
       edges: []

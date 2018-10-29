@@ -44,7 +44,7 @@ public class PlantAttack : MonoBehaviour {
     {
         GetComponent<MonsterInfo>().attacking = true;
         GetComponent<Animator>().SetBool("Attack", true);
-        yield return new WaitForSeconds(peaShootRate);
+        yield return new WaitForSeconds(0.3f);
 
         Vector3 tempPos = new Vector3(transform.position.x, transform.position.y, 0);
         
@@ -55,7 +55,7 @@ public class PlantAttack : MonoBehaviour {
 
         tempArrow.transform.eulerAngles = new Vector3(0, 0, z);
 
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(peaShootRate);
 
         GetComponent<MonsterInfo>().attacking = false;
         GetComponent<Animator>().SetBool("Attack", false);
