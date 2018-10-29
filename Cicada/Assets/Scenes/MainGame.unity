@@ -38,7 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0.44921875, g: 0.4992888, b: 0.5757129, a: 1}
+=======
+  m_IndirectSpecularColor: {r: 0.44921875, g: 0.49928886, b: 0.57571304, a: 1}
+>>>>>>> ed21349da42543ee8302e566606679b24e29fcc0
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3331,29 +3335,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 212744557766011472, guid: f60edf5d9a7bc0646a635e653b40a9cd,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: 666332341
-      objectReference: {fileID: 0}
-    - target: {fileID: 212744557766011472, guid: f60edf5d9a7bc0646a635e653b40a9cd,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1574037798191680, guid: f60edf5d9a7bc0646a635e653b40a9cd, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080959982080270, guid: f60edf5d9a7bc0646a635e653b40a9cd, type: 2}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 50578302503243334, guid: f60edf5d9a7bc0646a635e653b40a9cd,
-        type: 2}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f60edf5d9a7bc0646a635e653b40a9cd, type: 2}
   m_IsPrefabAsset: 0
@@ -5280,24 +5261,20 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 212609242826188744, guid: f6d34d9d526966f40b1aabc99a466075,
+    - target: {fileID: 61513629167609318, guid: f6d34d9d526966f40b1aabc99a466075,
         type: 2}
-      propertyPath: m_SortingLayerID
-      value: 666332341
+      propertyPath: m_Size.x
+      value: 0.4
       objectReference: {fileID: 0}
-    - target: {fileID: 212609242826188744, guid: f6d34d9d526966f40b1aabc99a466075,
+    - target: {fileID: 61513629167609318, guid: f6d34d9d526966f40b1aabc99a466075,
         type: 2}
-      propertyPath: m_SortingLayer
-      value: 7
+      propertyPath: m_Size.y
+      value: 0.39
       objectReference: {fileID: 0}
-    - target: {fileID: 4016153622086136, guid: f6d34d9d526966f40b1aabc99a466075, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114040315855675952, guid: f6d34d9d526966f40b1aabc99a466075,
+    - target: {fileID: 61513629167609318, guid: f6d34d9d526966f40b1aabc99a466075,
         type: 2}
-      propertyPath: direction
-      value: 1
+      propertyPath: m_Offset.y
+      value: -0.05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6d34d9d526966f40b1aabc99a466075, type: 2}
