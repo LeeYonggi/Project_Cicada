@@ -3,6 +3,7 @@ Base path: C:/Program Files/Unity/Hub/Editor/2018.2.11f1/Editor/Data
 =======
 Base path: C:/Program Files/Unity/Editor/Data
 >>>>>>> 72e8f598211ec153e4febbe1bf5e5dff34945d75
+<<<<<<< HEAD
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
@@ -46,4 +47,6 @@ Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
+=======
+>>>>>>> 7aeb7152d46d9e683242cd0dfb7215e7c8ccb86e
 Cmd: initializeCompiler
