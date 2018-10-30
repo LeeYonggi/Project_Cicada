@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61594879932924764}
   - component: {fileID: 50422410303329838}
   - component: {fileID: 114615562678412072}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Radar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 114269949970140990}
   - component: {fileID: 114500706420864828}
   - component: {fileID: 95095948531059334}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: StoneGolem
   m_TagString: Monster
   m_Icon: {fileID: 0}
@@ -64,9 +64,9 @@ GameObject:
   - component: {fileID: 50598685737382480}
   - component: {fileID: 61429299206859610}
   - component: {fileID: 114818693479977262}
-  m_Layer: 12
+  m_Layer: 10
   m_Name: MonsterAttackCol
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,9 +90,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1490777920186158}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -52.7, y: 2.75, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.55, y: 5.47, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4271884794949316}
   - {fileID: 4871068446666164}
@@ -106,8 +106,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1887816804857876}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.358, y: -0.053, z: 0}
-  m_LocalScale: {x: 0.2248225, y: 0.7947476, z: 1}
+  m_LocalPosition: {x: 0.417, y: -0.053, z: 0}
+  m_LocalScale: {x: 0.38219827, y: 0.7947476, z: 1}
   m_Children: []
   m_Father: {fileID: 4515351779963528}
   m_RootOrder: 1
@@ -299,9 +299,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnBackEnabled: 0
-  direction: -1
+  direction: 1
   moveSpeed: 0.7
   fixedMoveSpeed: 0
+  moveCheckEnabled: 0
   colDis: 0.2
   grounded: 0
   playerIsInBackView: 0
@@ -382,8 +383,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 666332341
+  m_SortingLayer: 9
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300004, guid: 218c2d45a7312364297cc10bd77501fb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
