@@ -15,6 +15,7 @@ public class PlayerController : PhysicsObject{
 
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
+    public float attackDelay;
     private bool isAttack;
 
     private SpriteRenderer spriteRenderer;
@@ -24,6 +25,7 @@ public class PlayerController : PhysicsObject{
     Vector2 directionX;
     Vector2 move;
 
+    public GameObject attackPrefeb;
 
     // Use this for initialization
     void Start () {
@@ -70,15 +72,26 @@ public class PlayerController : PhysicsObject{
 
     public void PlayerAttack()
     {
-        if(grounded)
+        if (grounded)
+        {
             StartCoroutine(AttackCoroutine());
+        }
+    }
+    
+    private void CreatePlayerAttack()
+    {
+        GameObject obj = Instantiate(attackPrefeb, new Vector3(transform.position.x, transform.position.y), Quaternion.identity);
+        obj.GetComponent<PlayerAttack>().AttackInit(attackDelay * 0.7f, gameObject);
     }
 
     IEnumerator AttackCoroutine()
     {
         isAttack = true;
+        yield return new WaitForSeconds(attackDelay * 0.3f);
 
-        yield return new WaitForSeconds(0.5f);
+        CreatePlayerAttack();
+
+        yield return new WaitForSeconds(attackDelay * 0.7f);
         isAttack = false;
     }
     
