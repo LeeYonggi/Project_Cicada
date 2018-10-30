@@ -10,6 +10,8 @@ public class HorizontalMonsterMove : MonoBehaviour {
     public float moveSpeed;
     [HideInInspector] public float fixedMoveSpeed;
 
+    public bool moveCheckEnabled;
+
     public float colDis;
 
     [HideInInspector] public bool grounded;
@@ -31,6 +33,9 @@ public class HorizontalMonsterMove : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+        moveCheckEnabled = true;
+
         grounded = false;
 
         turningBack = false;
@@ -51,7 +56,7 @@ public class HorizontalMonsterMove : MonoBehaviour {
                 //Debug.Log("BasicMoving on");
                 if (!turningBack)
                 {
-                    if (GetComponent<MonsterInfo>().landMonster)
+                    if (moveCheckEnabled)
                     {
                         if (MoveCheck())
                         {
@@ -68,7 +73,7 @@ public class HorizontalMonsterMove : MonoBehaviour {
                         GetComponent<Animator>().SetBool("Hitted", false);
                         transform.Translate(moveSpeed * direction * Time.deltaTime, 0, 0);
                     }
-                        
+
                 }
                 //else if (!turningBack)
                 //{
@@ -108,8 +113,7 @@ public class HorizontalMonsterMove : MonoBehaviour {
     }
 
     public bool MoveCheck()
-    {
-        if (!GetComponent<MonsterInfo>().landMonster) return true;
+    {        
 
         Vector2 fallColStart = new Vector2(transform.position.x + (transform.lossyScale.x / 2 - (colDis * direction)), transform.position.y - transform.lossyScale.y / 2 + colDis);
         Vector2 fallColEnd = new Vector2(fallColStart.x + 0.001f, fallColStart.y - groundCheckHeight);
@@ -133,6 +137,8 @@ public class HorizontalMonsterMove : MonoBehaviour {
             }
         }
 
+        if (!GetComponent<MonsterInfo>().landMonster) return true;
+
         if (Physics2D.OverlapArea(fallColStart, fallColEnd) != null)
         {
             Collider2D[] groundObj = Physics2D.OverlapAreaAll(fallColStart, fallColEnd);
@@ -148,6 +154,7 @@ public class HorizontalMonsterMove : MonoBehaviour {
         //Debug.Log("Move Check returned false");
         return false;
     }
+
 
     private void OnCollisionEnter2D(Collision2D col)
     {

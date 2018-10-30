@@ -99,6 +99,7 @@
     <Compile Include="Assets\Broyee\Monsters\Slime\SlimeAttack.cs" />
     <Compile Include="Assets\Broyee\Monsters\Slime\SlimeJump.cs" />
     <Compile Include="Assets\Broyee\Monsters\StoneGolem\StoneGolemAttack.cs" />
+    <Compile Include="Assets\Broyee\StageSelect\GoToMainGame.cs" />
     <Compile Include="Assets\Broyee\StageSelect\GoToStageSelect.cs" />
     <Compile Include="Assets\Broyee\StageSelect\StageButton.cs" />
     <Compile Include="Assets\Broyee\StageSelect\StageStart.cs" />

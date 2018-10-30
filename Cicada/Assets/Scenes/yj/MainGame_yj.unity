@@ -519,6 +519,7 @@ MonoBehaviour:
   direction: 1
   moveSpeed: 2
   fixedMoveSpeed: 0
+  moveCheckEnabled: 0
   colDis: 0.2
   grounded: 0
   playerIsInBackView: 0
@@ -713,7 +714,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1574037798191680, guid: f60edf5d9a7bc0646a635e653b40a9cd, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f60edf5d9a7bc0646a635e653b40a9cd, type: 2}
@@ -858,6 +859,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1183473099850058, guid: 8c46f818366afd64083253e701674981, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c46f818366afd64083253e701674981, type: 2}
   m_IsPrefabAsset: 0
@@ -1000,7 +1005,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1061830386686480, guid: f6d34d9d526966f40b1aabc99a466075, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4016153622086136, guid: f6d34d9d526966f40b1aabc99a466075, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114040315855675952, guid: f6d34d9d526966f40b1aabc99a466075,
+        type: 2}
+      propertyPath: direction
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6d34d9d526966f40b1aabc99a466075, type: 2}
@@ -1183,6 +1197,11 @@ Prefab:
       propertyPath: colDis
       value: -0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 114624995413189126, guid: 2825998f712240947a60d39bbaba7cec,
+        type: 2}
+      propertyPath: rollSpeed
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2825998f712240947a60d39bbaba7cec, type: 2}
   m_IsPrefabAsset: 0
@@ -1362,7 +1381,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1490777920186158, guid: 52043ccd0491cec4a9558b04d75153e7, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52043ccd0491cec4a9558b04d75153e7, type: 2}

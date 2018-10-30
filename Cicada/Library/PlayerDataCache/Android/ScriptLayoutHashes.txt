@@ -1,7 +1,10 @@
 Android
 PlayerPath?
-C:/Users/BroYee/Desktop/Build Test/aye.apk
+C:/Users/BroYee/Desktop/Build Test/test.apk
 SceneListBegin?
+Assets/Scenes/MainMenu.unity
+Assets/Scenes/StageSelect.unity
+Assets/Scenes/yj/MainGame_yj.unity
 Assets/Scenes/yg/MainGame.unity
 SceneListEnd?
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
@@ -214,7 +217,7 @@ dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 b4a8b3ed85775d50ba42bbbaa1fca507 Assembly-CSharp.dll:UnityEngine.Tilemaps.GridInformation
 aac9c55ae7ba4b95b852a7d9c191acd1 Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 f0b62db34c37349b414224be7217ec2e Assembly-CSharp.dll:.RolyPolyRoll
-9679ff99a1c26aaf506a1755991ba90c Assembly-CSharp.dll:.HorizontalMonsterMove
+d4be0c0f59117dd2f16c6121f1e21469 Assembly-CSharp.dll:.HorizontalMonsterMove
 0a006f3734181ba8b26758f0866152c0 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:Tiled2Unity.SortingLayerExposed
 8c042738ed90ace6daeecbbbcece8ee6 Assembly-CSharp.dll:.TintTextureGenerator
@@ -232,4 +235,6 @@ a3d95178c9699de5972a80525ebd0513 Assembly-CSharp.dll:.MantisAttack
 9c5cb9505986150b5435fa70b608d5f0 Assembly-CSharp.dll:Tiled2Unity.TmxObject
 4f50ad1f90d88f3574e434d164ac95be Assembly-CSharp.dll:.StageButton
 9efc50de9dffb2f5ffd5d693a39cadc0 Assembly-CSharp.dll:.BirdFly
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.PlayerAttack
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.UppercutEffect
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.GoToMainGame
