@@ -24,10 +24,11 @@ public class EarthWorm : MonoBehaviour {
 
         if (transform.GetChild(0).GetComponent<EarthWormRadar>().playerIsInView && !attacking)
         {
+            Debug.Log("Aye");
             StartCoroutine(BobUp());
         }
 
-	}
+    }
     
     IEnumerator BobUp()
     {
@@ -35,7 +36,7 @@ public class EarthWorm : MonoBehaviour {
 
         attacking = true;
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
 
         GetComponent<Animator>().SetBool("BobUp", true);
 

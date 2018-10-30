@@ -117,15 +117,15 @@ public class HorizontalMonsterMove : MonoBehaviour {
         Vector2 wallColStart = new Vector2(fallColStart.x, transform.position.y + (transform.lossyScale.y / 2));
         Vector2 wallColEnd = new Vector2(wallColStart.x + 0.001f, wallColStart.y - transform.lossyScale.y / 2);
 
-        Instantiate(_fallColStart, wallColStart, Quaternion.identity);
-        Instantiate(_fallColEnd, wallColEnd, Quaternion.identity);
+        //Instantiate(_fallColStart, wallColStart, Quaternion.identity);
+        //Instantiate(_fallColEnd, wallColEnd, Quaternion.identity);
 
-        if (Physics2D.OverlapArea(wallColStart, wallColEnd, 0) != null)
+        if (Physics2D.OverlapArea(wallColStart, wallColEnd) != null)
         {
             Collider2D[] wallObj = Physics2D.OverlapAreaAll(wallColStart, wallColEnd);
             for (int i = 0; i < wallObj.Length; i++)
             {
-                Debug.Log("WallObj tag : " + wallObj[i].tag);
+                //Debug.Log("WallObj tag : " + wallObj[i].tag);
                 if (wallObj[i].CompareTag("Ground"))
                 {
                     return false;
@@ -145,7 +145,7 @@ public class HorizontalMonsterMove : MonoBehaviour {
             }
         }
 
-        Debug.Log("Move Check returned false");
+        //Debug.Log("Move Check returned false");
         return false;
     }
 

@@ -12,7 +12,7 @@ public class EarthWormRadar : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void LateUpdate () {
         playerIsInView = false;
     }
 

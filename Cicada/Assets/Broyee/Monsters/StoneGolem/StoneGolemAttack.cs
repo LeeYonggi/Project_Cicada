@@ -101,7 +101,7 @@ public class StoneGolemAttack : MonoBehaviour {
 
     private IEnumerator Attack()
     {
-        Debug.Log("Attack");
+        //Debug.Log("Attack");
 
         attacking = true;
         GetComponent<MonsterInfo>().basicMoving = false;
@@ -122,7 +122,7 @@ public class StoneGolemAttack : MonoBehaviour {
 
     private IEnumerator Defend(float time)
     {
-        Debug.Log("Defend");
+        //Debug.Log("Defend");
 
         defending = true;
         GetComponent<MonsterInfo>().basicMoving = false;
