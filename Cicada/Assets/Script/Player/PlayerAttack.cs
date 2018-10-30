@@ -37,15 +37,9 @@ public class PlayerAttack : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-<<<<<<< HEAD
         if (col.CompareTag("Monster"))
         {
             Destroy(col.gameObject);
-=======
-        if(collision.gameObject.tag == "Monster")
-        {
-            
->>>>>>> 067e372aa101c29d3eef381c6beff9429e7c4ba1
         }
     }
 }

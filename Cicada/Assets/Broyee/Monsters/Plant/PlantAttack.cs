@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlantAttack : MonoBehaviour {
 
+    public bool horizontallyShoot;
+
     private int atkDir;    
 
     public float peaShootRate;
@@ -48,12 +50,27 @@ public class PlantAttack : MonoBehaviour {
 
         Vector3 tempPos = new Vector3(transform.position.x, transform.position.y, 0);
         
-        GameObject tempArrow = Instantiate(pea, tempPos, Quaternion.identity);
+        GameObject tempPea = Instantiate(pea, tempPos, Quaternion.identity);
 
-        float z = Mathf.Atan2((transform.GetChild(0).GetComponent<MonsterView>().playerPos.y - tempArrow.transform.position.y),
-            (transform.GetChild(0).GetComponent<MonsterView>().playerPos.x - tempArrow.transform.position.x)) * Mathf.Rad2Deg - 90;
+        float z = 0.0f;
 
-        tempArrow.transform.eulerAngles = new Vector3(0, 0, z);
+        if (horizontallyShoot)
+        {
+            if (tempPos.x < transform.GetChild(0).GetComponent<MonsterView>().playerPos.x)
+                z = - 90.0f;
+            else
+                z = - 270.0f;
+        }
+        else
+        {
+            z = Mathf.Atan2((transform.GetChild(0).GetComponent<MonsterView>().playerPos.y - tempPea.transform.position.y),
+                (transform.GetChild(0).GetComponent<MonsterView>().playerPos.x - tempPea.transform.position.x)) * Mathf.Rad2Deg - 90;
+
+
+            Debug.Log("Pea EulerAngles : " + z.ToString());
+        }
+
+        tempPea.transform.eulerAngles = new Vector3(0, 0, z);
 
         yield return new WaitForSeconds(peaShootRate);
 
