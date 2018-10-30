@@ -245,6 +245,9 @@ MonoBehaviour:
   velocity: {x: 0, y: 0}
   maxSpeed: 6.5
   jumpTakeOffSpeed: 8
+  attackDelay: 0.5
+  attackPrefeb: {fileID: 1549305453565282, guid: e951b800bdb9ec54fa6e47c55880d783,
+    type: 2}
 --- !u!212 &212275449109253518
 SpriteRenderer:
   m_ObjectHideFlags: 1
