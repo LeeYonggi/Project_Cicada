@@ -27,6 +27,10 @@ public class RolyPolyRoll : MonoBehaviour
             StartCoroutine(RollStart());
         }
 
+        if (rolling && !GetComponent<HorizontalMonsterMove>().MoveCheck())
+        {
+            StartCoroutine(RollStop());
+        }
     }
 
 
@@ -34,6 +38,7 @@ public class RolyPolyRoll : MonoBehaviour
     {
         rolling = true;
         GetComponent<Animator>().SetBool("RollStart", true);
+        GetComponent<MonsterInfo>().basicMoving = false;
 
         yield return new WaitForSeconds(1.0f);
 
@@ -44,6 +49,9 @@ public class RolyPolyRoll : MonoBehaviour
         GetComponent<BoxCollider2D>().size = new Vector2(0.7f, 0.7f);
 
         GetComponent<HorizontalMonsterMove>().moveSpeed = rollSpeed;
+        GetComponent<HorizontalMonsterMove>().moveCheckEnabled = false;
+        GetComponent<HorizontalMonsterMove>().turnBackEnabled = false;
+        GetComponent<MonsterInfo>().landMonster = false;
         GetComponent<MonsterInfo>().basicMoving = true;
     }
 
@@ -64,6 +72,9 @@ public class RolyPolyRoll : MonoBehaviour
 
         rolling = false;
         GetComponent<HorizontalMonsterMove>().moveSpeed = basicSpeed;
+        GetComponent<HorizontalMonsterMove>().moveCheckEnabled = true;
+        GetComponent<HorizontalMonsterMove>().turnBackEnabled = true;
+        GetComponent<MonsterInfo>().landMonster = true;
         GetComponent<MonsterInfo>().basicMoving = true;
     }
 }
