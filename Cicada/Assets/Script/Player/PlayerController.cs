@@ -16,7 +16,9 @@ public class PlayerController : PhysicsObject{
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
     public float attackDelay;
+
     private bool isAttack;
+    private bool isAttacked;
 
     private SpriteRenderer spriteRenderer;
     private Animator m_Animator;
@@ -34,6 +36,7 @@ public class PlayerController : PhysicsObject{
         m_Animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         isAttack = false;
+        isAttacked = false;
     }
 	
 	// Update is called once per frame
@@ -70,6 +73,7 @@ public class PlayerController : PhysicsObject{
         m_Animator.SetBool("isAttack", isAttack);
     }
 
+    #region Player_Attack
     public void PlayerAttack()
     {
         if (grounded)
@@ -77,7 +81,7 @@ public class PlayerController : PhysicsObject{
             StartCoroutine(AttackCoroutine());
         }
     }
-    
+
     private void CreatePlayerAttack()
     {
         GameObject obj = Instantiate(attackPrefeb, new Vector3(transform.position.x, transform.position.y), Quaternion.identity);
@@ -94,12 +98,13 @@ public class PlayerController : PhysicsObject{
         yield return new WaitForSeconds(attackDelay * 0.7f);
         isAttack = false;
     }
-    
+    #endregion
+
+    #region Player_Jump
     public void JumpStart()
     {
         if (grounded == false || isAttack) return;
-        velocity.y = jumpTakeOffSpeed;
-        isJump = true;
+        JumpPlayer();
     }
 
     public void JumpEnd()
@@ -109,12 +114,15 @@ public class PlayerController : PhysicsObject{
             velocity.y = velocity.y * 0.6f;
         }
     }
-    void JumpPlayer()
+
+    public void JumpPlayer()
     {
-        rb.AddForce(Vector2.up * jumpTakeOffSpeed, ForceMode2D.Impulse);
+        velocity.y = jumpTakeOffSpeed;
         isJump = true;
     }
+    #endregion
 
+    #region Player_Move
     void MovePlayer()
     {
         if (move.x > 0.01f)
@@ -147,5 +155,39 @@ public class PlayerController : PhysicsObject{
     public void StopMove()
     {
         move = Vector2.zero;
+    }
+    #endregion
+
+    IEnumerator AttackedCoroutine()
+    {
+        isAttacked = true;
+        
+        for(int i = 0; i < 3; i++)
+        {
+            if(i % 2 == 0)
+                spriteRenderer.color = new Color(1, 1, 1, 0.5f);
+            else
+                spriteRenderer.color = new Color(1, 1, 1, 1.0f);
+
+            yield return new WaitForSeconds(1.0f * 0.3f);
+        }
+        spriteRenderer.color = new Color(1, 1, 1, 1.0f);
+        isAttacked = false;
+    }
+
+    private void PlayerAttacked(int damage)
+    {
+        if (isAttacked) return;
+        GetComponent<PlayerInfo>().AddAttacked(damage);
+        StartCoroutine(AttackedCoroutine());
+        GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 15));
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Monster")
+        {
+            PlayerAttacked(1);
+        }
     }
 }

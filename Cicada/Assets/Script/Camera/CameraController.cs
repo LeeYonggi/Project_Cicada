@@ -18,8 +18,19 @@ public class CameraController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Vector3 tempPos = (player.transform.position - transform.position) / range;
-        transform.Translate(new Vector3(tempPos.x, tempPos.y, 0));
+        Vector3 tempPos;
+
+        //if (player.transform.position.y - transform.position.y > 0)
+        {
+            tempPos = (player.transform.position - transform.position) / range;
+            transform.Translate(new Vector3(0, tempPos.y, 0));
+        }
+        //else
+        //{
+        //    tempPos = (player.transform.position - transform.position) / range;
+        //    transform.Translate(new Vector3(tempPos.x, 0, 0));
+        //}
+
         WorkCameraZone();
     }
 
