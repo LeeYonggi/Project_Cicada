@@ -180,7 +180,7 @@ public class PlayerController : PhysicsObject{
         if (isAttacked) return;
         GetComponent<PlayerInfo>().AddAttacked(damage);
         StartCoroutine(AttackedCoroutine());
-        GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 15));
+        velocity.y += jumpTakeOffSpeed / 2.5f;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
