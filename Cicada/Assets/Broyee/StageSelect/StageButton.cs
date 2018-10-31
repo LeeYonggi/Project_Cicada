@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class StageButton : MonoBehaviour {
 
+    public bool playerIsOn;
+
     public bool locked;
 
 	// Use this for initialization
@@ -20,13 +22,13 @@ public class StageButton : MonoBehaviour {
     {
         if (!locked)
         {
-            MovePlayerToCurrentStage();
+            float playerYPos = transform.parent.Find("Player").transform.position.y;
+            if (transform.position.y > playerYPos)
+                StartCoroutine(transform.parent.Find("Player").GetComponent<PlayerInStageSelect>().Jump(transform.position.y));
+            else
+                StartCoroutine(transform.parent.Find("Player").GetComponent<PlayerInStageSelect>().Fall(transform.position.y));
         }
     }
-
-    void MovePlayerToCurrentStage()
-    {
-        transform.parent.Find("Player").position = transform.position;
-    }
+    
 
 }

@@ -54,7 +54,7 @@ public class EarthWorm : MonoBehaviour {
         while (transform.GetChild(1).position.x > (colXPos - (0.3f * dir)) * dir)
         {
             transform.GetChild(1).Translate(-5.0f * Time.deltaTime * dir, 0, 0);
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.2f);
         }
 
         attacking = false;
