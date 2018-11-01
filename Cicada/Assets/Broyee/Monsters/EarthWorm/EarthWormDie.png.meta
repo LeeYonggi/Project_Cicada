@@ -121,7 +121,7 @@ TextureImporter:
       name: EarthWormDie_1
       rect:
         serializedVersion: 2
-        x: 45
+        x: 46
         y: 0
         width: 45
         height: 20
@@ -141,7 +141,7 @@ TextureImporter:
       name: EarthWormDie_2
       rect:
         serializedVersion: 2
-        x: 90
+        x: 91
         y: 0
         width: 45
         height: 20

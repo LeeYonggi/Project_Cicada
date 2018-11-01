@@ -1487,6 +1487,10 @@ Prefab:
       propertyPath: m_TagString
       value: Monster
       objectReference: {fileID: 0}
+    - target: {fileID: 1080959982080270, guid: f60edf5d9a7bc0646a635e653b40a9cd, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f60edf5d9a7bc0646a635e653b40a9cd, type: 2}
   m_IsPrefabAsset: 0
