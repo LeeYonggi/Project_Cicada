@@ -510,3 +510,5 @@ C:\Users\rl445\Desktop\Notebook\Project\Project_Cicada\Cicada\obj\Debug\Assembly
 C:\Users\rl445\Desktop\Notebook\Project\Project_Cicada\Cicada\obj\Debug\Assembly-CSharp-firstpass.pdb
 C:\Users\rl445\Desktop\Notebook\Project\Project_Cicada\Cicada\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.dll
 C:\Users\rl445\Desktop\Notebook\Project\Project_Cicada\Cicada\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.xml
+D:\PJ\Project_Cicada\Cicada\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.dll
+D:\PJ\Project_Cicada\Cicada\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.xml
