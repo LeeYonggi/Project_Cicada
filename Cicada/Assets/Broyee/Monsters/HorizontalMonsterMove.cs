@@ -44,6 +44,8 @@ public class HorizontalMonsterMove : MonoBehaviour {
 
         playerIsInBackView = false;
 
+        if (transform.localScale.x > 0) direction = 1;
+        else direction = -1;
     }
 	
 	// Update is called once per frame
@@ -80,7 +82,7 @@ public class HorizontalMonsterMove : MonoBehaviour {
                 //    StartCoroutine(TurnBack(0.0f));
                 //}
             }
-            else Debug.Log("BasicMoving off");
+            //else Debug.Log("BasicMoving off");
 
 
             playerIsInBackView = false;
