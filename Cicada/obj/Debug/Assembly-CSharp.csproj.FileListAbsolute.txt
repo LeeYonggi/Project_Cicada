@@ -683,6 +683,7 @@ C:\Users\rl445\Desktop\Notebook\Project\Project_Cicada\Cicada\obj\Debug\Assembly
 C:\Users\rl445\Desktop\Notebook\Project\Project_Cicada\Cicada\obj\Debug\Assembly-CSharp.pdb
 C:\Users\rl445\Desktop\Notebook\Project\Project_Cicada\Cicada\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.dll
 C:\Users\rl445\Desktop\Notebook\Project\Project_Cicada\Cicada\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.xml
+<<<<<<< HEAD
 C:\Users\BroYee\Project_Cicada\Cicada\Temp\bin\Debug\Assembly-CSharp.dll
 C:\Users\BroYee\Project_Cicada\Cicada\Temp\bin\Debug\Assembly-CSharp.pdb
 C:\Users\BroYee\Project_Cicada\Cicada\Temp\bin\Debug\Boo.Lang.dll
@@ -856,3 +857,7 @@ C:\Users\BroYee\Project_Cicada\Cicada\obj\Debug\Assembly-CSharp.csproj.CoreCompi
 C:\Users\BroYee\Project_Cicada\Cicada\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\BroYee\Project_Cicada\Cicada\obj\Debug\Assembly-CSharp.dll
 C:\Users\BroYee\Project_Cicada\Cicada\obj\Debug\Assembly-CSharp.pdb
+=======
+D:\PJ\Project_Cicada\Cicada\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.dll
+D:\PJ\Project_Cicada\Cicada\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.xml
+>>>>>>> 62444a4c25ef4d6d14a2739aba366465a681c0ea
