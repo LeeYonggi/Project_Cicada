@@ -175,12 +175,11 @@ public class PlayerController : PhysicsObject{
         isAttacked = false;
     }
 
-    private void PlayerAttacked(int damage)
+    public void PlayerAttacked(int damage)
     {
         if (isAttacked) return;
         GetComponent<PlayerInfo>().AddAttacked(damage);
         StartCoroutine(AttackedCoroutine());
-        velocity.y += jumpTakeOffSpeed / 2.5f;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
