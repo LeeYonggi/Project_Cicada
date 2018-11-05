@@ -7,6 +7,11 @@ public class StageGenerator : MonoBehaviour {
     public int map;
     public int stage;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     private void Start()
     {
         GenerateStage();
@@ -26,5 +31,13 @@ public class StageGenerator : MonoBehaviour {
             Debug.Log(mapData.monsters[i].name);
             Instantiate(Resources.Load("Prefabs/Monsters/" + mapData.monsters[i].name) as GameObject, mapData.monsters[i].pos, Quaternion.identity);
         }
+    }
+
+    public void SetMapAndStage(int _map, int _stage)
+    {
+        map = _map;
+        stage = _stage;
+
+        Debug.Log("Map : " + map.ToString() + "  " + "Stage : " + stage.ToString());
     }
 }

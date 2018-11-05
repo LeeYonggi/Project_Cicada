@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class StageButton : MonoBehaviour {
 
-    public bool playerIsOn;
+    public int map;
+    public int stage;
 
-    public bool locked;
+    [HideInInspector] public bool playerIsOn;
+    [HideInInspector] public bool locked;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +24,9 @@ public class StageButton : MonoBehaviour {
     {
         if (!locked)
         {
+            GameObject stageGenerator = GameObject.FindObjectOfType(typeof(StageGenerator)) as GameObject;
+            stageGenerator.GetComponent<StageGenerator>().SetMapAndStage(map, stage);
+
             float playerYPos = transform.parent.Find("Player").transform.position.y;
             if (transform.position.y > playerYPos)
                 StartCoroutine(transform.parent.Find("Player").GetComponent<PlayerInStageSelect>().Jump(transform.position.y));
