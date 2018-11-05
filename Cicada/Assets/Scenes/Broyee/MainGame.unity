@@ -118,6 +118,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4643608740925476, guid: 3631d85d186ef664eb33bcdbe3d1310f,
     type: 2}
   m_PrefabInternal: {fileID: 1772865477}
+--- !u!1 &124488913 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1253566542579024, guid: 845020962117ff94499aa4df0318c7b7,
+    type: 2}
+  m_PrefabInternal: {fileID: 391991537}
+--- !u!114 &124488917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 124488913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b45a8a4f98bd57f47950c4459a9a26d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1015680782}
 --- !u!1001 &143673664
 Prefab:
   m_ObjectHideFlags: 0
@@ -461,8 +478,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4515351779963528, guid: 52043ccd0491cec4a9558b04d75153e7,
     type: 2}
   m_PrefabInternal: {fileID: 1630422263}
-<<<<<<< HEAD:Cicada/Assets/Scenes/Broyee/MainGame.unity
-=======
 --- !u!1 &297430921 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1720691480588918, guid: 845020962117ff94499aa4df0318c7b7,
@@ -572,7 +587,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 845020962117ff94499aa4df0318c7b7, type: 2}
   m_IsPrefabAsset: 0
->>>>>>> 62444a4c25ef4d6d14a2739aba366465a681c0ea:Cicada/Assets/Scenes/yg/MainGame.unity
 --- !u!1 &397964546
 GameObject:
   m_ObjectHideFlags: 0
@@ -1477,24 +1491,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 756103a6264393541b8463e307f50809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD:Cicada/Assets/Scenes/Broyee/MainGame.unity
-  hp: 3
---- !u!1001 &1030162431
-=======
   hp: 10
 --- !u!1001 &1019623645
->>>>>>> 62444a4c25ef4d6d14a2739aba366465a681c0ea:Cicada/Assets/Scenes/yg/MainGame.unity
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-<<<<<<< HEAD:Cicada/Assets/Scenes/Broyee/MainGame.unity
-    - target: {fileID: 4947645576281812, guid: 8c46f818366afd64083253e701674981, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-=======
     - target: {fileID: 8195094281801327898, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
         type: 2}
       propertyPath: m_Tiles.Array.size
@@ -2161,7 +2165,6 @@ Prefab:
         type: 2}
       propertyPath: m_Tiles.Array.data[189].first.x
       value: -9
->>>>>>> 62444a4c25ef4d6d14a2739aba366465a681c0ea:Cicada/Assets/Scenes/yg/MainGame.unity
       objectReference: {fileID: 0}
     - target: {fileID: 8195094281801327898, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
         type: 2}
@@ -2298,16 +2301,10 @@ Prefab:
       propertyPath: m_Tiles.Array.data[192].second.m_TileFlags
       value: 1
       objectReference: {fileID: 0}
-<<<<<<< HEAD:Cicada/Assets/Scenes/Broyee/MainGame.unity
-    - target: {fileID: 1080959982080270, guid: f60edf5d9a7bc0646a635e653b40a9cd, type: 2}
-      propertyPath: m_TagString
-      value: MonsterCol
-=======
     - target: {fileID: 8195094281801327898, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
         type: 2}
       propertyPath: m_Tiles.Array.data[192].second.m_ColliderType
       value: 1
->>>>>>> 62444a4c25ef4d6d14a2739aba366465a681c0ea:Cicada/Assets/Scenes/yg/MainGame.unity
       objectReference: {fileID: 0}
     - target: {fileID: 8195094281801327898, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
         type: 2}
@@ -8277,8 +8274,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD:Cicada/Assets/Scenes/Broyee/MainGame.unity
-=======
 --- !u!1001 &1314513850
 Prefab:
   m_ObjectHideFlags: 0
@@ -8326,7 +8321,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a4dbc654316873498f08c2d8dba9146, type: 2}
   m_IsPrefabAsset: 0
->>>>>>> 62444a4c25ef4d6d14a2739aba366465a681c0ea:Cicada/Assets/Scenes/yg/MainGame.unity
 --- !u!1001 &1416380157
 Prefab:
   m_ObjectHideFlags: 0
@@ -8729,10 +8723,6 @@ Prefab:
       propertyPath: rollSpeed
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 1394146571314936, guid: 2825998f712240947a60d39bbaba7cec, type: 2}
-      propertyPath: m_TagString
-      value: MonsterCol
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2825998f712240947a60d39bbaba7cec, type: 2}
   m_IsPrefabAsset: 0
@@ -8837,14 +8827,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1887816804857876, guid: 52043ccd0491cec4a9558b04d75153e7, type: 2}
-      propertyPath: m_TagString
-      value: MonsterCol
-      objectReference: {fileID: 0}
-    - target: {fileID: 1486209961804372, guid: 52043ccd0491cec4a9558b04d75153e7, type: 2}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52043ccd0491cec4a9558b04d75153e7, type: 2}
   m_IsPrefabAsset: 0
@@ -8889,7 +8871,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1080959982080270, guid: f60edf5d9a7bc0646a635e653b40a9cd, type: 2}
       propertyPath: m_TagString
-      value: MonsterCol
+      value: Monster
       objectReference: {fileID: 0}
     - target: {fileID: 1574037798191680, guid: f60edf5d9a7bc0646a635e653b40a9cd, type: 2}
       propertyPath: m_Name
@@ -9577,14 +9559,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 1763553051442934, guid: 3631d85d186ef664eb33bcdbe3d1310f, type: 2}
-      propertyPath: m_TagString
-      value: MonsterCol
-      objectReference: {fileID: 0}
-    - target: {fileID: 1272277044469040, guid: 3631d85d186ef664eb33bcdbe3d1310f, type: 2}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3631d85d186ef664eb33bcdbe3d1310f, type: 2}
   m_IsPrefabAsset: 0
@@ -9678,204 +9652,11 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1884413784}
   m_CullTransparentMesh: 0
-<<<<<<< HEAD:Cicada/Assets/Scenes/Broyee/MainGame.unity
---- !u!1001 &2061140315
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4174224362424658, guid: ed223b98a8d4083459b4de369bc6a871, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 4.2857347
-      objectReference: {fileID: 0}
-    - target: {fileID: 4174224362424658, guid: ed223b98a8d4083459b4de369bc6a871, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 7.2845874
-      objectReference: {fileID: 0}
-    - target: {fileID: 4174224362424658, guid: ed223b98a8d4083459b4de369bc6a871, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -0.10815475
-      objectReference: {fileID: 0}
-    - target: {fileID: 4174224362424658, guid: ed223b98a8d4083459b4de369bc6a871, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4174224362424658, guid: ed223b98a8d4083459b4de369bc6a871, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4174224362424658, guid: ed223b98a8d4083459b4de369bc6a871, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4174224362424658, guid: ed223b98a8d4083459b4de369bc6a871, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4174224362424658, guid: ed223b98a8d4083459b4de369bc6a871, type: 2}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 114918365897448602, guid: ed223b98a8d4083459b4de369bc6a871,
-        type: 2}
-      propertyPath: playerPhysics
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 114245044888369736, guid: ed223b98a8d4083459b4de369bc6a871,
-        type: 2}
-      propertyPath: playerPhysics
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 114328024268752654, guid: ed223b98a8d4083459b4de369bc6a871,
-        type: 2}
-      propertyPath: playerPhysics
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 114228727070190856, guid: ed223b98a8d4083459b4de369bc6a871,
-        type: 2}
-      propertyPath: playerPhysics
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 114677725354288214, guid: ed223b98a8d4083459b4de369bc6a871,
-        type: 2}
-      propertyPath: playerPhysics
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 114420319274656370, guid: ed223b98a8d4083459b4de369bc6a871,
-        type: 2}
-      propertyPath: playerPhysics
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 114104871330406212, guid: ed223b98a8d4083459b4de369bc6a871,
-        type: 2}
-      propertyPath: playerPhysics
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 114309242447579266, guid: ed223b98a8d4083459b4de369bc6a871,
-        type: 2}
-      propertyPath: playerPhysics
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 114793948662807334, guid: ed223b98a8d4083459b4de369bc6a871,
-        type: 2}
-      propertyPath: playerPhysics
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 114642909845179102, guid: ed223b98a8d4083459b4de369bc6a871,
-        type: 2}
-      propertyPath: playerPhysics
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 114228909303604628, guid: ed223b98a8d4083459b4de369bc6a871,
-        type: 2}
-      propertyPath: playerPhysics
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 114005681325381044, guid: ed223b98a8d4083459b4de369bc6a871,
-        type: 2}
-      propertyPath: playerPhysics
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 114365459536722528, guid: ed223b98a8d4083459b4de369bc6a871,
-        type: 2}
-      propertyPath: playerPhysics
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 114767740715817310, guid: ed223b98a8d4083459b4de369bc6a871,
-        type: 2}
-      propertyPath: playerPhysics
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 114400407192792982, guid: ed223b98a8d4083459b4de369bc6a871,
-        type: 2}
-      propertyPath: playerPhysics
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 114076681423766776, guid: ed223b98a8d4083459b4de369bc6a871,
-        type: 2}
-      propertyPath: playerPhysics
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 114237727664798348, guid: ed223b98a8d4083459b4de369bc6a871,
-        type: 2}
-      propertyPath: playerPhysics
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 114378357507030672, guid: ed223b98a8d4083459b4de369bc6a871,
-        type: 2}
-      propertyPath: playerPhysics
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 114101637092265508, guid: ed223b98a8d4083459b4de369bc6a871,
-        type: 2}
-      propertyPath: playerPhysics
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 114240182412773188, guid: ed223b98a8d4083459b4de369bc6a871,
-        type: 2}
-      propertyPath: playerPhysics
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 114955131707835008, guid: ed223b98a8d4083459b4de369bc6a871,
-        type: 2}
-      propertyPath: playerPhysics
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 114080686663925978, guid: ed223b98a8d4083459b4de369bc6a871,
-        type: 2}
-      propertyPath: playerPhysics
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 114242467563786904, guid: ed223b98a8d4083459b4de369bc6a871,
-        type: 2}
-      propertyPath: playerPhysics
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 114105407844479084, guid: ed223b98a8d4083459b4de369bc6a871,
-        type: 2}
-      propertyPath: playerPhysics
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 114586292182058408, guid: ed223b98a8d4083459b4de369bc6a871,
-        type: 2}
-      propertyPath: playerPhysics
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 114049673646443394, guid: ed223b98a8d4083459b4de369bc6a871,
-        type: 2}
-      propertyPath: playerPhysics
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 114475898375148682, guid: ed223b98a8d4083459b4de369bc6a871,
-        type: 2}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 114363724382980210, guid: ed223b98a8d4083459b4de369bc6a871,
-        type: 2}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 1839951844421024, guid: ed223b98a8d4083459b4de369bc6a871, type: 2}
-      propertyPath: m_Name
-      value: Map
-      objectReference: {fileID: 0}
-    - target: {fileID: 1839951844421024, guid: ed223b98a8d4083459b4de369bc6a871, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ed223b98a8d4083459b4de369bc6a871, type: 2}
-  m_IsPrefabAsset: 0
-=======
 --- !u!4 &1912714963 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4789307832732400, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
     type: 2}
   m_PrefabInternal: {fileID: 1019623645}
->>>>>>> 62444a4c25ef4d6d14a2739aba366465a681c0ea:Cicada/Assets/Scenes/yg/MainGame.unity
 --- !u!1 &2069755192
 GameObject:
   m_ObjectHideFlags: 0
@@ -9886,11 +9667,11 @@ GameObject:
   - component: {fileID: 2069755193}
   m_Layer: 0
   m_Name: Monsters
-  m_TagString: Untagged
+  m_TagString: Monsters
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2069755193
 Transform:
   m_ObjectHideFlags: 0
@@ -9908,11 +9689,7 @@ Transform:
   - {fileID: 22356321}
   - {fileID: 673765119}
   m_Father: {fileID: 0}
-<<<<<<< HEAD:Cicada/Assets/Scenes/Broyee/MainGame.unity
-  m_RootOrder: 6
-=======
   m_RootOrder: 9
->>>>>>> 62444a4c25ef4d6d14a2739aba366465a681c0ea:Cicada/Assets/Scenes/yg/MainGame.unity
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2127415758
 GameObject:
