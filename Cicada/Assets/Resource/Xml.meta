@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Cicada/Assets/Resource/Xml.meta
 guid: ebed16ecc6b91994fb775d8da2fa5e45
+=======
+guid: 19f163a53bef3e74b91e7d31e12eafe1
+>>>>>>> 677c3fe1bd5f110952f494b4e6a90bc36f67712e:Cicada/Assets/Scenes/yg.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
