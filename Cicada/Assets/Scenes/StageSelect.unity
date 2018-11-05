@@ -733,6 +733,7 @@ GameObject:
   m_Component:
   - component: {fileID: 933800732}
   - component: {fileID: 933800731}
+  - component: {fileID: 933800733}
   - component: {fileID: 933800730}
   m_Layer: 0
   m_Name: Main Camera
@@ -801,6 +802,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &933800733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 933800729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35dcc471994fbf549ae17d17ad396fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: 1
+  stage: 1
 --- !u!1 &1103800281
 GameObject:
   m_ObjectHideFlags: 0
@@ -1394,7 +1408,6 @@ GameObject:
   - component: {fileID: 1538332772}
   - component: {fileID: 1538332771}
   - component: {fileID: 1538332770}
-  - component: {fileID: 1538332768}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -1402,17 +1415,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1538332768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1538332767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88a3f2323c47d174abd0dd5486036e6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &1538332769
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1473,8 +1475,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1538332768}
-        m_MethodName: OnClick
+      - m_Target: {fileID: 933800733}
+        m_MethodName: StartStage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

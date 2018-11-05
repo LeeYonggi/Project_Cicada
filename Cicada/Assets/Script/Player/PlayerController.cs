@@ -185,7 +185,7 @@ public class PlayerController : PhysicsObject{
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Monster")
+        if(collision.gameObject.tag == "MonsterCol")
         {
             PlayerAttacked(1);
         }

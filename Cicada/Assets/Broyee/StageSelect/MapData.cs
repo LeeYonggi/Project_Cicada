@@ -14,7 +14,7 @@ public class MapData
     public Vector3 playerPos;
 
     [XmlArray("Monsters"), XmlArrayItem("Monster")]
-    public MonsterData[] monsters;    
+    public MonsterData[] monsters;
 
     public void Save(string path)
     {

@@ -26,13 +26,13 @@ public class StageSave : MonoBehaviour {
 
         mapData.playerPos = GameObject.FindGameObjectWithTag("Player").gameObject.transform.position;
 
-        GameObject monsters = GameObject.FindGameObjectWithTag("Monsters");
-        mapData.monsters = new MonsterData[monsters.transform.childCount];
-        for (int i = 0; i < monsters.transform.childCount; i++)
+        GameObject[] monsters = GameObject.FindGameObjectsWithTag("Monster");
+        mapData.monsters = new MonsterData[monsters.Length];
+        for (int i = 0; i < monsters.Length; i++)
         {
-            Debug.Log("i : " + i.ToString());
-            mapData.monsters[i].name = monsters.transform.GetChild(i).gameObject.name;
-            mapData.monsters[i].pos = monsters.transform.GetChild(i).transform.position;
+            mapData.monsters[i] = new MonsterData();
+            mapData.monsters[i].name = monsters[i].name;
+            mapData.monsters[i].pos = monsters[i].transform.position;
         }
 
         mapData.Save("Assets/Resource/Xml/" + stageName + ".xml");

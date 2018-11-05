@@ -1,10 +1,10 @@
 Android
 PlayerPath?
-C:/Users/BroYee/Desktop/Build Test/vv.apk
+C:/Users/BroYee/Desktop/Build Test/idunno.apk
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/StageSelect.unity
-Assets/Scenes/yg/MainGame.unity
+Assets/Scenes/EmptyMainGame.unity
 SceneListEnd?
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 7b803eb2910e9b4cd5e521ae07b9f7d6 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
@@ -25,7 +25,7 @@ c7dd12c15208b0447e101f80038706df UnityEngine.Timeline.dll:UnityEngine.Timeline.A
 0c79e4ed130a7bf39c118b750393eb55 Assembly-CSharp.dll:.SlimeAttack
 f6637497451c9a030c421de4a1ad5cdb Unity.TextMeshPro.dll:TMPro.TMP_ScrollbarEventHandler
 231595a20c97318d65492290b1a9d17b Assembly-CSharp.dll:.MonsterCollision
-486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.StageStart
+edb43c2baf4ad36048a8ee52d7839b74 Assembly-CSharp.dll:.StageStart
 b14b4630cc47b6e9ea8a644551a6a8cc Unity.TextMeshPro.dll:TMPro.TMP_Text
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.PortalToWildBoar
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.MoveUI
@@ -117,6 +117,7 @@ c7dd12c15208b0447e101f80038706df UnityEngine.Timeline.dll:UnityEngine.Timeline.A
 0ddb2c46096a1e59e0dce07886ce4769 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 0ddb2c46096a1e59e0dce07886ce4769 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 64f3a13c1277a7f1324321d93d0ec13b UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
+cdc26dfe017d3aed12cfa956c58f0ff0 Assembly-CSharp.dll:.StageSave
 a3ae15dd82e1067fe2ae11c5aad9b286 Assembly-CSharp.dll:.ChargeCol
 9a4951ff7d7d096971bbe22beec31a30 Assembly-CSharp.dll:.Pea
 2e5a69fcdc33cda1da9e71d0ea632caf Assembly-CSharp.dll:.PlayerController
@@ -227,6 +228,7 @@ d4be0c0f59117dd2f16c6121f1e21469 Assembly-CSharp.dll:.HorizontalMonsterMove
 f5ece19966a893bd3def5b7aaf85514d Assembly-CSharp.dll:UnityEngine.Tilemaps.TerrainTile
 aaf3fc6261493d2e43f8e694b6fedc17 Assembly-CSharp.dll:Tiled2Unity.SpriteDepthInMap
 12c940366a3116cb4e7c7e13ad4c1ee6 Assembly-CSharp.dll:Tiled2Unity.ObjectLayer
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.GameClear
 6c24e6019bec8a1eb9233022be832ea8 Assembly-CSharp.dll:.PhysicsObject
 e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 4bef1329c012bc7032b0ad97b66f6efd Assembly-CSharp.dll:.Penetration_Tile

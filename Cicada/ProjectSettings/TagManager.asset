@@ -10,7 +10,7 @@ TagManager:
   - Wall
   - BossMonster
   - UI
-  - Monsters
+  - MonsterCol
   layers:
   - Default
   - TransparentFX

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using System.Collections.Generic;
 using System.Xml;
 using System.Xml.Serialization;
 using System.IO;
@@ -25,11 +24,13 @@ public class StageStart : MonoBehaviour {
 
         var mapData = MapData.Load("Assets/Resource/Xml/" + levelName + ".xml");
 
-        GameObject.FindGameObjectWithTag("Player").gameObject.transform.position = mapData.playerPos;
-        Instantiate(Resources.Load("prefab/LevelDesigns/" + levelName + "/" + levelName + "Map.prefab") as GameObject);
+        //GameObject.FindGameObjectWithTag("Player").gameObject.transform.position = mapData.playerPos;
+        Debug.Log("Instantiate!!");
+        Instantiate(Resources.Load("Prefabs/LevelDesigns/" + levelName + "/" + levelName + "Map") as GameObject, new Vector3(0, 0, 0), Quaternion.identity);
         for (int i = 0; i < mapData.monsters.Length; i++)
         {
-            Instantiate(Resources.Load("prefab/Monsters/" + mapData.monsters[i].name + ".prefab") as GameObject).transform.position = mapData.monsters[i].pos;
+            Debug.Log(mapData.monsters[i].name);
+            Instantiate(Resources.Load("Prefabs/Monsters/" + mapData.monsters[i].name) as GameObject, mapData.monsters[i].pos, Quaternion.identity);
         }
     }
 }
