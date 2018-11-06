@@ -117,7 +117,7 @@ public class PlayerController : PhysicsObject{
 
     public void JumpPlayer()
     {
-        velocity.y = jumpTakeOffSpeed;
+        velocity.y += jumpTakeOffSpeed;
         isJump = true;
     }
     #endregion

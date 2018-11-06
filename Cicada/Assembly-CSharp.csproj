@@ -123,8 +123,11 @@
     <Compile Include="Assets\Script\Player\PlayerController.cs" />
     <Compile Include="Assets\Script\Player\PlayerInfo.cs" />
     <Compile Include="Assets\Script\Tile\BackTileMove.cs" />
+    <Compile Include="Assets\Script\Tile\MoveTile.cs" />
+    <Compile Include="Assets\Script\Tile\ObstacleTile.cs" />
     <Compile Include="Assets\Script\Tile\Penetration_Tile.cs" />
     <Compile Include="Assets\Script\Tile\SplitTile.cs" />
+    <Compile Include="Assets\Script\UI\HpHeart.cs" />
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\CircleObject.cs" />
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\GameObjectExtensions.cs" />
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\GPUInstancing.cs" />
