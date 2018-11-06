@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/StageSelect.unity
-=======
-- path: Assets/Scenes/Broyee/MainGame.unity
->>>>>>> f4ce1bb08767f61bb7e5c4df1ee4ed591b439aa6
+- path: Assets/Scenes/Broyee/MainGame_yj.unity
   isLoaded: 1
   isActive: 1

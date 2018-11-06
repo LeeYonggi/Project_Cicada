@@ -16,8 +16,11 @@ public class GameClear : MonoBehaviour {
 	}
 
 
-    public void ClearGame(bool clear, int star, int score, int stage)
+    public IEnumerator ClearGame(bool clear, int star, int score, int stage)
     {
+        yield return new WaitForSeconds(0.2f);
+        Time.timeScale = 0;
+
         transform.GetChild(0).gameObject.SetActive(true);
 
         if (clear)
