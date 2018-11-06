@@ -38,7 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0.44921875, g: 0.49928886, b: 0.57571304, a: 1}
+=======
+  m_IndirectSpecularColor: {r: 0.44921875, g: 0.4992888, b: 0.5757129, a: 1}
+>>>>>>> fd99e17c741bb2442571b1f17091be9ae6dc8dff
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7966,6 +7970,7 @@ Prefab:
       propertyPath: m_Tiles.Array.data[71].second.m_ColliderType
       value: 1
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 114135987563768800, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
         type: 2}
       propertyPath: playerPhysics
@@ -8002,16 +8007,27 @@ Prefab:
       value: 
       objectReference: {fileID: 1015680782}
     - target: {fileID: 114857865470672184, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
-        type: 2}
-      propertyPath: playerPhysics
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 114453849000483470, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
-        type: 2}
-      propertyPath: playerPhysics
-      value: 
-      objectReference: {fileID: 1015680782}
+=======
     - target: {fileID: 114153007135395400, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
+>>>>>>> fd99e17c741bb2442571b1f17091be9ae6dc8dff
+        type: 2}
+      propertyPath: playerPhysics
+      value: 
+      objectReference: {fileID: 1015680782}
+<<<<<<< HEAD
+    - target: {fileID: 114453849000483470, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
+=======
+    - target: {fileID: 114994923229441820, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
+>>>>>>> fd99e17c741bb2442571b1f17091be9ae6dc8dff
+        type: 2}
+      propertyPath: playerPhysics
+      value: 
+      objectReference: {fileID: 1015680782}
+<<<<<<< HEAD
+    - target: {fileID: 114153007135395400, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
+=======
+    - target: {fileID: 114978546508396780, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
+>>>>>>> fd99e17c741bb2442571b1f17091be9ae6dc8dff
         type: 2}
       propertyPath: playerPhysics
       value: 
@@ -8026,6 +8042,7 @@ Prefab:
       propertyPath: playerPhysics
       value: 
       objectReference: {fileID: 1015680782}
+<<<<<<< HEAD
     - target: {fileID: 114978546508396780, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
         type: 2}
       propertyPath: playerPhysics
@@ -8037,6 +8054,9 @@ Prefab:
       value: 
       objectReference: {fileID: 1015680782}
     - target: {fileID: 114994923229441820, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
+=======
+    - target: {fileID: 114400373432182078, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
+>>>>>>> fd99e17c741bb2442571b1f17091be9ae6dc8dff
         type: 2}
       propertyPath: playerPhysics
       value: 
@@ -8046,12 +8066,20 @@ Prefab:
       propertyPath: playerPhysics
       value: 
       objectReference: {fileID: 1015680782}
+<<<<<<< HEAD
     - target: {fileID: 114306644132035620, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
+=======
+    - target: {fileID: 114742736741236710, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
+>>>>>>> fd99e17c741bb2442571b1f17091be9ae6dc8dff
         type: 2}
       propertyPath: playerPhysics
       value: 
       objectReference: {fileID: 1015680782}
+<<<<<<< HEAD
     - target: {fileID: 114400373432182078, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
+=======
+    - target: {fileID: 114306644132035620, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
+>>>>>>> fd99e17c741bb2442571b1f17091be9ae6dc8dff
         type: 2}
       propertyPath: playerPhysics
       value: 
