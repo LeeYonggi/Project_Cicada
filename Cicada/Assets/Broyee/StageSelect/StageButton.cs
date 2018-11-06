@@ -24,8 +24,10 @@ public class StageButton : MonoBehaviour {
     {
         if (!locked)
         {
-            GameObject stageGenerator = GameObject.FindObjectOfType(typeof(StageGenerator)) as GameObject;
-            stageGenerator.GetComponent<StageGenerator>().SetMapAndStage(map, stage);
+            //GameObject stageGenerator = GameObject.FindObjectOfType(typeof(StageGenerator)) as GameObject;
+            //stageGenerator.GetComponent<StageGenerator>().SetMapAndStage(map, stage);
+
+            GameObject.Find("StageManager").GetComponent<StageManager>().SetMapAndStage(map, stage);
 
             float playerYPos = transform.parent.Find("Player").transform.position.y;
             if (transform.position.y > playerYPos)

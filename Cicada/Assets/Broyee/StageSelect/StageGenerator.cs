@@ -4,13 +4,27 @@ using UnityEngine;
 
 public class StageGenerator : MonoBehaviour {
 
-    public int map;
-    public int stage;
+    //public static StageGenerator stageGenerator;
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
+    //public static int map;
+    //public static int stage;
+    
+
+    //private void Awake()
+    //{
+    //    if (stageGenerator == null)
+    //    {
+    //        DontDestroyOnLoad(gameObject);
+    //        stageGenerator = this;
+    //    }
+    //    else
+    //    {
+    //        if (stageGenerator != this)
+    //        {
+    //            Destroy(gameObject);
+    //        }
+    //    }
+    //}
 
     private void Start()
     {
@@ -19,6 +33,10 @@ public class StageGenerator : MonoBehaviour {
 
     public void GenerateStage()
     {
+        StageManager stageManager = GameObject.Find("StageManager").GetComponent<StageManager>();
+        int map = stageManager.GetMap();
+        int stage = stageManager.GetStage();
+
         string levelName = map.ToString() + "_" + stage.ToString();
 
         var mapData = MapData.Load("Assets/Resource/Xml/" + levelName + ".xml");
@@ -33,11 +51,5 @@ public class StageGenerator : MonoBehaviour {
         }
     }
 
-    public void SetMapAndStage(int _map, int _stage)
-    {
-        map = _map;
-        stage = _stage;
-
-        Debug.Log("Map : " + map.ToString() + "  " + "Stage : " + stage.ToString());
-    }
+    
 }

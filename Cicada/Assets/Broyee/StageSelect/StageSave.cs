@@ -24,8 +24,6 @@ public class StageSave : MonoBehaviour {
     {
         MapData mapData = new MapData();
 
-        mapData.playerPos = GameObject.FindGameObjectWithTag("Player").gameObject.transform.position;
-
         GameObject[] monsters = GameObject.FindGameObjectsWithTag("Monster");
         mapData.monsters = new MonsterData[monsters.Length];
         for (int i = 0; i < monsters.Length; i++)

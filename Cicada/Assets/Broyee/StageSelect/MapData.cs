@@ -8,10 +8,8 @@ using UnityEngine;
 [XmlRoot("Map")]
 public class MapData
 {
-    public int map;
-    public int stage;
-
-    public Vector3 playerPos;
+    //public int map;
+    //public int stage;
 
     [XmlArray("Monsters"), XmlArrayItem("Monster")]
     public MonsterData[] monsters;
