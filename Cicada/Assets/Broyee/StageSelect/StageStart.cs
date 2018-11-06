@@ -22,6 +22,6 @@ public class StageStart : MonoBehaviour {
 
         UnityEngine.SceneManagement.SceneManager.LoadScene(2);//, UnityEngine.SceneManagement.LoadSceneMode.Single);
 
-        GameObject.Find("StageGenerator").GetComponent<StageGenerator>().GenerateStage();
+        //GameObject.Find("StageGenerator").GetComponent<StageGenerator>().GenerateStage();
     }
 }

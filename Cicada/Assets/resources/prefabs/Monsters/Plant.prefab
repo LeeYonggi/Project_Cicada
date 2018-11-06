@@ -248,7 +248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontallyShoot: 1
   peaShootRate: 1
-  pea: {fileID: 1764871391674746, guid: 4e373d41ee5083845b763b9b8ec34c23, type: 2}
+  pea: {fileID: 1764871391674746, guid: f8bce45d3d17ab44495bafc5784c888d, type: 2}
 --- !u!114 &114868892543723360
 MonoBehaviour:
   m_ObjectHideFlags: 1
