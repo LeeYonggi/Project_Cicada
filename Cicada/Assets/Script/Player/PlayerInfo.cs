@@ -37,16 +37,7 @@ public class PlayerInfo : MonoBehaviour {
 
         if (hp <= 0)
         {
-            StartCoroutine(GameOver());
+            StartCoroutine(GameObject.FindGameObjectWithTag("UI").transform.GetChild(5).GetComponent<GameClear>().ClearGame(false, 2, 567, 1));
         }
-    }
-
-    private IEnumerator GameOver()
-    {
-        yield return new WaitForSeconds(0.2f);
-
-        Time.timeScale = 0;
-
-        GameObject.FindGameObjectWithTag("UI").transform.GetChild(5).GetComponent<GameClear>().ClearGame(false, 2, 567, 1);
     }
 }

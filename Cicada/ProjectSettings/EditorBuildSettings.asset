@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/StageSelect.unity
     guid: e93d3407a5daad44194788daf48884b7
   - enabled: 1
-    path: Assets/Scenes/Broyee/MainGame.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/Broyee/MainGame_yj.unity
+    guid: 24bc93cc17011274cbdfc6951de00d79
   - enabled: 0
     path: Assets/Scenes/EmptyMainGame.unity
     guid: 70560b782678e854c842e00bee7e623f
