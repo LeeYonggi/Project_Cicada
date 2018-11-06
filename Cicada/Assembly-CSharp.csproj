@@ -74,6 +74,7 @@
     <Compile Include="Assets\Broyee\GamePause\ExitButton.cs" />
     <Compile Include="Assets\Broyee\GamePause\PauseButton.cs" />
     <Compile Include="Assets\Broyee\MainMenu\GoToMainMenu.cs" />
+    <Compile Include="Assets\Broyee\MainMenu\TouchToStart.cs" />
     <Compile Include="Assets\Broyee\Monsters\BossMonsters\WildBoar\Blocks\BlockInfo.cs" />
     <Compile Include="Assets\Broyee\Monsters\BossMonsters\WildBoar\Blocks\HugeBlock.cs" />
     <Compile Include="Assets\Broyee\Monsters\BossMonsters\WildBoar\Blocks\RoundBlock.cs" />
@@ -94,6 +95,7 @@
     <Compile Include="Assets\Broyee\Monsters\MonsterCollision.cs" />
     <Compile Include="Assets\Broyee\Monsters\MonsterData.cs" />
     <Compile Include="Assets\Broyee\Monsters\MonsterInfo.cs" />
+    <Compile Include="Assets\Broyee\Monsters\MonsterManager.cs" />
     <Compile Include="Assets\Broyee\Monsters\MonsterView.cs" />
     <Compile Include="Assets\Broyee\Monsters\Parrot\BirdFly.cs" />
     <Compile Include="Assets\Broyee\Monsters\Parrot\ParrotAttack.cs" />
