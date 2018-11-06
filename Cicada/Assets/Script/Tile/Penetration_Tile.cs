@@ -10,8 +10,21 @@ public class Penetration_Tile : MonoBehaviour {
     private float tileResetTime = 0;
     private bool isPlayerOn = false;
 
-	// Use this for initialization
-	void Start () {
+    public bool IsPlayerOn
+    {
+        get
+        {
+            return isPlayerOn;
+        }
+
+        set
+        {
+            isPlayerOn = value;
+        }
+    }
+
+    // Use this for initialization
+    void Start () {
         m_BoxCollider = GetComponent<BoxCollider2D>();
         playerPhysics = GameObject.FindWithTag("Player");
     }
