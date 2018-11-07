@@ -78,11 +78,6 @@ public class ParrotAttack : MonoBehaviour {
     {
         Debug.Log("Charged");
         GetComponent<MonsterInfo>().basicMoving = false;
-        if (transform.GetChild(0).GetComponent<MonsterView>().playerPos.x > transform.position.x)
-        {
-            atkDir = 1;
-        }
-        else atkDir = -1;
         GetComponent<Animator>().SetBool("Attack", true);
 
         yield return new WaitForSeconds(0.5f);

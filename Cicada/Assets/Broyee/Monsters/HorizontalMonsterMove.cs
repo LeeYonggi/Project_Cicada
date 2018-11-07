@@ -205,4 +205,12 @@ public class HorizontalMonsterMove : MonoBehaviour {
             }
         }
     }
+
+    public void LookAtPlayer()
+    {
+        if (direction != transform.GetChild(0).GetComponent<MonsterView>().PlayerIsOnRight())
+        {
+            StartCoroutine(TurnBack(0.0f));
+        }
+    }
 }

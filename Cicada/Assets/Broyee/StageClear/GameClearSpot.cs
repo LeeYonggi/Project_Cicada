@@ -8,7 +8,7 @@ public class GameClearSpot : MonoBehaviour {
     {
         if (col.CompareTag("Player"))
         {
-            StartCoroutine(GameObject.FindGameObjectWithTag("UI").transform.GetChild(5).GetComponent<GameClear>().ClearGame(true, 2, 567, 1));
+            StartCoroutine(GameObject.FindGameObjectWithTag("UI").transform.GetChild(6).GetComponent<GameClear>().ClearGame(true, 2, 567, 1));
         }
     }
 }

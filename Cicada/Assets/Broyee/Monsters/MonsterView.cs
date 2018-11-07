@@ -28,6 +28,13 @@ public class MonsterView : MonoBehaviour {
         transform.Rotate(tempRot);
     }
 
+    public int PlayerIsOnRight()
+    {
+        if (transform.position.x < playerPos.x)
+            return 1;
+        return -1;
+    }
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Ground"))

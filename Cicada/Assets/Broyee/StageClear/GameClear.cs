@@ -21,6 +21,11 @@ public class GameClear : MonoBehaviour {
         yield return new WaitForSeconds(0.2f);
         Time.timeScale = 0;
 
+        for (int i = 0; i < transform.parent.childCount - 1; i++)
+        {
+            transform.parent.GetChild(i).gameObject.SetActive(false);
+        }
+
         transform.GetChild(0).gameObject.SetActive(true);
 
         if (clear)
