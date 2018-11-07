@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/broyee/yeeMainGame.unity
+- path: Assets/Scenes/yg/MainGame.unity
   isLoaded: 1
   isActive: 1

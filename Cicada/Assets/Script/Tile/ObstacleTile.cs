@@ -14,11 +14,12 @@ public class ObstacleTile : MonoBehaviour {
 		
 	}
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.tag == "Player_Bottom")
+        if (collision.tag == "Player_Bottom")
         {
-            collision.gameObject.transform.parent.GetComponent<PlayerController>().PlayerAttacked(1);
+            collision.gameObject.transform.parent.GetComponent<PlayerController>().PlayerAttacked(1, transform.position);
         }
     }
 }
