@@ -194,6 +194,7 @@ public class PlayerController : PhysicsObject{
     }
     public void StopMove()
     {
+        pastMove = Vector2.zero;
         if (!isClimbJump)
             move = Vector2.zero;
     }
@@ -211,6 +212,7 @@ public class PlayerController : PhysicsObject{
                 {
                     transform.Translate(Vector2.left * 0.1f);
                     JumpPlayer();
+                    pastMove = -move;
                 }
             }
             if (climbingFlip == true)
@@ -220,9 +222,9 @@ public class PlayerController : PhysicsObject{
                 {
                     transform.Translate(Vector2.right * 0.1f);
                     JumpPlayer();
+                    pastMove = -move;
                 }
             }
-            pastMove = -move;
             //isClimbJump = false;
         }
     }

@@ -10,6 +10,9 @@ public class CameraController : MonoBehaviour {
     public Vector2 cameraSize;
 
     private BoxCollider2D cameraBox;
+    public bool isMoveX;
+    public bool isMoveY;
+    public bool isStop;
 
     // Use this for initialization
     void Start () {
@@ -24,7 +27,10 @@ public class CameraController : MonoBehaviour {
         //if (player.transform.position.y - transform.position.y > 0)
         {
             tempPos = (player.transform.position - transform.position) / range;
-            transform.Translate(new Vector3(0, tempPos.y, 0));
+            if (isMoveX == false) tempPos.x = 0;
+            if (isMoveY == false) tempPos.y = 0;
+            tempPos.z = 0;
+            transform.Translate(tempPos);
         }
         //else
         //{
