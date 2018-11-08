@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using UnityEngine.UI;
 
 public class PlayerController : PhysicsObject{
 
@@ -19,6 +20,7 @@ public class PlayerController : PhysicsObject{
 
     private bool isAttack;
     private bool isAttacked;
+    private bool isClimbing;
 
     private SpriteRenderer spriteRenderer;
     private Animator m_Animator;
@@ -30,6 +32,10 @@ public class PlayerController : PhysicsObject{
     public GameObject attackPrefeb;
 
     private float attackedMoveX;
+    private bool climbingFlip;
+    public bool isClimbJump;
+
+    private Vector2 pastMove;
 
     // Use this for initialization
     void Start () {
@@ -39,6 +45,9 @@ public class PlayerController : PhysicsObject{
         rb = GetComponent<Rigidbody2D>();
         isAttack = false;
         isAttacked = false;
+        isClimbing = false;
+        isClimbJump = false;
+        pastMove = Vector2.zero;
     }
 	
 	// Update is called once per frame
@@ -71,14 +80,27 @@ public class PlayerController : PhysicsObject{
 
         if(isAttacked)
         {
-            //attackedMoveX -= attackedMoveX * 0.2f;
-            //transform.Translate(new Vector2(attackedMoveX, 0));
+            attackedMoveX -= attackedMoveX * 0.2f;
+            transform.Translate(new Vector2(attackedMoveX, 0));
         }
+
+        if(grounded)
+        {
+            isClimbing = false;
+            if (isClimbJump)
+            {
+                isClimbJump = false;
+                move = pastMove;
+            }
+        }
+
+        ClimbingJump();
 
         m_Animator.SetBool("isJump", isJump);
         m_Animator.SetBool("grounded", grounded);
         m_Animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
         m_Animator.SetBool("isAttack", isAttack);
+        m_Animator.SetBool("isClimbing", isClimbing);
     }
 
     #region Player_Attack
@@ -111,8 +133,14 @@ public class PlayerController : PhysicsObject{
     #region Player_Jump
     public void JumpStart()
     {
-        if (grounded == false || isAttack) return;
-        JumpPlayer();
+        if (isJump == true || isAttack) return;
+
+        if (isClimbing)
+        {
+            isClimbJump = true;
+        }
+        else 
+            JumpPlayer();
     }
 
     public void JumpEnd()
@@ -154,17 +182,50 @@ public class PlayerController : PhysicsObject{
 
     public void MoveLeft()
     {
-        move = Vector2.left * 0.7f;
+        pastMove = Vector2.left * 0.7f;
+        if (!isClimbJump)
+            move = Vector2.left * 0.7f;
     }
     public void MoveRight()
     {
-        move = Vector2.right * 0.7f;
+        pastMove = Vector2.right * 0.7f;
+        if (!isClimbJump)
+            move = Vector2.right * 0.7f;
     }
     public void StopMove()
     {
-        move = Vector2.zero;
+        if (!isClimbJump)
+            move = Vector2.zero;
     }
     #endregion
+
+    void ClimbingJump()
+    {
+        if(isClimbJump)
+        {
+            if (climbingFlip == false)
+            {
+                move = Vector2.left * 0.7f;
+                
+                if (!isJump)
+                {
+                    transform.Translate(Vector2.left * 0.1f);
+                    JumpPlayer();
+                }
+            }
+            if (climbingFlip == true)
+            {
+                move = Vector2.right * 0.7f;
+                if (!isJump)
+                {
+                    transform.Translate(Vector2.right * 0.1f);
+                    JumpPlayer();
+                }
+            }
+            pastMove = -move;
+            //isClimbJump = false;
+        }
+    }
 
     IEnumerator AttackedCoroutine()
     {
@@ -189,7 +250,7 @@ public class PlayerController : PhysicsObject{
         GetComponent<PlayerInfo>().AddAttacked(damage);
         StartCoroutine(AttackedCoroutine());
         if (targetPos.y <= transform.position.y)
-            velocity.y -= jumpTakeOffSpeed;
+            velocity.y += jumpTakeOffSpeed * 0.7f;
         attackedMoveX = (transform.position.x - targetPos.x) * 0.25f;
     }
 
@@ -198,6 +259,28 @@ public class PlayerController : PhysicsObject{
         if(collision.gameObject.tag == "MonsterCol")
         {
             PlayerAttacked(1, collision.transform.position);
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Wall")
+        {
+            if(grounded == false)
+            {
+                isClimbing = true;
+                velocity.y = 0;
+                isJump = false;
+                climbingFlip = spriteRenderer.flipX;
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+            isClimbing = false;
         }
     }
 }

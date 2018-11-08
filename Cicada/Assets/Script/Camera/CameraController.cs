@@ -14,6 +14,7 @@ public class CameraController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         cameraBox = cameraZone.GetComponent<BoxCollider2D>();
+        transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
     }
 	
 	// Update is called once per frame
