@@ -23,6 +23,8 @@ public class StoneGolemAttack : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if (GetComponent<MonsterInfo>().dead) return;
+
         float distanceFromPlayer = Mathf.Abs(transform.position.x - transform.GetChild(0).GetComponent<MonsterView>().playerPos.x);
 
         Sneak();

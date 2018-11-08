@@ -21,21 +21,29 @@ public class GameClear : MonoBehaviour {
         yield return new WaitForSeconds(0.2f);
         Time.timeScale = 0;
 
+        // Disable other UIs
         for (int i = 0; i < transform.parent.childCount - 1; i++)
         {
             transform.parent.GetChild(i).gameObject.SetActive(false);
         }
 
+        // Enable Whole UIs
         transform.GetChild(0).gameObject.SetActive(true);
 
+        // Clear screen or fail screen
         if (clear)
-            transform.GetChild(0).GetChild(0).GetChild(0).gameObject.SetActive(true);
+            transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
         else
-            transform.GetChild(0).GetChild(0).GetChild(1).gameObject.SetActive(true);
+            transform.GetChild(0).GetChild(1).gameObject.SetActive(true);
+
+        // Stars
+        for (int i = 0; i < star; i++)
+        {
+            transform.GetChild(0).GetChild(2).GetChild(i + 3).gameObject.SetActive(true);
+        }
 
 
-
-        transform.GetChild(0).GetChild(0).GetChild(3).GetComponent<Text>().text = "Score : " + score.ToString();
+        transform.GetChild(0).GetChild(3).GetComponent<Text>().text = "Score : " + score.ToString();
 
 
     }

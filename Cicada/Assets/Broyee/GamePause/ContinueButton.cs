@@ -8,6 +8,6 @@ public class ContinueButton : MonoBehaviour {
     {
         Time.timeScale = 1;
 
-        transform.parent.parent.gameObject.SetActive(false);
+        transform.parent.gameObject.SetActive(false);
     }
 }
