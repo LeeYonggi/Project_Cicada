@@ -20,9 +20,8 @@ public class Pea : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Player"))
+        if (col.CompareTag("Player") || col.CompareTag("Ground") || col.CompareTag("Wall"))
         {
-            //col.GetComponent<PlayerTrap>().Hurt(damage);
             Destroy(gameObject);
         }
     }

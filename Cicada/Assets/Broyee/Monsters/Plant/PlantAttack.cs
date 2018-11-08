@@ -14,31 +14,17 @@ public class PlantAttack : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        transform.localScale = new Vector3(-transform.localScale.x, 1, 1);
+        
     }
-	
-	// Update is called once per frame
-	void Update () {
 
-        if (!GetComponent<MonsterInfo>().stunned)
+    // Update is called once per frame
+    void Update()
+    {
+        if (GetComponent<MonsterInfo>().GetPlayerIsInView() && !GetComponent<MonsterInfo>().attacking)
         {
-            if (GetComponent<HorizontalMonsterMove>().grounded)
-            {
-                if (GetComponent<MonsterInfo>().GetPlayerIsInView() && !GetComponent<MonsterInfo>().attacking)
-                {
-                    GetComponent<MonsterInfo>().basicMoving = false;
-                    StartCoroutine(PeaShoot());
-                }
-                if (GetComponent<MonsterInfo>().GetPlayerIsInView())
-                    GetComponent<MonsterInfo>().basicMoving = false;
-                else GetComponent<MonsterInfo>().basicMoving = true;
-            }
-        }
-        else
-        {
-            StopCoroutine(PeaShoot());
-            GetComponent<MonsterInfo>().attacking = false;
-            GetComponent<Animator>().SetBool("Attack", false);
+            if (GetComponent<HorizontalMonsterMove>().LookAtPlayer())
+                transform.Translate(-0.3f * transform.localScale.x, 0, 0);
+            StartCoroutine(PeaShoot());
         }
     }
 
