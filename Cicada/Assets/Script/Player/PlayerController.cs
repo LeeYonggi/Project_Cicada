@@ -29,6 +29,8 @@ public class PlayerController : PhysicsObject{
 
     public GameObject attackPrefeb;
 
+    private float attackedMoveX;
+
     // Use this for initialization
     void Start () {
         Init();
@@ -67,6 +69,12 @@ public class PlayerController : PhysicsObject{
             PlayerAttack();
         }
 
+        if(isAttacked)
+        {
+            //attackedMoveX -= attackedMoveX * 0.2f;
+            //transform.Translate(new Vector2(attackedMoveX, 0));
+        }
+
         m_Animator.SetBool("isJump", isJump);
         m_Animator.SetBool("grounded", grounded);
         m_Animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
@@ -76,7 +84,7 @@ public class PlayerController : PhysicsObject{
     #region Player_Attack
     public void PlayerAttack()
     {
-        if (grounded)
+        if (grounded && isAttack == false)
         {
             StartCoroutine(AttackCoroutine());
         }
@@ -175,18 +183,21 @@ public class PlayerController : PhysicsObject{
         isAttacked = false;
     }
 
-    public void PlayerAttacked(int damage)
+    public void PlayerAttacked(int damage, Vector2 targetPos)
     {
         if (isAttacked) return;
         GetComponent<PlayerInfo>().AddAttacked(damage);
         StartCoroutine(AttackedCoroutine());
+        if (targetPos.y <= transform.position.y)
+            velocity.y -= jumpTakeOffSpeed;
+        attackedMoveX = (transform.position.x - targetPos.x) * 0.25f;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "MonsterCol")
         {
-            PlayerAttacked(1);
+            PlayerAttacked(1, collision.transform.position);
         }
     }
 }

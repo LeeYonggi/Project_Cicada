@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4492191, g: 0.49928963, b: 0.57571393, a: 1}
+  m_IndirectSpecularColor: {r: 0.44921875, g: 0.4992888, b: 0.5757129, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7765,6 +7765,96 @@ Prefab:
       propertyPath: playerPhysics
       value: 
       objectReference: {fileID: 1015680782}
+    - target: {fileID: 114967158673384480, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
+        type: 2}
+      propertyPath: initDelay
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114742736741236710, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
+        type: 2}
+      propertyPath: initDelay
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114306644132035620, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
+        type: 2}
+      propertyPath: initDelay
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114400373432182078, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
+        type: 2}
+      propertyPath: initDelay
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114153007135395400, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
+        type: 2}
+      propertyPath: initDelay
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114316885389763092, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
+        type: 2}
+      propertyPath: initDelay
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114994923229441820, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
+        type: 2}
+      propertyPath: initDelay
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114915748019258326, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
+        type: 2}
+      propertyPath: initDelay
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114978546508396780, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
+        type: 2}
+      propertyPath: initDelay
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114967158673384480, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
+        type: 2}
+      propertyPath: spawnInitDelay
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114742736741236710, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
+        type: 2}
+      propertyPath: spawnInitDelay
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114306644132035620, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
+        type: 2}
+      propertyPath: spawnInitDelay
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114400373432182078, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
+        type: 2}
+      propertyPath: spawnInitDelay
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114153007135395400, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
+        type: 2}
+      propertyPath: spawnInitDelay
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114316885389763092, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
+        type: 2}
+      propertyPath: spawnInitDelay
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114994923229441820, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
+        type: 2}
+      propertyPath: spawnInitDelay
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114915748019258326, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
+        type: 2}
+      propertyPath: spawnInitDelay
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114978546508396780, guid: 2b32c1fff7800df4a85f1d30fa2f7efb,
+        type: 2}
+      propertyPath: spawnInitDelay
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b32c1fff7800df4a85f1d30fa2f7efb, type: 2}
   m_IsPrefabAsset: 0
@@ -7806,6 +7896,11 @@ Prefab:
     - target: {fileID: 4947645576281812, guid: 8c46f818366afd64083253e701674981, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114662424890195134, guid: 8c46f818366afd64083253e701674981,
+        type: 2}
+      propertyPath: maxHp
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c46f818366afd64083253e701674981, type: 2}
@@ -7938,8 +8033,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   muchSprite: {fileID: 21300042, guid: 2575d74e449dd3845bcb6e787e32b3e7, type: 3}
   littleSprite: {fileID: 0}
-  initDelay: 3
-  spawnInitDelay: 5
+  initDelay: 1.1
+  spawnInitDelay: 8
   playerPhysics: {fileID: 1015680782}
 --- !u!4 &1155655679 stripped
 Transform:
