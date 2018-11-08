@@ -87,6 +87,7 @@
     <Compile Include="Assets\Broyee\Monsters\BossMonsters\WildBoar\UppercutEffect.cs" />
     <Compile Include="Assets\Broyee\Monsters\BossMonsters\WildBoar\WildBoarAttack.cs" />
     <Compile Include="Assets\Broyee\Monsters\ChargeBat\ChargeBat.cs" />
+    <Compile Include="Assets\Broyee\Monsters\DestroyAfterTime.cs" />
     <Compile Include="Assets\Broyee\Monsters\EarthWorm\EarthWorm.cs" />
     <Compile Include="Assets\Broyee\Monsters\EarthWorm\EarthWormRadar.cs" />
     <Compile Include="Assets\Broyee\Monsters\HorizontalMonsterMove.cs" />

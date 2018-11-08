@@ -91,7 +91,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1490777920186158}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.55, y: 5.47, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4271884794949316}
@@ -278,15 +278,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHp: 0
   hp: 200
+  dead: 0
   invincible: 0
   basicMoving: 1
   attacking: 0
   stunned: 0
   playerRecognized: 0
-  monsterState: 0
   loseRecogOfPlayerTime: 1
-  dyingTime: 1
+  dyingDur: 0
   landMonster: 1
+  hittedEffect: {fileID: 1990782833900190, guid: 032dc7ce14652fb40a4f257e74c9f8fa,
+    type: 2}
 --- !u!114 &114269949970140990
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -440,7 +442,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!212 &212476165533440318

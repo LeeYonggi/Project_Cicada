@@ -2,17 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-enum MonsterState
-{
-    NONE,
-    MANTIS,
-    PARROT
-}
-
 public class MonsterInfo : MonoBehaviour {
 
     [HideInInspector] public int maxHp;
-    public int hp;
+    [HideInInspector] public int hp;
     [HideInInspector] public bool dead;
     public bool invincible;
     [HideInInspector] public bool basicMoving;
@@ -21,15 +14,14 @@ public class MonsterInfo : MonoBehaviour {
     private bool playerIsInView;
     [HideInInspector] public bool playerRecognized;
 
-    [SerializeField]
-    private MonsterState monsterState = MonsterState.NONE;
-    internal MonsterState MonsterState{ get{return monsterState;}set{monsterState = value;}}
 
     public float loseRecogOfPlayerTime;
 
     public float dyingDur;
 
     public bool landMonster;
+
+    public GameObject hittedEffect;
 
     // Use this for initialization
     void Start () {
@@ -58,7 +50,7 @@ public class MonsterInfo : MonoBehaviour {
         if (hp <= 0 && !dead)
         {
             hp = 0;
-            Die();
+            //Die();
         }
 
         if (basicMoving)
@@ -137,6 +129,7 @@ public class MonsterInfo : MonoBehaviour {
     {
         dead = true;
         GetComponent<Animator>().SetBool("Die", true);
+        Instantiate(hittedEffect, transform.position, Quaternion.identity);
 
         yield return new WaitForSeconds(dyingDur);
 
