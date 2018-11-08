@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerInStageSelect : MonoBehaviour {
 
-    public bool moving;
+    [HideInInspector] public bool moving;
 
     public float jumpingTime;
     public float fallTime;
@@ -31,7 +31,7 @@ public class PlayerInStageSelect : MonoBehaviour {
 
         Debug.Log("Jump");
         GetComponent<Animator>().SetBool("Jump", true);
-        while (transform.position.y < stageYPos + 90 + 30)
+        while (transform.position.y < stageYPos + 200 + 30)
         {
             Debug.Log("Jumping");
             transform.Translate(0, 15, 0);
@@ -41,7 +41,7 @@ public class PlayerInStageSelect : MonoBehaviour {
         Debug.Log("Fall");
         GetComponent<Animator>().SetBool("Jump", false);
         GetComponent<Animator>().SetBool("Fall", true);
-        while (transform.position.y > stageYPos + 100)
+        while (transform.position.y > stageYPos + 200)
         {
             transform.Translate(0, -15, 0);
             yield return new WaitForSeconds(0.001f);
@@ -65,7 +65,7 @@ public class PlayerInStageSelect : MonoBehaviour {
 
         Debug.Log("Fall");
         GetComponent<Animator>().SetBool("Fall", true);
-        while (transform.position.y > stageYPos + 100)
+        while (transform.position.y > stageYPos + 200)
         {
             transform.Translate(0, -15, 0);
             yield return new WaitForSeconds(0.001f);

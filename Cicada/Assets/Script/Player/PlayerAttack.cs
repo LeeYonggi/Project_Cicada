@@ -39,7 +39,7 @@ public class PlayerAttack : MonoBehaviour {
     {
         if (col.CompareTag("Monster"))
         {
-            Destroy(col.gameObject);
+            col.GetComponent<MonsterInfo>().Die();
         }
     }
 }

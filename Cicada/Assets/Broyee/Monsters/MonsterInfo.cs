@@ -2,18 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-enum MonsterState
-{
-    NONE,
-    MANTIS,
-    PARROT
-}
-
 public class MonsterInfo : MonoBehaviour {
 
     [HideInInspector] public int maxHp;
-    public int hp;
-    private bool dead;
+    [HideInInspector] public int hp;
+    [HideInInspector] public bool dead;
     public bool invincible;
     [HideInInspector] public bool basicMoving;
     [HideInInspector] public bool attacking;
@@ -21,15 +14,14 @@ public class MonsterInfo : MonoBehaviour {
     private bool playerIsInView;
     [HideInInspector] public bool playerRecognized;
 
-    [SerializeField]
-    private MonsterState monsterState = MonsterState.NONE;
-    internal MonsterState MonsterState{ get{return monsterState;}set{monsterState = value;}}
 
     public float loseRecogOfPlayerTime;
 
-    public float dyingTime;
+    public float dyingDur;
 
     public bool landMonster;
+
+    public GameObject hittedEffect;
 
     // Use this for initialization
     void Start () {
@@ -47,15 +39,18 @@ public class MonsterInfo : MonoBehaviour {
         else basicMoving = true;
         stunned = false;
 
+        if (dyingDur <= 0) dyingDur = 0.5f;
     }
 	
 	// Update is called once per frame
 	void Update () {
 
+        if (dead) return;
+
         if (hp <= 0 && !dead)
         {
             hp = 0;
-            StartCoroutine(Die(1.0f));
+            //Die();
         }
 
         if (basicMoving)
@@ -130,18 +125,24 @@ public class MonsterInfo : MonoBehaviour {
         }
     }
 
-    private IEnumerator Die(float _dyingTime)
+    private IEnumerator _Die()
     {
-
         dead = true;
         GetComponent<Animator>().SetBool("Die", true);
+        Instantiate(hittedEffect, transform.position, Quaternion.identity);
 
-        yield return new WaitForSeconds(_dyingTime);
+        yield return new WaitForSeconds(dyingDur);
 
         GetComponent<Animator>().SetBool("Die", false);
         gameObject.SetActive(false);
         GameObject obj = GameObject.FindGameObjectWithTag("Player");
         //obj.GetComponent<PlayerState>().AbilityState = (AbilityState)monsterState;
 
+    }
+
+    public void Die()
+    {
+        if (!invincible)
+            StartCoroutine(_Die());
     }
 }

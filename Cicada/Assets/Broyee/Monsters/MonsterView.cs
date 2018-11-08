@@ -16,9 +16,14 @@ public class MonsterView : MonoBehaviour {
 
         playerPos = new Vector3(0, 0, 0);
 	}
-	
-	// Update is called once per frame
-	void LateUpdate () {
+
+    private void Update()
+    {
+        if (transform.parent.GetComponent<MonsterInfo>().dead) return;
+    }
+
+    // Update is called once per frame
+    void LateUpdate () {
 
         transform.position = new Vector3(transform.parent.position.x + (localXPos * transform.parent.GetComponent<HorizontalMonsterMove>().direction), transform.position.y, 0);
 

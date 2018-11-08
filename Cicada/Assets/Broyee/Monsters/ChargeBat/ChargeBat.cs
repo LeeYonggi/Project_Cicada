@@ -16,6 +16,8 @@ public class ChargeBat : MonoBehaviour {
 
     private void Update()
     {
+        if (GetComponent<MonsterInfo>().dead) return;
+
         if (GetComponent<MonsterInfo>().GetPlayerIsInView() && !charging)
         {
             StartCoroutine(Charge());

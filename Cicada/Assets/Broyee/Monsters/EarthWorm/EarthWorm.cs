@@ -18,6 +18,8 @@ public class EarthWorm : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        if (GetComponent<MonsterInfo>().dead) return;
+
         dir = 1;
 
         if (transform.localScale.x < 0) dir = -1;

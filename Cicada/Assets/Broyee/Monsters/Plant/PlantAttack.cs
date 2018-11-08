@@ -20,6 +20,8 @@ public class PlantAttack : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if (GetComponent<MonsterInfo>().dead) return;
+
         if (GetComponent<MonsterInfo>().GetPlayerIsInView() && !GetComponent<MonsterInfo>().attacking)
         {
             if (GetComponent<HorizontalMonsterMove>().LookAtPlayer())
@@ -53,7 +55,7 @@ public class PlantAttack : MonoBehaviour {
                 (transform.GetChild(0).GetComponent<MonsterView>().playerPos.x - tempPea.transform.position.x)) * Mathf.Rad2Deg - 90;
 
 
-            Debug.Log("Pea EulerAngles : " + z.ToString());
+            //Debug.Log("Pea EulerAngles : " + z.ToString());
         }
 
         tempPea.transform.eulerAngles = new Vector3(0, 0, z);

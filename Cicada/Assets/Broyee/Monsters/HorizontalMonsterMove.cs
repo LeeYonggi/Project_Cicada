@@ -51,6 +51,8 @@ public class HorizontalMonsterMove : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        if (GetComponent<MonsterInfo>().dead) return;
+
         if (!GetComponent<MonsterInfo>().stunned)
         {
             if (GetComponent<MonsterInfo>().basicMoving)
