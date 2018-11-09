@@ -46,6 +46,7 @@ public class PlayerInStageSelect : MonoBehaviour {
             transform.Translate(0, -15, 0);
             yield return new WaitForSeconds(0.001f);
         }
+        transform.parent.GetChild(4).transform.position = new Vector3(1024, stageYPos, 0);
 
         GetComponent<Animator>().SetBool("Fall", false);
         GetComponent<Animator>().SetBool("Grounded", true);
@@ -70,6 +71,7 @@ public class PlayerInStageSelect : MonoBehaviour {
             transform.Translate(0, -15, 0);
             yield return new WaitForSeconds(0.001f);
         }
+        transform.parent.GetChild(4).transform.position = new Vector3(1024, stageYPos, 0);
 
         GetComponent<Animator>().SetBool("Fall", false);
         GetComponent<Animator>().SetBool("Grounded", true);
