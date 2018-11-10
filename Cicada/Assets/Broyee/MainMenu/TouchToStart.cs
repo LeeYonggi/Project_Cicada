@@ -8,12 +8,15 @@ public class TouchToStart : MonoBehaviour {
     [HideInInspector] bool readyToStart;
     private Image image;
 
+    private AudioSource[] audioSources;
+
     public Image screen;
     public Image logos;
     
     // Use this for initialization
     void Start () {
         image = GetComponent<Image>();
+        audioSources = GetComponents<AudioSource>();
 
         readyToStart = false;
 
@@ -27,8 +30,7 @@ public class TouchToStart : MonoBehaviour {
         {
             if (Input.GetMouseButtonDown(0) || (Input.touchCount > 0))
             {
-                Time.timeScale = 1;
-                UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+                StartCoroutine(StartGame());
             }
         }
 	}
@@ -56,12 +58,14 @@ public class TouchToStart : MonoBehaviour {
 
         readyToStart = true;
 
+        audioSources[0].Play();
         StartCoroutine(Blink());
     }
 
     private IEnumerator StartGame()
     {
-        GetComponent<AudioSource>().Play();
+        audioSources[0].Stop();
+        audioSources[1].Play();
 
         yield return new WaitForSeconds(1.0f);
 
