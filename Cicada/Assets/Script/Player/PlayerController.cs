@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityEngine.UI;
 
+
 public class PlayerController : PhysicsObject{
+    const float mobileSpeed = 0.8f;
 
     enum DIRECTION
     {
@@ -184,15 +186,15 @@ public class PlayerController : PhysicsObject{
 
     public void MoveLeft()
     {
-        pastMove = Vector2.left * 0.7f;
+        pastMove = Vector2.left * mobileSpeed;
         if (!isClimbJump)
-            move = Vector2.left * 0.7f;
+            move = Vector2.left * mobileSpeed;
     }
     public void MoveRight()
     {
-        pastMove = Vector2.right * 0.7f;
+        pastMove = Vector2.right * mobileSpeed;
         if (!isClimbJump)
-            move = Vector2.right * 0.7f;
+            move = Vector2.right * mobileSpeed;
     }
     public void StopMove()
     {
@@ -208,7 +210,7 @@ public class PlayerController : PhysicsObject{
         {
             if (climbingFlip == false)
             {
-                move = Vector2.left * 0.7f;
+                move = Vector2.left * mobileSpeed;
                 
                 if (!isJump)
                 {
@@ -219,7 +221,7 @@ public class PlayerController : PhysicsObject{
             }
             if (climbingFlip == true)
             {
-                move = Vector2.right * 0.7f;
+                move = Vector2.right * mobileSpeed;
                 if (!isJump)
                 {
                     transform.Translate(Vector2.right * 0.1f);

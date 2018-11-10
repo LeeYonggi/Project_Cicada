@@ -19,11 +19,11 @@ public class MoveTile : MonoBehaviour {
     public bool isCircle;
     public float radius;
     public GameObject player;
+    public float runningTime;
 
 
     private Vector2 moveVec2;
     private BoxCollider2D m_BoxCollider;
-    private float runningTime;
     private Vector2 initPosition;
 
     // Use this for initialization
@@ -31,7 +31,6 @@ public class MoveTile : MonoBehaviour {
         moveVec2 = new Vector2(0, 0);
         m_BoxCollider = GetComponent<BoxCollider2D>();
         initPosition = transform.position;
-        runningTime = 0.0f;
     }
 	
 	// Update is called once per frame

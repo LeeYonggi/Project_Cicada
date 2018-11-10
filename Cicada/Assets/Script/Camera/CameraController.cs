@@ -32,7 +32,7 @@ public class CameraController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Vector3 tempPos;
-        if (isShake == true) return;
+        //if (isShake == true) return;
 
         //if (player.transform.position.y - transform.position.y > 0)
         if (isChangeCameraBox)
@@ -52,8 +52,8 @@ public class CameraController : MonoBehaviour {
             {
                 isChangeCameraBox = false;
             }
-            tempPos.x = (targetPos.x - transform.position.x) / range;
-            tempPos.y = (player.transform.position.y - transform.position.y) / range;
+            tempPos.x = (targetPos.x - transform.position.x) / (range * 1.5f);
+            tempPos.y = (player.transform.position.y - transform.position.y) / (range * 1.5f);
             if (isMoveX == false) tempPos.x = 0;
             if (isMoveY == false) tempPos.y = 0;
             tempPos.z = 0;
@@ -119,8 +119,10 @@ public class CameraController : MonoBehaviour {
     {
         float cameraLineY = cameraBox.size.y / 2.0f;
 
-        float cameraCompareY = cameraLineY + cameraBox.offset.y - (cameraSize.y / 2.0f + transform.position.y);
-        float lCameraCompareY = -cameraLineY + cameraBox.offset.y - (-cameraSize.y / 2.0f + transform.position.y);
+        float cameraCompareY = cameraZone[nowCameraBox].transform.position.y + 
+            cameraLineY + cameraBox.offset.y - (cameraSize.y / 2.0f + transform.position.y);
+        float lCameraCompareY = cameraZone[nowCameraBox].transform.position.y + 
+            -cameraLineY + cameraBox.offset.y - (-cameraSize.y / 2.0f + transform.position.y);
 
         if (cameraCompareY < 0.0f)
             transform.Translate(new Vector3(0, cameraCompareY, 0));

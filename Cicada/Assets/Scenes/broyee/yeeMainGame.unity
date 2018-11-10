@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44921875, g: 0.49928886, b: 0.57571304, a: 1}
+  m_IndirectSpecularColor: {r: 0.4492191, g: 0.49928963, b: 0.57571393, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1078,7 +1078,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 476f80e6cb5f8e74da6cc3bf611106bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraZone: {fileID: 1257801809}
+  cameraZone:
+  - {fileID: 0}
   player: {fileID: 1015680782}
   range: 10
   cameraSize: {x: 11.8, y: 6.6}
@@ -10731,6 +10732,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 95537165171711250, guid: b646c190d0e2a7a46b3785563f7a9f3b,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 07a1c62324ae9c44e800b696fb37d2fd, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b646c190d0e2a7a46b3785563f7a9f3b, type: 2}
   m_IsPrefabAsset: 0
