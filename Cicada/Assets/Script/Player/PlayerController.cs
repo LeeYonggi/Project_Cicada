@@ -33,9 +33,11 @@ public class PlayerController : PhysicsObject{
 
     private float attackedMoveX;
     private bool climbingFlip;
-    public bool isClimbJump;
+    private bool isClimbJump;
 
     private Vector2 pastMove;
+    public Camera mainCamera;
+    public GameObject landingEffect;
 
     // Use this for initialization
     void Start () {
@@ -78,11 +80,11 @@ public class PlayerController : PhysicsObject{
             PlayerAttack();
         }
 
-        if(isAttacked)
-        {
-            attackedMoveX -= attackedMoveX * 0.2f;
-            transform.Translate(new Vector2(attackedMoveX, 0));
-        }
+        //if(isAttacked)
+        //{
+        //    attackedMoveX -= attackedMoveX * 0.2f;
+        //    transform.Translate(new Vector2(attackedMoveX, 0));
+        //}
 
         if(grounded)
         {
@@ -134,7 +136,7 @@ public class PlayerController : PhysicsObject{
     public void JumpStart()
     {
         if (isJump == true || isAttack) return;
-
+        if (isAttacked && velocity.y > 0) return;
         if (isClimbing)
         {
             isClimbJump = true;
@@ -251,9 +253,20 @@ public class PlayerController : PhysicsObject{
         if (isAttacked) return;
         GetComponent<PlayerInfo>().AddAttacked(damage);
         StartCoroutine(AttackedCoroutine());
-        if (targetPos.y <= transform.position.y)
-            velocity.y += jumpTakeOffSpeed * 0.7f;
-        attackedMoveX = (transform.position.x - targetPos.x) * 0.25f;
+        if (targetPos.y <= transform.position.y + 0.1f && velocity.y <= 0.0f)
+            velocity.y = jumpTakeOffSpeed * 0.4f;
+
+        mainCamera.GetComponent<CameraController>().ShakeCamera();
+        //attackedMoveX = (transform.position.x - targetPos.x) * 0.25f;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Ground")
+        {
+            GameObject obj = Instantiate(landingEffect, new Vector3(transform.position.x, transform.position.y - 0.45f), Quaternion.identity);
+            Destroy(obj, 0.3f);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)

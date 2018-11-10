@@ -117,12 +117,12 @@ TextureImporter:
       name: Gstar_character2_move_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 15
         y: 3
         width: 45
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -137,12 +137,12 @@ TextureImporter:
       name: Gstar_character2_move_1
       rect:
         serializedVersion: 2
-        x: 45
+        x: 63
         y: 1
-        width: 46
+        width: 47
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -157,12 +157,12 @@ TextureImporter:
       name: Gstar_character2_move_2
       rect:
         serializedVersion: 2
-        x: 91
+        x: 112
         y: 0
-        width: 45
+        width: 46
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -177,12 +177,12 @@ TextureImporter:
       name: Gstar_character2_move_3
       rect:
         serializedVersion: 2
-        x: 136
+        x: 158
         y: 0
-        width: 46
+        width: 49
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,12 +197,12 @@ TextureImporter:
       name: Gstar_character2_move_4
       rect:
         serializedVersion: 2
-        x: 182
+        x: 209
         y: 3
-        width: 52
+        width: 60
         height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,12 +217,12 @@ TextureImporter:
       name: Gstar_character2_move_5
       rect:
         serializedVersion: 2
-        x: 234
+        x: 274
         y: 1
-        width: 50
+        width: 54
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -237,12 +237,12 @@ TextureImporter:
       name: Gstar_character2_move_6
       rect:
         serializedVersion: 2
-        x: 284
-        y: 0
-        width: 47
+        x: 328
+        y: 1
+        width: 59
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -257,12 +257,12 @@ TextureImporter:
       name: Gstar_character2_move_7
       rect:
         serializedVersion: 2
-        x: 331
+        x: 385
         y: 0
-        width: 45
-        height: 48
+        width: 49
+        height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
