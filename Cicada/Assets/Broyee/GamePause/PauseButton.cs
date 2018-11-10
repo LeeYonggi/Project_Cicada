@@ -15,6 +15,8 @@ public class PauseButton : MonoBehaviour {
 
     public void Pause()
     {
+        GetComponent<AudioSource>().Play();
+
         Time.timeScale = 0;
 
         transform.GetChild(0).gameObject.SetActive(true);

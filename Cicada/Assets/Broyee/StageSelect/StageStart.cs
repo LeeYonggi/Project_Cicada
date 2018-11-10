@@ -18,10 +18,21 @@ public class StageStart : MonoBehaviour {
 
     public void StartStage()
     {
+        GetComponent<AudioSource>().Play();
+
         Time.timeScale = 1;
 
         UnityEngine.SceneManagement.SceneManager.LoadScene(2);//, UnityEngine.SceneManagement.LoadSceneMode.Single);
 
         //GameObject.Find("StageGenerator").GetComponent<StageGenerator>().GenerateStage();
+    }
+
+    public void StartNextStage()
+    {
+        GetComponent<AudioSource>().Play();
+
+        Time.timeScale = 1;
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene(2);
     }
 }

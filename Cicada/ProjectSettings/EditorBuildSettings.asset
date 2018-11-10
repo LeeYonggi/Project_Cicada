@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/broyee/yeeMainGame.unity
     guid: 0f49d03021bc154499bb7c12590db3ec
   - enabled: 0
+    path: Assets/Scenes/yg/MainGame.unity
+    guid: d5b6becc497485049b3786341fb08861
+  - enabled: 0
     path: Assets/Scenes/EmptyMainGame.unity
     guid: 70560b782678e854c842e00bee7e623f
   m_configObjects: {}

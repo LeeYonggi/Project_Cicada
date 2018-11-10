@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/yg/Stage2.unity
+=======
+- path: Assets/Scenes/broyee/yeeMainGame.unity
+>>>>>>> c52012bbc1b80dbf7875f46bc1e6722f55e1bf4d
   isLoaded: 1
   isActive: 1

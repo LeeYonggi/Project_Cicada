@@ -12,10 +12,14 @@ public class PlayerInStageSelect : MonoBehaviour {
     private UnityEngine.UI.Image image;
     private Animator animator;
 
+    private AudioSource[] audioSources;
+
     private void Start()
     {
         image = GetComponent<UnityEngine.UI.Image>();
         animator = GetComponent<Animator>();
+
+        audioSources = GetComponents<AudioSource>();
     }
 
     private void Update()
@@ -31,6 +35,7 @@ public class PlayerInStageSelect : MonoBehaviour {
 
         Debug.Log("Jump");
         GetComponent<Animator>().SetBool("Jump", true);
+        audioSources[0].Play();
         while (transform.position.y < stageYPos + 200 + 30)
         {
             Debug.Log("Jumping");
@@ -41,6 +46,7 @@ public class PlayerInStageSelect : MonoBehaviour {
         Debug.Log("Fall");
         GetComponent<Animator>().SetBool("Jump", false);
         GetComponent<Animator>().SetBool("Fall", true);
+        audioSources[1].Play();
         while (transform.position.y > stageYPos + 200)
         {
             transform.Translate(0, -15, 0);
@@ -66,6 +72,7 @@ public class PlayerInStageSelect : MonoBehaviour {
 
         Debug.Log("Fall");
         GetComponent<Animator>().SetBool("Fall", true);
+        audioSources[1].Play();
         while (transform.position.y > stageYPos + 200)
         {
             transform.Translate(0, -15, 0);
