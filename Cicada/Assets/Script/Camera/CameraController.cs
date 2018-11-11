@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour {
-
+    const float MOVESPEED = 1.0f;
     public List<GameObject> cameraZone = new List<GameObject>();
     public GameObject player;
     public float range;
     public Vector2 cameraSize;
+    public Vector2 padCameraSize;
+    public bool isPad;
 
     private BoxCollider2D cameraBox;
     private int nowCameraBox;
@@ -27,6 +29,8 @@ public class CameraController : MonoBehaviour {
         transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
         isShake = false;
         isChangeCameraBox = false;
+        if (Screen.width == 2048 || isPad)
+            cameraSize = padCameraSize;
     }
 	
 	// Update is called once per frame
@@ -52,8 +56,8 @@ public class CameraController : MonoBehaviour {
             {
                 isChangeCameraBox = false;
             }
-            tempPos.x = (targetPos.x - transform.position.x) / (range * 1.5f);
-            tempPos.y = (player.transform.position.y - transform.position.y) / (range * 1.5f);
+            tempPos.x = (targetPos.x - transform.position.x) / (range * MOVESPEED);
+            tempPos.y = (player.transform.position.y - transform.position.y) / (range * MOVESPEED);
             if (isMoveX == false) tempPos.x = 0;
             if (isMoveY == false) tempPos.y = 0;
             tempPos.z = 0;

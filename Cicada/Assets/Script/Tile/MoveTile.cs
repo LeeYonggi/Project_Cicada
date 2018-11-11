@@ -74,6 +74,12 @@ public class MoveTile : MonoBehaviour {
             {
                 switch (direction)
                 {
+                    case (int)DIRECTION.LEFT:
+                        player.transform.Translate(new Vector2(-moveSpeed * Time.deltaTime, 0));
+                        break;
+                    case (int)DIRECTION.RIGHT:
+                        player.transform.Translate(new Vector2(moveSpeed * Time.deltaTime, 0));
+                        break;
                     case (int)DIRECTION.UP:
                         player.transform.Translate(new Vector2(0, moveSpeed * Time.deltaTime));
                         break;
