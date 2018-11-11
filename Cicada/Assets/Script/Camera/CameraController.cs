@@ -145,7 +145,7 @@ public class CameraController : MonoBehaviour {
         isShake = true;
         for (int i = 0; i < 10; i++)
         {
-            transform.Translate(new Vector2(Random.Range(-5, 5) * 0.01f, Random.Range(-5, 5) * 0.01f));
+            transform.Translate(new Vector2(Random.Range(-5, 5) * 0.03f, Random.Range(-5, 5) * 0.03f));
             yield return new WaitForSeconds(0.03f);
         }
         isShake = false;

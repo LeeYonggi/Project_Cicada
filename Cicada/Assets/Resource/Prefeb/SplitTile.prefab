@@ -36,8 +36,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1891153751369410}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.6, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.5, y: 14.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -91,8 +91,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1697fcd3067848f4da5403b464890b7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  muchSprite: {fileID: 21300042, guid: 2575d74e449dd3845bcb6e787e32b3e7, type: 3}
-  littleSprite: {fileID: 0}
+  stateSprites:
+  - {fileID: 21300102, guid: 2259d0c7810adf1438909dbca424eb1b, type: 3}
+  - {fileID: 21300106, guid: 2259d0c7810adf1438909dbca424eb1b, type: 3}
+  - {fileID: 21300110, guid: 2259d0c7810adf1438909dbca424eb1b, type: 3}
+  - {fileID: 21300114, guid: 2259d0c7810adf1438909dbca424eb1b, type: 3}
   initDelay: 1.1
   spawnInitDelay: 8
   playerPhysics: {fileID: 0}

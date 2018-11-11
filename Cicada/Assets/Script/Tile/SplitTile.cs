@@ -6,15 +6,16 @@ public class SplitTile : MonoBehaviour {
 
     enum SPLIT_STATE
     {
-        LITTLE,
-        MUCH,
-        DESTROY
+        DESTROY,
+        STATE4,
+        STATE3,
+        STATE2,
+        STATE1
     }
 
-    public Sprite muchSprite;
-    public Sprite littleSprite;
+    public List<Sprite> stateSprites;
 
-    private SPLIT_STATE m_eSplitState;
+    private int m_eSplitState;
     [SerializeField]
     private float initDelay = 3.0f;
     [SerializeField]
@@ -31,12 +32,12 @@ public class SplitTile : MonoBehaviour {
 
     public GameObject playerPhysics;
 
+
     // Use this for initialization
     void Start () {
-        m_eSplitState = SPLIT_STATE.LITTLE;
+        m_eSplitState = (int)SPLIT_STATE.STATE1;
 
         m_SpRenderer = GetComponent<SpriteRenderer>();
-        littleSprite = m_SpRenderer.sprite;
         m_Bcollider2D = GetComponent<BoxCollider2D>();
         isPlayerOn = false;
         isDie = false;
@@ -52,10 +53,10 @@ public class SplitTile : MonoBehaviour {
             //    isPlayerOn = false;
             if (isPlayerOn)
                 splitDelay -= Time.deltaTime;
-            if (splitDelay < initDelay / 2.0f)
+            if (splitDelay < 0.2f * m_eSplitState * initDelay)
             {
-                m_eSplitState = SPLIT_STATE.MUCH;
-                m_SpRenderer.sprite = muchSprite;
+                --m_eSplitState;
+                m_SpRenderer.sprite = stateSprites[m_eSplitState];
             }
             if (splitDelay < 0.0f)
             {
@@ -71,7 +72,7 @@ public class SplitTile : MonoBehaviour {
             {
                 isDie = false;
                 splitDelay = initDelay;
-                m_SpRenderer.sprite = littleSprite;
+                m_SpRenderer.sprite = stateSprites[(int)SPLIT_STATE.STATE1];
                 m_Bcollider2D.enabled = true;
                 spawnDelay = spawnInitDelay;
                 isPlayerOn = false;
