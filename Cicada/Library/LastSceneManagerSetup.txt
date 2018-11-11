@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/yg/Stage1.unity
+=======
+- path: Assets/Scenes/yg/Stage1_2.unity
+>>>>>>> 664265aa7c77fc61b9fc0306c52bb5e6548567b5
   isLoaded: 1
   isActive: 1

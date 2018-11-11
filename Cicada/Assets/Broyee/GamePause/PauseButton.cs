@@ -15,10 +15,18 @@ public class PauseButton : MonoBehaviour {
 
     public void Pause()
     {
-        GetComponent<AudioSource>().Play();
+        if (transform.GetChild(0).gameObject.activeSelf)
+        {
+            Time.timeScale = 0;
+
+            transform.GetChild(0).gameObject.SetActive(false);
+
+            return;
+        }
 
         Time.timeScale = 0;
 
         transform.GetChild(0).gameObject.SetActive(true);
+
     }
 }

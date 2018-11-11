@@ -3,42 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class StageGenerator : MonoBehaviour {
-
-    //public static StageGenerator stageGenerator;
-
-    //public static int map;
-    //public static int stage;
     
-
-    //private void Awake()
-    //{
-    //    if (stageGenerator == null)
-    //    {
-    //        DontDestroyOnLoad(gameObject);
-    //        stageGenerator = this;
-    //    }
-    //    else
-    //    {
-    //        if (stageGenerator != this)
-    //        {
-    //            Destroy(gameObject);
-    //        }
-    //    }
-    //}
-
-    private void Start()
-    {
-        GenerateStage();
-    }
-
     public void GenerateStage()
     {
         StageManager stageManager = GameObject.Find("StageManager").GetComponent<StageManager>();
         int map = stageManager.GetMap();
         int stage = stageManager.GetStage();
 
-        string levelName = map.ToString() + "_" + stage.ToString();
+        string levelName = "Stage" + map.ToString() + "_" + stage.ToString();
 
+        Time.timeScale = 1;
         UnityEngine.SceneManagement.SceneManager.LoadScene(levelName);
 
         //var mapData = MapData.Load("Assets/Resource/Xml/" + levelName + ".xml");
@@ -50,6 +24,24 @@ public class StageGenerator : MonoBehaviour {
         //    Debug.Log(mapData.monsters[i].name);
         //    Instantiate(Resources.Load("Prefabs/Monsters/" + mapData.monsters[i].name) as GameObject, mapData.monsters[i].pos, Quaternion.identity);
         //}
+    }
+
+    public void GenerateNextStage()
+    {
+        StageManager stageManager = GameObject.Find("StageManager").GetComponent<StageManager>();
+        int map = stageManager.GetMap();
+        int stage = stageManager.GetStage() + 1;
+
+        if (stage > 5)
+        {
+            map++;
+            stage = 1;
+        }
+
+        string levelName = "Stage" + map.ToString() + "_" + stage.ToString();
+
+        Time.timeScale = 1;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(levelName);
     }
 
     
