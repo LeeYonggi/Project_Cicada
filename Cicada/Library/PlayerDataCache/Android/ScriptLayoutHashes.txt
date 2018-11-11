@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/BroYee/Desktop/Build Test/ppp.apk
+C:/Users/BroYee/Desktop/Build Test/full_monty.apk
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/StageSelect.unity
@@ -172,7 +172,7 @@ fa1c317e7807ba3c9b05056693f277ff Assembly-CSharp-firstpass.dll:UnityStandardAsse
 f16835701e71dd5d6fb1fed4b7aff1d8 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 6ccf1223e4133c42905516ad242c5d1f Assembly-CSharp.dll:.PlayerInfo
 146beb328b10aa75598b1f0c48551539 Assembly-CSharp.dll:.MonsterManager
-cc1393e457450c041c5797b5cc067f67 Assembly-CSharp.dll:.CameraController
+d52bd663d6239a1868c073de00d239f2 Assembly-CSharp.dll:.CameraController
 d947b95c171314b81b313a2f4ffd0411 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.ButtonHandler
 8ec030da35f0d90d1a4cbf00d3b0f178 Assembly-CSharp.dll:.ThrowingBlock
 809fb91ff924586cb12cc3c938d12aa0 Assembly-CSharp.dll:.HpHeart
@@ -242,6 +242,7 @@ d4be0c0f59117dd2f16c6121f1e21469 Assembly-CSharp.dll:.HorizontalMonsterMove
 2d5613dfea5ebe89d441816537142920 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.TouchPad
 f5ece19966a893bd3def5b7aaf85514d Assembly-CSharp.dll:UnityEngine.Tilemaps.TerrainTile
 aaf3fc6261493d2e43f8e694b6fedc17 Assembly-CSharp.dll:Tiled2Unity.SpriteDepthInMap
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.InGameManager
 12c940366a3116cb4e7c7e13ad4c1ee6 Assembly-CSharp.dll:Tiled2Unity.ObjectLayer
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.GameClear
 6c24e6019bec8a1eb9233022be832ea8 Assembly-CSharp.dll:.PhysicsObject
