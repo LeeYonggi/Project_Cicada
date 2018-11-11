@@ -12,6 +12,8 @@ public class TouchToStart : MonoBehaviour {
 
     public Image screen;
     public Image logos;
+
+    private bool started;
     
     // Use this for initialization
     void Start () {
@@ -19,6 +21,7 @@ public class TouchToStart : MonoBehaviour {
         audioSources = GetComponents<AudioSource>();
 
         readyToStart = false;
+        started = false;
 
         StartCoroutine(ScreenStart());
     }
@@ -30,6 +33,7 @@ public class TouchToStart : MonoBehaviour {
         {
             if (Input.GetMouseButtonDown(0) || (Input.touchCount > 0))
             {
+                started = true;
                 StartCoroutine(StartGame());
             }
         }
@@ -64,6 +68,9 @@ public class TouchToStart : MonoBehaviour {
 
     private IEnumerator StartGame()
     {
+        StopCoroutine(Blink());
+        image.color = new Color(1, 1, 1, 1);
+
         audioSources[0].Stop();
         audioSources[1].Play();
 
@@ -75,12 +82,15 @@ public class TouchToStart : MonoBehaviour {
 
     private IEnumerator Blink()
     {
-        image.color = new Color(1, 1, 1, 0.5f);
-        yield return new WaitForSeconds(0.3f);
+        if (!started)
+        {
+            image.color = new Color(1, 1, 1, 0.5f);
+            yield return new WaitForSeconds(0.3f);
 
-        image.color = new Color(1, 1, 1, 1);
-        yield return new WaitForSeconds(0.3f);
+            image.color = new Color(1, 1, 1, 1);
+            yield return new WaitForSeconds(0.3f);
 
-        StartCoroutine(Blink());
+            StartCoroutine(Blink());
+        }
     }
 }

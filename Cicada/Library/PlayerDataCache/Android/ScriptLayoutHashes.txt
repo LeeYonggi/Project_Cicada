@@ -1,8 +1,11 @@
 Android
 PlayerPath?
-C:/Users/BroYee/Desktop/Build Test/yg.apk
+C:/Users/BroYee/Desktop/Build Test/ppp.apk
 SceneListBegin?
-Assets/Scenes/yg/MainGame.unity
+Assets/Scenes/MainMenu.unity
+Assets/Scenes/StageSelect.unity
+Assets/Scenes/yg/Stage1_1.unity
+Assets/Scenes/yg/Stage1_2.unity
 SceneListEnd?
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 7b803eb2910e9b4cd5e521ae07b9f7d6 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
@@ -121,7 +124,7 @@ c7dd12c15208b0447e101f80038706df UnityEngine.Timeline.dll:UnityEngine.Timeline.A
 64f3a13c1277a7f1324321d93d0ec13b UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.ObstacleTile
 cdc26dfe017d3aed12cfa956c58f0ff0 Assembly-CSharp.dll:.StageSave
-691601d9106b2e22589d776da2690fa6 Assembly-CSharp.dll:.MoveTile
+613431bdd949d065ec5c5fc78544ce89 Assembly-CSharp.dll:.MoveTile
 a3ae15dd82e1067fe2ae11c5aad9b286 Assembly-CSharp.dll:.ChargeCol
 9a4951ff7d7d096971bbe22beec31a30 Assembly-CSharp.dll:.Pea
 95d575842cb2c84d0d584eff596a1f97 Assembly-CSharp.dll:.PlayerController

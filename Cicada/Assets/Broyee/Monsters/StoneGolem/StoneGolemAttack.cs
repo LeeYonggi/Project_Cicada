@@ -12,10 +12,16 @@ public class StoneGolemAttack : MonoBehaviour {
     private bool attacking;
     private bool approaching;
 
+    private AudioSource attackSound;
+    private AudioSource defendSound;
+
 	// Use this for initialization
 	void Start () {
         approaching = false;
         camouflaged = true;
+
+        attackSound = GetComponents<AudioSource>()[2];
+        defendSound = GetComponents<AudioSource>()[3];
 
         StartCoroutine(Defend(9999.0f));
 	}
@@ -108,6 +114,7 @@ public class StoneGolemAttack : MonoBehaviour {
         attacking = true;
         GetComponent<MonsterInfo>().basicMoving = false;
         GetComponent<Animator>().SetBool("Attack", true);
+        attackSound.Play();
 
         yield return new WaitForSeconds(0.3f);
 
@@ -130,6 +137,7 @@ public class StoneGolemAttack : MonoBehaviour {
         GetComponent<MonsterInfo>().basicMoving = false;
         GetComponent<Animator>().SetBool("Defend", true);
         GetComponent<Animator>().SetBool("Undefend", false);
+        defendSound.Play();
 
         yield return new WaitForSeconds(time);
 

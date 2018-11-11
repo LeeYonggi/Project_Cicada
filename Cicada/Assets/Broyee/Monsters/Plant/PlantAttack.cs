@@ -34,6 +34,7 @@ public class PlantAttack : MonoBehaviour {
     {
         GetComponent<MonsterInfo>().attacking = true;
         GetComponent<Animator>().SetBool("Attack", true);
+        GetComponents<AudioSource>()[2].Play();
         yield return new WaitForSeconds(0.3f);
 
         Vector3 tempPos = new Vector3(transform.position.x, transform.position.y, 0);
