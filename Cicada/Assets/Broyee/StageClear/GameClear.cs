@@ -22,7 +22,7 @@ public class GameClear : MonoBehaviour {
         Time.timeScale = 0;
 
         // Disable other UIs
-        for (int i = 0; i < transform.parent.childCount - 1; i++)
+        for (int i = 0; i < transform.parent.childCount - 2; i++)
         {
             transform.parent.GetChild(i).gameObject.SetActive(false);
         }
