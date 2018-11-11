@@ -48,8 +48,8 @@ public class SplitTile : MonoBehaviour {
 	void Update () {
         if (isDie == false)
         {
-            if (playerPhysics.GetComponent<PhysicsObject>().Grounded == false)
-                isPlayerOn = false;
+            //if (playerPhysics.GetComponent<PhysicsObject>().Grounded == false)
+            //    isPlayerOn = false;
             if (isPlayerOn)
                 splitDelay -= Time.deltaTime;
             if (splitDelay < initDelay / 2.0f)

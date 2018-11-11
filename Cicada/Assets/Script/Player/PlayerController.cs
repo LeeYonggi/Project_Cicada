@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 
 public class PlayerController : PhysicsObject{
-    const float mobileSpeed = 0.8f;
+    const float mobileSpeed = 1.0f;
 
     enum DIRECTION
     {
