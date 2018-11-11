@@ -22,6 +22,7 @@ public class Pea : MonoBehaviour {
     {
         if (col.CompareTag("Player") || col.CompareTag("Ground") || col.CompareTag("Wall"))
         {
+            GetComponent<AudioSource>().Play();
             Destroy(gameObject);
         }
     }

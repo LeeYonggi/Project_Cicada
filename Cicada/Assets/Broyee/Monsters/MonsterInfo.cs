@@ -23,6 +23,9 @@ public class MonsterInfo : MonoBehaviour {
 
     public GameObject hittedEffect;
 
+    private AudioSource idleSound;
+    private AudioSource dieSound;
+
     // Use this for initialization
     void Start () {
 
@@ -38,6 +41,9 @@ public class MonsterInfo : MonoBehaviour {
         if (landMonster) basicMoving = false;
         else basicMoving = true;
         stunned = false;
+
+        idleSound = GetComponents<AudioSource>()[0];
+        dieSound = GetComponents<AudioSource>()[1];
 
         if (dyingDur <= 0) dyingDur = 0.5f;
     }
@@ -56,10 +62,12 @@ public class MonsterInfo : MonoBehaviour {
         if (basicMoving)
         {
             GetComponent<Animator>().SetBool("Move", true);
+            if (!idleSound.isPlaying) idleSound.Play();
         }
         else
         {
             GetComponent<Animator>().SetBool("Move", false);
+            if (idleSound.isPlaying) idleSound.Stop();
         }
 	}
 
@@ -130,6 +138,7 @@ public class MonsterInfo : MonoBehaviour {
         dead = true;
         GetComponent<Animator>().SetBool("Die", true);
         Instantiate(hittedEffect, transform.position, Quaternion.identity);
+        dieSound.Play();
 
         yield return new WaitForSeconds(dyingDur);
 

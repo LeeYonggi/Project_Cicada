@@ -9,9 +9,12 @@ public class ChargeBat : MonoBehaviour {
 
     private Rigidbody2D rb;
 
+    private AudioSource chargeSound;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        chargeSound = GetComponents<AudioSource>()[2];
     }
 
     private void Update()
@@ -32,6 +35,7 @@ public class ChargeBat : MonoBehaviour {
         GetComponent<HorizontalMonsterMove>().LookAtPlayer();
         GetComponent<HorizontalMonsterMove>().turnBackEnabled = false;
         GetComponent<Animator>().SetBool("Attack", true);
+        chargeSound.Play();
 
         yield return new WaitForSeconds(0.7f);
 
@@ -42,6 +46,7 @@ public class ChargeBat : MonoBehaviour {
         rb.velocity = new Vector2(0, 0);
         GetComponent<Animator>().SetBool("Attack", false);
 
+        GetComponents<AudioSource>()[0].Play();
         yield return new WaitForSeconds(2);
         GetComponent<MonsterInfo>().basicMoving = true;
         GetComponent<HorizontalMonsterMove>().turnBackEnabled = true;
