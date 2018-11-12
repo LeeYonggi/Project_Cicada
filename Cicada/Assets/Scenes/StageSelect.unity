@@ -480,6 +480,15 @@ Prefab:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1955338448088064, guid: d6f82998e1547dc4f9d5c7e308c77324, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 224713492138857128, guid: d6f82998e1547dc4f9d5c7e308c77324,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6f82998e1547dc4f9d5c7e308c77324, type: 2}
   m_IsPrefabAsset: 0

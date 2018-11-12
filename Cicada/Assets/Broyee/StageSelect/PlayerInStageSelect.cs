@@ -20,6 +20,8 @@ public class PlayerInStageSelect : MonoBehaviour {
         animator = GetComponent<Animator>();
 
         audioSources = GetComponents<AudioSource>();
+
+        MovePlayerToCurrentStage();
     }
 
     private void Update()
@@ -90,6 +92,18 @@ public class PlayerInStageSelect : MonoBehaviour {
         GetComponent<Animator>().SetBool("Grounded", false);
         moving = false;
 
+    }
+
+    public void MovePlayerToCurrentStage()
+    {
+        StageManager stageManager = GameObject.Find("StageManager").GetComponent<StageManager>();
+
+        int map = stageManager.GetMap();
+        int stage = stageManager.GetStage();
+
+        int childNum = (map - 1) * 5 + stage - 1;
+
+        transform.position = new Vector3(1024, transform.parent.GetChild(childNum).transform.position.y + 200, 0);
     }
 	
 }

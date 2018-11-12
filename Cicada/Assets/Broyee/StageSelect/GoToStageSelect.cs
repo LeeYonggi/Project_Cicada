@@ -8,7 +8,6 @@ public class GoToStageSelect : MonoBehaviour {
     public void OnClick()
     {
         Time.timeScale = 1;
-        //UnityEngine.SceneManagement.SceneManager.LoadScene(2);
-        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);        
     }
 }

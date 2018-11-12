@@ -26,6 +26,7 @@ public class GameClear : MonoBehaviour {
         {
             transform.parent.GetChild(i).gameObject.SetActive(false);
         }
+        transform.parent.GetChild(transform.parent.childCount - 1).gameObject.SetActive(false);
 
         // Enable Whole UIs
         transform.GetChild(0).gameObject.SetActive(true);
