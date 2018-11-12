@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/BroYee/Desktop/Build Test/11_12 12.apk
+C:/Users/BroYee/Desktop/Build Test/11_12 14.apk
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/StageSelect.unity

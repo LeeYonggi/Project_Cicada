@@ -30,7 +30,7 @@ public class ScrollArrow : MonoBehaviour {
         }
         else
         {
-            if (transform.parent.GetChild(1).GetChild(0).position.y > 1130)
+            if (transform.parent.GetChild(1).GetChild(0).position.y > 1630)
             {
                 image.sprite = darkSprite;
             }
