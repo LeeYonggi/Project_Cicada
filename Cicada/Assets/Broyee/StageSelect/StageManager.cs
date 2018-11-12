@@ -8,6 +8,8 @@ public class StageManager : MonoBehaviour {
 
     private int map;
     private int stage;
+    
+    public int maxStage;
 
     private void Awake()
     {

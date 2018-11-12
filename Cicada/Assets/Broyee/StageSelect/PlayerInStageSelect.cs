@@ -29,6 +29,14 @@ public class PlayerInStageSelect : MonoBehaviour {
         image.sprite = GetComponent<SpriteRenderer>().sprite;
     }
 
+    public void Move(float stageYPos)
+    {
+        if (transform.position.y < stageYPos)
+            StartCoroutine(Jump(stageYPos));
+        else
+            StartCoroutine(Fall(stageYPos));
+    }
+
     public IEnumerator Jump(float stageYPos)
     {
         if (moving) yield break;
@@ -103,7 +111,10 @@ public class PlayerInStageSelect : MonoBehaviour {
 
         int childNum = (map - 1) * 5 + stage - 1;
 
-        transform.position = new Vector3(1024, transform.parent.GetChild(childNum).transform.position.y + 200, 0);
+        float stageYPos = transform.parent.GetChild(childNum).transform.position.y + 200;
+
+        transform.position = new Vector3(1024, stageYPos, 0);
+        Move(stageYPos - 200);
     }
 	
 }

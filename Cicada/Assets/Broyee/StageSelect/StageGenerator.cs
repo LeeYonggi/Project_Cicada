@@ -30,7 +30,15 @@ public class StageGenerator : MonoBehaviour {
     {
         StageManager stageManager = GameObject.Find("StageManager").GetComponent<StageManager>();
         int map = stageManager.GetMap();
-        int stage = stageManager.GetStage() + 1;
+        int stage = stageManager.GetStage();
+
+        int stageNum = (map - 1) * 5 + stage;
+
+        Debug.Log("Map : " + map + " Stage : " + stage);
+        Debug.Log("StageNum :" + stageNum);
+        if (stageNum >= stageManager.maxStage) return;
+
+        stage++;
 
         if (stage > 5)
         {

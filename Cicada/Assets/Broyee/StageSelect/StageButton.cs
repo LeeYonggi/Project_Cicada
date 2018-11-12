@@ -29,11 +29,7 @@ public class StageButton : MonoBehaviour {
 
             GameObject.Find("StageManager").GetComponent<StageManager>().SetMapAndStage(map, stage);
 
-            float playerYPos = transform.parent.Find("Player").transform.position.y;
-            if (transform.position.y > playerYPos)
-                StartCoroutine(transform.parent.Find("Player").GetComponent<PlayerInStageSelect>().Jump(transform.position.y));
-            else
-                StartCoroutine(transform.parent.Find("Player").GetComponent<PlayerInStageSelect>().Fall(transform.position.y));
+            transform.parent.Find("Player").GetComponent<PlayerInStageSelect>().Move(transform.position.y);
         }
     }
     

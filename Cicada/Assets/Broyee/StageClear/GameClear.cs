@@ -16,7 +16,7 @@ public class GameClear : MonoBehaviour {
 	}
 
 
-    public IEnumerator ClearGame(bool clear, int star, int score, int stage)
+    public IEnumerator ClearGame(bool clear, int star, int score)
     {
         yield return new WaitForSeconds(0.2f);
         Time.timeScale = 0;
@@ -38,10 +38,10 @@ public class GameClear : MonoBehaviour {
             transform.GetChild(0).GetChild(1).gameObject.SetActive(true);
 
         // Stars
-        //for (int i = 0; i < star; i++)
-        //{
-        //    transform.GetChild(0).GetChild(2).GetChild(i + 3).gameObject.SetActive(true);
-        //}
+        for (int i = 0; i < star; i++)
+        {
+            transform.GetChild(0).GetChild(2).GetChild(i + 3).gameObject.SetActive(true);
+        }
 
 
         //transform.GetChild(0).GetChild(3).GetComponent<Text>().text = "Score : " + score.ToString();
