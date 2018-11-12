@@ -38,6 +38,9 @@ public class StageGenerator : MonoBehaviour {
             stage = 1;
         }
 
+        stageManager.SetMap(map);
+        stageManager.SetStage(stage);
+
         string levelName = "Stage" + map.ToString() + "_" + stage.ToString();
 
         Time.timeScale = 1;

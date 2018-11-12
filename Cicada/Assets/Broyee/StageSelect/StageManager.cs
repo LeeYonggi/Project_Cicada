@@ -46,6 +46,16 @@ public class StageManager : MonoBehaviour {
         return stage;
     }
 
+    public void SetMap(int _map)
+    {
+        map = _map;
+    }
+
+    public void SetStage(int _stage)
+    {
+        stage = _stage;
+    }
+
     public void SetMapAndStage(int _map, int _stage)
     {
         map = _map;
