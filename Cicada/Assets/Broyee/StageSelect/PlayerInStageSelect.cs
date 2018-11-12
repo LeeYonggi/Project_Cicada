@@ -56,6 +56,7 @@ public class PlayerInStageSelect : MonoBehaviour {
 
         GetComponent<Animator>().SetBool("Fall", false);
         GetComponent<Animator>().SetBool("Grounded", true);
+        audioSources[2].Play();
 
         yield return new WaitForSeconds(0.2f);
 
@@ -82,6 +83,7 @@ public class PlayerInStageSelect : MonoBehaviour {
 
         GetComponent<Animator>().SetBool("Fall", false);
         GetComponent<Animator>().SetBool("Grounded", true);
+        audioSources[2].Play();
 
         yield return new WaitForSeconds(0.2f);
 
