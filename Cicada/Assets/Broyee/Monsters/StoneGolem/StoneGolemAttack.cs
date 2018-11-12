@@ -73,8 +73,8 @@ public class StoneGolemAttack : MonoBehaviour {
 
             invincible = true;
             
-            GetComponent<MonsterInfo>().invincible = invincible;
         }
+        GetComponent<MonsterInfo>().invincible = invincible;
     }
 
 

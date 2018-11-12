@@ -43,9 +43,9 @@ MonoBehaviour:
     width: 1536
     height: 731
   m_MinSize: {x: 681, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 97
+  controlID: 107
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -64,8 +64,8 @@ MonoBehaviour:
     y: 0
     width: 311
     height: 731
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -89,8 +89,8 @@ MonoBehaviour:
     y: 0
     width: 303
     height: 442
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -143,7 +143,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 781
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -206,10 +206,10 @@ MonoBehaviour:
     y: 0
     width: 1225
     height: 731
-  m_MinSize: {x: 406, y: 492}
+  m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 98
+  controlID: 108
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -230,10 +230,10 @@ MonoBehaviour:
     y: 0
     width: 1225
     height: 442
-  m_MinSize: {x: 406, y: 221}
-  m_MaxSize: {x: 8006, y: 4021}
+  m_MinSize: {x: 404, y: 221}
+  m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 99
+  controlID: 109
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -323,20 +323,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Broyee/StageSelect
+    - Assets/resources/prefabs/Monsters
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Broyee/StageSelect
+  - Assets/resources/prefabs/Monsters
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\BroYee\Project_Cicada\Cicada
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 189}
-    m_SelectedIDs: fc2c0000
-    m_LastClickedID: 11516
-    m_ExpandedIDs: 00000000042b0000e62b00001a2d0000242f00003e2f00009c2f00001230000094320000da320000f6320000663300007a33000084330000e43300006c340000303500008e3700008438000000ca9a3b
+    scrollPos: {x: 0, y: 697}
+    m_SelectedIDs: 12380000
+    m_LastClickedID: 14354
+    m_ExpandedIDs: 00000000042b0000e62b00001a2d0000242f00003e2f00009c2f000012300000fa30000094320000da320000f6320000663300007a33000084330000e43300006c34000030350000ee3500008e3700008438000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -391,7 +391,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -480,9 +480,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 4a5b0000
-    m_LastClickedID: 23370
-    m_ExpandedIDs: 3496feffa497feff6e98feff489dfeffba9ffeff28a2feff34a2feff42a2feffc49dffff6cf8ffffb4f8ffffb8f8ffffbaf8ffffe6fbfffff4ffffff00000000265b00003e5b0000845b0000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 84c2fdff0ec4fdfff2c4fdffb4c6fdff20c9fdff6ecbfdff26ccfdff34ccfdffcee0fdff58e2fdff3ce3fdfffee4fdff6ae7fdffb8e9fdff70eafdff7eeafdff0e9effff5e9fffff94aeffff4cb0ffff5eb1ffff3cb6ffffb2b8ffff24bbffff34bbffff46bbffff52c6ffff0ac8ffff1cc9fffffacdffff70d0ffffe2d2fffff2d2ffff04d3ffffc4e8ffff7ceaffff8eebffff68f0ffffdaf2ffff48f5ffff54f5ffff62f5ffffe6fbffff0000000014500000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -501,7 +501,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
   m_ExpandedScenes:
-  - StageSelect
+  - Stage1_3
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
@@ -532,14 +532,14 @@ MonoBehaviour:
     height: 421
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 4741.028962551368
+  lastFramingTime: 1021.3143319776385
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 884.8667, y: 814.8937, z: 21.574299}
+    m_Target: {x: -1.2823956, y: 2.9418128, z: -0.056330714}
     speed: 2
-    m_Value: {x: 884.8667, y: 814.8937, z: 21.574299}
+    m_Value: {x: -1.2823956, y: 2.9418128, z: -0.056330714}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -571,9 +571,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 2073.931
+    m_Target: 8.284415
     speed: 2
-    m_Value: 2073.931
+    m_Value: 8.284415
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -620,10 +620,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -367.2
-    m_HBaseRangeMax: 367.2
-    m_VBaseRangeMin: -161.6
-    m_VBaseRangeMax: 161.6
+    m_HBaseRangeMin: -819.2
+    m_HBaseRangeMax: 819.2
+    m_VBaseRangeMin: -614.4
+    m_VBaseRangeMax: 614.4
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -656,7 +656,7 @@ MonoBehaviour:
       width: 2792.1743
       height: 1228.8
     m_MinimalGUI: 1
-  m_defaultScale: 1
+  m_defaultScale: 0.32877603
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
   m_LastWindowPixelSize: {x: 1147.5, y: 526.25}
