@@ -460,12 +460,12 @@ Prefab:
     - target: {fileID: 82765470427344718, guid: d6f82998e1547dc4f9d5c7e308c77324,
         type: 2}
       propertyPath: m_Volume
-      value: 0.26
+      value: 0.642
       objectReference: {fileID: 0}
     - target: {fileID: 82128701512092080, guid: d6f82998e1547dc4f9d5c7e308c77324,
         type: 2}
       propertyPath: m_Volume
-      value: 0.39
+      value: 0.691
       objectReference: {fileID: 0}
     - target: {fileID: 82765470427344718, guid: d6f82998e1547dc4f9d5c7e308c77324,
         type: 2}
@@ -510,7 +510,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8ddeb900eb4aa4149be9ce3f50c8f897, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.33
+  m_Volume: 0.707
   m_Pitch: 1
   Loop: 0
   Mute: 0
