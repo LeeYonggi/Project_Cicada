@@ -17,7 +17,7 @@ public class PauseButton : MonoBehaviour {
     {
         if (transform.GetChild(0).gameObject.activeSelf)
         {
-            Time.timeScale = 0;
+            Time.timeScale = 1;
 
             transform.GetChild(0).gameObject.SetActive(false);
 
