@@ -27,6 +27,11 @@ public class ChargeBat : MonoBehaviour {
         }
     }
 
+    private void OnEnable()
+    {
+        charging = false;
+    }
+
     private IEnumerator Charge()
     {
         Debug.Log("Charged");

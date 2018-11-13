@@ -19,12 +19,24 @@ public class StoneGolemAttack : MonoBehaviour {
 	void Start () {
         approaching = false;
         camouflaged = true;
+        attacking = false;
+        defending = false;
 
         attackSound = GetComponents<AudioSource>()[2];
         defendSound = GetComponents<AudioSource>()[3];
 
         StartCoroutine(Defend(9999.0f));
 	}
+
+    private void OnEnable()
+    {
+        approaching = false;
+        camouflaged = true;
+        attacking = false;
+        defending = false;
+
+        StartCoroutine(Defend(9999.0f));
+    }
 
     // Update is called once per frame
     void Update()

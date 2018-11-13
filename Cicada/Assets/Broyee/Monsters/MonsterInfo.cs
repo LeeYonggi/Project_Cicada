@@ -26,6 +26,15 @@ public class MonsterInfo : MonoBehaviour {
     private AudioSource idleSound;
     private AudioSource dieSound;
 
+    private Vector3 initialPos;
+
+
+    private void Awake()
+    {
+        Debug.Log("InitialPos : " + initialPos);
+        initialPos = transform.position;
+    }
+
     // Use this for initialization
     void Start () {
 
@@ -41,7 +50,7 @@ public class MonsterInfo : MonoBehaviour {
         if (landMonster) basicMoving = false;
         else basicMoving = true;
         stunned = false;
-
+        
         idleSound = GetComponents<AudioSource>()[0];
         dieSound = GetComponents<AudioSource>()[1];
 
@@ -70,6 +79,17 @@ public class MonsterInfo : MonoBehaviour {
             if (idleSound.isPlaying) idleSound.Stop();
         }
 	}
+
+    private void OnEnable()
+    {
+        attacking = false;
+        basicMoving = true;
+        dead = false;
+        stunned = false;
+
+        Debug.Log("transform.position : " + transform.position);
+        transform.position = initialPos;
+    }
 
     public bool GetPlayerIsInView()
     {
@@ -144,7 +164,7 @@ public class MonsterInfo : MonoBehaviour {
 
         GetComponent<Animator>().SetBool("Die", false);
         gameObject.SetActive(false);
-        GameObject obj = GameObject.FindGameObjectWithTag("Player");
+        //GameObject obj = GameObject.FindGameObjectWithTag("Player");
         //obj.GetComponent<PlayerState>().AbilityState = (AbilityState)monsterState;
 
     }

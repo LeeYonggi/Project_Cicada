@@ -12,7 +12,7 @@ public class PlayerAttack : MonoBehaviour {
         destroyDelay = _destroyDelay;
         player = _player;
     }
-
+    
     // Use this for initialization
     void Start () {
 		

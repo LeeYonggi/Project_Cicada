@@ -31,9 +31,10 @@ public class Pea : MonoBehaviour {
         {
             if (col.CompareTag("Player") || col.CompareTag("Ground") || col.CompareTag("Wall"))
             {
-                GetComponent<AudioSource>().Play();                
+                GetComponent<AudioSource>().Play();
                 popped = true;
                 GetComponent<SpriteRenderer>().enabled = false;
+                GetComponent<BoxCollider2D>().enabled = false;
             }
         }
     }

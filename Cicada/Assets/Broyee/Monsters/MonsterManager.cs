@@ -6,21 +6,34 @@ public class MonsterManager : MonoBehaviour {
 
     public float respawnTime;
 
+    private bool[] respawning;
+
 	// Use this for initialization
 	void Start () {
-		
+        respawning = new bool[transform.childCount];
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            if (!transform.GetChild(i).gameObject.activeSelf && !respawning[i])
+            {
+                StartCoroutine(Respawn(i));
+                respawning[i] = true;
+            }
+        }
 	}
 
-    private IEnumerator Respawn(GameObject monster)
+    private IEnumerator Respawn(int index)
     {
 
         yield return new WaitForSeconds(respawnTime);
 
-        monster.SetActive(true);
+        transform.GetChild(index).gameObject.SetActive(true);
+        transform.GetChild(index).GetComponent<MonsterInfo>().dead = false;
+
+        respawning[index] = false;
     }
 }

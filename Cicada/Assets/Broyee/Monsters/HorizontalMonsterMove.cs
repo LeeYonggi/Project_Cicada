@@ -47,9 +47,22 @@ public class HorizontalMonsterMove : MonoBehaviour {
         if (transform.localScale.x > 0) direction = 1;
         else direction = -1;
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void OnEnable()
+    {
+        moveCheckEnabled = true;
+
+        grounded = false;
+
+        turningBack = false;
+
+        turnBackEnabled = true;
+
+        playerIsInBackView = false;
+    }
+
+    // Update is called once per frame
+    void Update () {
 
         if (GetComponent<MonsterInfo>().dead) return;
 
