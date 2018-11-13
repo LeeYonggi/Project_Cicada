@@ -29,7 +29,7 @@ public class StageButton : MonoBehaviour {
 
             GameObject.Find("StageManager").GetComponent<StageManager>().SetMapAndStage(map, stage);
 
-            transform.parent.Find("Player").GetComponent<PlayerInStageSelect>().Move(transform.position.y);
+            transform.parent.Find("Player").GetComponent<PlayerInStageSelect>().Move(transform);
         }
     }
     
