@@ -20,16 +20,18 @@ public class TouchToStart : MonoBehaviour {
         image = GetComponent<Image>();
         audioSources = GetComponents<AudioSource>();
 
-        readyToStart = false;
+        readyToStart = true;
         started = false;
 
-        StartCoroutine(ScreenStart());
+        //StartCoroutine(ScreenStart());
+        audioSources[0].Play();
+        StartCoroutine(Blink());
     }
 	
 	// Update is called once per frame
 	void Update () {
 
-        if (readyToStart)
+        if (readyToStart && !started)
         {
             if (Input.GetMouseButtonDown(0) || (Input.touchCount > 0))
             {
