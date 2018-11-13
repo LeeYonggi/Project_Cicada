@@ -41,5 +41,10 @@ public class PlayerAttack : MonoBehaviour {
         {
             col.GetComponent<MonsterInfo>().Die();
         }
+        else if (col.gameObject.name == "Pea(Clone)")
+        {
+            col.GetComponent<Pea>().Pop();
+        }
+
     }
 }

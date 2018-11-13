@@ -87,7 +87,6 @@ public class MonsterInfo : MonoBehaviour {
         dead = false;
         stunned = false;
 
-        Debug.Log("transform.position : " + transform.position);
         transform.position = initialPos;
     }
 

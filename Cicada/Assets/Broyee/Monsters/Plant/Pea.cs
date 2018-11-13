@@ -25,16 +25,21 @@ public class Pea : MonoBehaviour {
         }
 	}
 
+    public void Pop()
+    {
+        GetComponent<AudioSource>().Play();
+        popped = true;
+        GetComponent<SpriteRenderer>().enabled = false;
+        GetComponent<BoxCollider2D>().enabled = false;
+    }
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (!popped)
         {
             if (col.CompareTag("Player") || col.CompareTag("Ground") || col.CompareTag("Wall"))
             {
-                GetComponent<AudioSource>().Play();
-                popped = true;
-                GetComponent<SpriteRenderer>().enabled = false;
-                GetComponent<BoxCollider2D>().enabled = false;
+                Pop();
             }
         }
     }
