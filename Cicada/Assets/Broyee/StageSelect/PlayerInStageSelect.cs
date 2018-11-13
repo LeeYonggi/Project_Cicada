@@ -82,7 +82,7 @@ public class PlayerInStageSelect : MonoBehaviour {
             transform.Translate(0, -15, 0);
             yield return new WaitForSeconds(0.001f);
         }
-        transform.parent.GetChild(4).transform.position = new Vector3(1024, destinationTrans.position.y, 0);
+        transform.parent.GetChild(4).transform.position = destinationTrans.position;
 
         GetComponent<Animator>().SetBool("Fall", false);
         GetComponent<Animator>().SetBool("Grounded", true);
@@ -109,7 +109,7 @@ public class PlayerInStageSelect : MonoBehaviour {
             transform.Translate(0, -15, 0);
             yield return new WaitForSeconds(0.001f);
         }
-        transform.parent.GetChild(4).transform.position = new Vector3(1024, destinationTrans.position.y, 0);
+        transform.parent.GetChild(4).transform.position = destinationTrans.position;
 
         GetComponent<Animator>().SetBool("Fall", false);
         GetComponent<Animator>().SetBool("Grounded", true);
@@ -206,7 +206,7 @@ public class PlayerInStageSelect : MonoBehaviour {
 
         destinationTrans = transform.parent.GetChild(childNum).transform;
 
-        transform.position = new Vector3(1024, destinationTrans.position.y + 200, 0);
+        transform.position = new Vector3(destinationTrans.position.x, destinationTrans.position.y + 200, 0);
         Move();
     }
 	
