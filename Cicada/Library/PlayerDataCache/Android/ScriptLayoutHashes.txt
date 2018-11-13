@@ -1,12 +1,8 @@
 Android
 PlayerPath?
-C:/Users/BroYee/Desktop/Build Test/11_13 11.apk
+C:/Users/BroYee/Desktop/Build Test/stage1_5 test 13.apk
 SceneListBegin?
-Assets/Scenes/MainMenu.unity
-Assets/Scenes/StageSelect.unity
-Assets/Scenes/yg/Stage1_1.unity
-Assets/Scenes/yg/Stage1_2.unity
-Assets/Scenes/yg/Stage1_3.unity
+Assets/Scenes/broyee/Stage1_5.unity
 SceneListEnd?
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 7b803eb2910e9b4cd5e521ae07b9f7d6 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
