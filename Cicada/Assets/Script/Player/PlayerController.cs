@@ -23,6 +23,7 @@ public class PlayerController : PhysicsObject{
     private bool isAttack;
     private bool isAttacked;
     private bool isClimbing;
+    private bool isTouched;
 
     private SpriteRenderer spriteRenderer;
     private Animator m_Animator;
@@ -216,7 +217,8 @@ public class PlayerController : PhysicsObject{
                 {
                     transform.Translate(Vector2.left * 0.1f);
                     JumpPlayer();
-                    pastMove = -move;
+                    if(isTouched)
+                        pastMove = -move;
                 }
             }
             if (climbingFlip == true)
@@ -226,7 +228,8 @@ public class PlayerController : PhysicsObject{
                 {
                     transform.Translate(Vector2.right * 0.1f);
                     JumpPlayer();
-                    pastMove = -move;
+                    if(isTouched)
+                        pastMove = -move;
                 }
             }
             //isClimbJump = false;
@@ -283,12 +286,17 @@ public class PlayerController : PhysicsObject{
     {
         if(collision.gameObject.tag == "Wall")
         {
-            if(grounded == false)
+            if(grounded == false && move.x != 0)
             {
+                climbingFlip = spriteRenderer.flipX;
                 isClimbing = true;
                 velocity.y = 0;
                 isJump = false;
-                climbingFlip = spriteRenderer.flipX;
+                
+                if (Input.touchCount == 0)
+                    isTouched = false;
+                else
+                    isTouched  = true;
             }
         }
     }
