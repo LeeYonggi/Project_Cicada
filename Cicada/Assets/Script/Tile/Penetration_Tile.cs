@@ -56,22 +56,22 @@ public class Penetration_Tile : MonoBehaviour {
     //}
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //if (collision.gameObject.tag == "Player_Bottom")
-        //{
-        //    float pVelocity = playerPhysics.GetComponent<PhysicsObject>().Velocity.y;
-        //    tileResetTime = 10f;
-        //    Vector3 objPos = collision.gameObject.transform.parent.transform.position;
-        //    if (pVelocity <= 1)
-        //    {
-        //        m_BoxCollider.isTrigger = false;
-        //        playerPhysics.GetComponent<PhysicsObject>().Grounded = true;
-        //        collision.gameObject.transform.parent.transform.position = new Vector2(objPos.x, transform.position.y + 1.0f);
-        //    }
-        //    //m_BoxCollider.isTrigger = false;
-        //    //playerPhysics.GetComponent<PhysicsObject>().Grounded = true;
-        //    //Vector3 objPos = collision.gameObject.transform.parent.transform.position
-        //    //collision.gameObject.transform.parent.transform.position = new Vector2(objPos.x, transform.position.y + 1.0f);
-        //}
+        if (collision.gameObject.tag == "Player_Bottom")
+        {
+            float pVelocity = playerPhysics.GetComponent<PhysicsObject>().Velocity.y;
+            tileResetTime = 10f;
+            Vector3 objPos = collision.gameObject.transform.parent.transform.position;
+            if (pVelocity <= 1)
+            {
+                m_BoxCollider.isTrigger = false;
+                playerPhysics.GetComponent<PhysicsObject>().Grounded = true;
+                collision.gameObject.transform.parent.transform.position = new Vector2(objPos.x, transform.position.y + 1.0f);
+            }
+            //m_BoxCollider.isTrigger = false;
+            //playerPhysics.GetComponent<PhysicsObject>().Grounded = true;
+            //Vector3 objPos = collision.gameObject.transform.parent.transform.position
+            //collision.gameObject.transform.parent.transform.position = new Vector2(objPos.x, transform.position.y + 1.0f);
+        }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
