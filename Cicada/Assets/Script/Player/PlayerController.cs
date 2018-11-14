@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityEngine.UI;
-
+using UnityEngine.EventSystems;
 
 public class PlayerController : PhysicsObject{
     const float mobileSpeed = 1.0f;
@@ -41,6 +41,7 @@ public class PlayerController : PhysicsObject{
     private Vector2 pastMove;
     public Camera mainCamera;
     public GameObject landingEffect;
+    //EventTrigger uievent;
 
     // Use this for initialization
     void Start () {
@@ -143,6 +144,10 @@ public class PlayerController : PhysicsObject{
         if (isClimbing)
         {
             isClimbJump = true;
+            if (Input.touchCount <= 1)
+                isTouched = false;
+            else
+                isTouched = true;
         }
         else 
             JumpPlayer();
@@ -293,10 +298,6 @@ public class PlayerController : PhysicsObject{
                 velocity.y = 0;
                 isJump = false;
                 
-                if (Input.touchCount == 0)
-                    isTouched = false;
-                else
-                    isTouched  = true;
             }
         }
     }

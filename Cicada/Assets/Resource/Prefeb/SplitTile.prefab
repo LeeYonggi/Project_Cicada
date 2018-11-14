@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1891153751369410}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5, y: 14.5, z: 0}
+  m_LocalPosition: {x: 0.5053835, y: -0.3606063, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -92,10 +92,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateSprites:
-  - {fileID: 21300102, guid: 2259d0c7810adf1438909dbca424eb1b, type: 3}
-  - {fileID: 21300106, guid: 2259d0c7810adf1438909dbca424eb1b, type: 3}
-  - {fileID: 21300110, guid: 2259d0c7810adf1438909dbca424eb1b, type: 3}
   - {fileID: 21300114, guid: 2259d0c7810adf1438909dbca424eb1b, type: 3}
+  - {fileID: 21300110, guid: 2259d0c7810adf1438909dbca424eb1b, type: 3}
+  - {fileID: 21300106, guid: 2259d0c7810adf1438909dbca424eb1b, type: 3}
+  - {fileID: 21300102, guid: 2259d0c7810adf1438909dbca424eb1b, type: 3}
   initDelay: 1.1
   spawnInitDelay: 8
   playerPhysics: {fileID: 0}
@@ -134,7 +134,7 @@ SpriteRenderer:
   m_SortingLayerID: -139420787
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300038, guid: e6cd5280d4e3eb949af3e253d015ec65, type: 3}
+  m_Sprite: {fileID: 21300102, guid: 2259d0c7810adf1438909dbca424eb1b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

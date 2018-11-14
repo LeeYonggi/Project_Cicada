@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 61545415680018530}
   - component: {fileID: 50422450419300994}
   - component: {fileID: 114662424890195134}
+  - component: {fileID: 81690069440322304}
   m_Layer: 11
   m_Name: Character
   m_TagString: Player
@@ -175,6 +176,13 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4269825, y: 0.91685563}
   m_EdgeRadius: 0
+--- !u!81 &81690069440322304
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1975371588702580}
+  m_Enabled: 1
 --- !u!95 &95838359086354256
 Animator:
   serializedVersion: 3
@@ -245,7 +253,7 @@ MonoBehaviour:
   gravityModifier: 4
   velocity: {x: 0, y: 0}
   maxSpeed: 4.5
-  jumpTakeOffSpeed: 13
+  jumpTakeOffSpeed: 12.5
   attackDelay: 0.5
   attackPrefeb: {fileID: 1549305453565282, guid: e951b800bdb9ec54fa6e47c55880d783,
     type: 2}

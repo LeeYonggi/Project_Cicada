@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SplitTile : MonoBehaviour {
-    /*
+    //*
     enum SPLIT_STATE
     {
         DESTROY,
@@ -55,7 +55,8 @@ public class SplitTile : MonoBehaviour {
                 splitDelay -= Time.deltaTime;
             if (splitDelay < 0.2f * m_eSplitState * initDelay)
             {
-                --m_eSplitState;
+                if(m_eSplitState > 0)
+                    --m_eSplitState;
                 m_SpRenderer.sprite = stateSprites[m_eSplitState];
             }
             if (splitDelay < 0.0f)
@@ -72,10 +73,11 @@ public class SplitTile : MonoBehaviour {
             {
                 isDie = false;
                 splitDelay = initDelay;
-                m_SpRenderer.sprite = stateSprites[(int)SPLIT_STATE.STATE1];
+                m_SpRenderer.sprite = stateSprites[3];
                 m_Bcollider2D.enabled = true;
                 spawnDelay = spawnInitDelay;
                 isPlayerOn = false;
+                m_eSplitState = (int)SPLIT_STATE.STATE1;
             }
         }
 	}
@@ -84,9 +86,20 @@ public class SplitTile : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player_Bottom")
         {
-            isPlayerOn = true;
+            if(collision.gameObject.transform.parent.GetComponent<PlayerController>().Grounded)
+                isPlayerOn = true;
         }
-    }*/
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player_Bottom")
+        {
+            if (collision.gameObject.transform.parent.GetComponent<PlayerController>().Grounded)
+                isPlayerOn = true;
+        }
+    }
+    //*/
+    /*
     enum SPLIT_STATE
     {
         LITTLE,
@@ -171,4 +184,5 @@ public class SplitTile : MonoBehaviour {
             isPlayerOn = true;
         }
     }
+    */
 }
