@@ -16,6 +16,8 @@ public class PlayerInStageSelect : MonoBehaviour {
 
     private AudioSource[] audioSources;
 
+    public GameObject spotLight;
+
     private void Start()
     {
         image = GetComponent<UnityEngine.UI.Image>();
@@ -82,7 +84,7 @@ public class PlayerInStageSelect : MonoBehaviour {
             transform.Translate(0, -15, 0);
             yield return new WaitForSeconds(0.001f);
         }
-        transform.parent.GetChild(4).transform.position = destinationTrans.position;
+        spotLight.transform.position = destinationTrans.position;
 
         GetComponent<Animator>().SetBool("Fall", false);
         GetComponent<Animator>().SetBool("Grounded", true);
@@ -109,7 +111,7 @@ public class PlayerInStageSelect : MonoBehaviour {
             transform.Translate(0, -15, 0);
             yield return new WaitForSeconds(0.001f);
         }
-        transform.parent.GetChild(4).transform.position = destinationTrans.position;
+        spotLight.transform.position = destinationTrans.position;
 
         GetComponent<Animator>().SetBool("Fall", false);
         GetComponent<Animator>().SetBool("Grounded", true);
