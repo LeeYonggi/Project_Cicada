@@ -30587,6 +30587,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114195785963889260, guid: 8e7c1fef3795c1647a066e5feff69ce8,
+        type: 2}
+      propertyPath: m_lHpUI.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 224483425032148962, guid: 8e7c1fef3795c1647a066e5feff69ce8,
         type: 2}
       propertyPath: m_RootOrder
@@ -30752,6 +30757,34 @@ Prefab:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: JumpEnd
       objectReference: {fileID: 0}
+    - target: {fileID: 114413939694777438, guid: 8e7c1fef3795c1647a066e5feff69ce8,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 091ec9b8e55f00442b0e4947a8815c78,
+        type: 3}
+    - target: {fileID: 114978276263878584, guid: 8e7c1fef3795c1647a066e5feff69ce8,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d933d546059f82942b4e64ef491fe784,
+        type: 3}
+    - target: {fileID: 1898334762635644, guid: 8e7c1fef3795c1647a066e5feff69ce8, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114195785963889260, guid: 8e7c1fef3795c1647a066e5feff69ce8,
+        type: 2}
+      propertyPath: m_lHpUI.Array.data[1]
+      value: 
+      objectReference: {fileID: 1939947155660638, guid: acdd2c81b06bfb446b6bf40651b127e2,
+        type: 2}
+    - target: {fileID: 114195785963889260, guid: 8e7c1fef3795c1647a066e5feff69ce8,
+        type: 2}
+      propertyPath: m_lHpUI.Array.data[2]
+      value: 
+      objectReference: {fileID: 1939947155660638, guid: acdd2c81b06bfb446b6bf40651b127e2,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e7c1fef3795c1647a066e5feff69ce8, type: 2}
   m_IsPrefabAsset: 0
