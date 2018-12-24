@@ -32077,6 +32077,66 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b646c190d0e2a7a46b3785563f7a9f3b, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1001 &1404044404
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4643608740925476, guid: 3631d85d186ef664eb33bcdbe3d1310f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643608740925476, guid: 3631d85d186ef664eb33bcdbe3d1310f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643608740925476, guid: 3631d85d186ef664eb33bcdbe3d1310f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.07485167
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643608740925476, guid: 3631d85d186ef664eb33bcdbe3d1310f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643608740925476, guid: 3631d85d186ef664eb33bcdbe3d1310f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643608740925476, guid: 3631d85d186ef664eb33bcdbe3d1310f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643608740925476, guid: 3631d85d186ef664eb33bcdbe3d1310f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643608740925476, guid: 3631d85d186ef664eb33bcdbe3d1310f, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1763553051442934, guid: 3631d85d186ef664eb33bcdbe3d1310f, type: 2}
+      propertyPath: m_TagString
+      value: MonsterCol
+      objectReference: {fileID: 0}
+    - target: {fileID: 1272277044469040, guid: 3631d85d186ef664eb33bcdbe3d1310f, type: 2}
+      propertyPath: m_TagString
+      value: MonsterCol
+      objectReference: {fileID: 0}
+    - target: {fileID: 212904430804877410, guid: 3631d85d186ef664eb33bcdbe3d1310f,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -636899249
+      objectReference: {fileID: 0}
+    - target: {fileID: 212904430804877410, guid: 3631d85d186ef664eb33bcdbe3d1310f,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3631d85d186ef664eb33bcdbe3d1310f, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1418164211
 GameObject:
   m_ObjectHideFlags: 0
