@@ -14,7 +14,13 @@ public class PlayerController : PhysicsObject{
         LEFT,
         RIGHT
     }
+    enum PLAYER_WEAPON_STATE
+    {
+        SPEAR,
+        PICKEL
+    }
     private DIRECTION moveDirection;
+    private PLAYER_WEAPON_STATE player_weapon_state;
 
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
@@ -54,6 +60,7 @@ public class PlayerController : PhysicsObject{
         isClimbing = false;
         isClimbJump = false;
         pastMove = Vector2.zero;
+        player_weapon_state = PLAYER_WEAPON_STATE.PICKEL;
     }
 	
 	// Update is called once per frame
@@ -102,6 +109,7 @@ public class PlayerController : PhysicsObject{
 
         ClimbingJump();
 
+        m_Animator.SetInteger("Weapon_State", (int)player_weapon_state);
         m_Animator.SetBool("isJump", isJump);
         m_Animator.SetBool("grounded", grounded);
         m_Animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
