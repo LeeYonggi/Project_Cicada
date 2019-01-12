@@ -36,7 +36,7 @@ public class StageGenerator : MonoBehaviour {
 
         Debug.Log("Map : " + map + " Stage : " + stage);
         Debug.Log("StageNum :" + stageNum);
-        if (stageNum >= stageManager.maxStage) return;
+        //if (stageNum >= stageManager.maxStage) return;
 
         stage++;
 

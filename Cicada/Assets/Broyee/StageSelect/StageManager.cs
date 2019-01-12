@@ -6,10 +6,12 @@ public class StageManager : MonoBehaviour {
 
     public static StageManager stageManager;
 
+    public Transform stages;
+
     private int map;
     private int stage;
-    
-    public int maxStage;
+
+    public int stageStars;
 
     private void Awake()
     {
@@ -25,12 +27,19 @@ public class StageManager : MonoBehaviour {
                 Destroy(gameObject);
             }
         }
+
+        PlayerPrefs.SetInt("StageStars", stageStars);
     }
 
     // Use this for initialization
     void Start () {
         map = 1;
         stage = 1;
+
+        for (int i = 0; i < stages.childCount - 2; i++)
+        {
+            stages.GetChild(i).GetChild(0).GetComponent<Stars>().enabledStarNum = PlayerPrefs.GetInt("StageStars") / (10 ^ stages.childCount- 2 - i);
+        }
 	}
 	
 	// Update is called once per frame

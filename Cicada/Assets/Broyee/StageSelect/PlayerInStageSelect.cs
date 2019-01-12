@@ -63,19 +63,19 @@ public class PlayerInStageSelect : MonoBehaviour {
     {
         if (moving) yield break;
         moving = true;
-        Debug.Log("StageYPos : " + destinationTrans.position.y.ToString());
+        //Debug.Log("StageYPos : " + destinationTrans.position.y.ToString());
 
-        Debug.Log("Jump");
+        //Debug.Log("Jump");
         GetComponent<Animator>().SetBool("Jump", true);
         audioSources[0].Play();
         while (transform.position.y < destinationTrans.position.y + 200 + 30)
         {
-            Debug.Log("Jumping");
+            //Debug.Log("Jumping");
             transform.Translate(0, 15, 0);
             yield return new WaitForSeconds(0.001f);
         }
 
-        Debug.Log("Fall");
+        //Debug.Log("Fall");
         GetComponent<Animator>().SetBool("Jump", false);
         GetComponent<Animator>().SetBool("Fall", true);
         audioSources[1].Play();
@@ -101,9 +101,9 @@ public class PlayerInStageSelect : MonoBehaviour {
     {
         if (moving) yield break;
         moving = true;
-        Debug.Log("StageYPos : " + destinationTrans.position.y.ToString());
+        //Debug.Log("StageYPos : " + destinationTrans.position.y.ToString());
 
-        Debug.Log("Fall");
+        //Debug.Log("Fall");
         GetComponent<Animator>().SetBool("Fall", true);
         audioSources[1].Play();
         while (transform.position.y > destinationTrans.position.y + 200)
