@@ -147,12 +147,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 328263703}
-  m_RootOrder: 2
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -241.49963, y: 174.5}
-  m_SizeDelta: {x: 372, y: 117}
+  m_AnchoredPosition: {x: -23, y: 137}
+  m_SizeDelta: {x: 700, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &23383870
 MonoBehaviour:
@@ -359,7 +359,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 8582f56cbc08e9644b1f66bc0347e44e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ceb0d93bbe8fd3f4094d387a5e7a4951, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -858,6 +858,7 @@ GameObject:
   - component: {fileID: 207212845}
   - component: {fileID: 207212844}
   - component: {fileID: 207212843}
+  - component: {fileID: 207212846}
   m_Layer: 5
   m_Name: CustumeButton
   m_TagString: Untagged
@@ -877,12 +878,12 @@ RectTransform:
   m_Children:
   - {fileID: 1551681148}
   m_Father: {fileID: 328263703}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 731, y: -160}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 883, y: -170}
+  m_SizeDelta: {x: 600, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &207212843
 MonoBehaviour:
@@ -944,8 +945,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 6566c30c9c21f944499f1853f045ef4d, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -959,6 +960,19 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 207212841}
   m_CullTransparentMesh: 0
+--- !u!114 &207212846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 207212841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6dc49960bd2c9743bc29de2a802953c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalMoveDis: -100
+  horizontalMoveSpeed: -5
 --- !u!1 &209703731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1246,14 +1260,14 @@ RectTransform:
   m_GameObject: {fileID: 304660602}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.459, y: 1.459, z: 1.459}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 328263703}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 730, y: -135}
+  m_AnchoredPosition: {x: 747, y: -119}
   m_SizeDelta: {x: 592, y: 186}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &304660604
@@ -1332,12 +1346,12 @@ RectTransform:
   m_Children:
   - {fileID: 1004981072}
   - {fileID: 209703732}
-  - {fileID: 23383869}
-  - {fileID: 207212842}
   - {fileID: 1178809719}
   - {fileID: 1005663032}
   - {fileID: 893137380}
   - {fileID: 710912862}
+  - {fileID: 207212842}
+  - {fileID: 23383869}
   - {fileID: 304660603}
   - {fileID: 1380650914}
   m_Father: {fileID: 0}
@@ -2156,6 +2170,7 @@ GameObject:
   - component: {fileID: 710912865}
   - component: {fileID: 710912864}
   - component: {fileID: 710912863}
+  - component: {fileID: 710912866}
   m_Layer: 5
   m_Name: CollectionsButton
   m_TagString: Untagged
@@ -2175,12 +2190,12 @@ RectTransform:
   m_Children:
   - {fileID: 64567568}
   m_Father: {fileID: 328263703}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 731, y: 34}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 889, y: 19}
+  m_SizeDelta: {x: 600, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &710912863
 MonoBehaviour:
@@ -2242,8 +2257,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 50f637e3cc85b9342920039a72f7ea9c, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2257,6 +2272,19 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 710912861}
   m_CullTransparentMesh: 0
+--- !u!114 &710912866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 710912861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6dc49960bd2c9743bc29de2a802953c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalMoveDis: -100
+  horizontalMoveSpeed: -5
 --- !u!1 &813001977
 GameObject:
   m_ObjectHideFlags: 0
@@ -2347,6 +2375,7 @@ GameObject:
   - component: {fileID: 893137383}
   - component: {fileID: 893137382}
   - component: {fileID: 893137381}
+  - component: {fileID: 893137384}
   m_Layer: 5
   m_Name: AchievementsButton
   m_TagString: Untagged
@@ -2366,12 +2395,12 @@ RectTransform:
   m_Children:
   - {fileID: 1777485627}
   m_Father: {fileID: 328263703}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 737, y: 200}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 890, y: 215}
+  m_SizeDelta: {x: 600, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &893137381
 MonoBehaviour:
@@ -2433,8 +2462,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 14010b6619b5e4b47a6485c543afbbce, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2448,6 +2477,19 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 893137379}
   m_CullTransparentMesh: 0
+--- !u!114 &893137384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 893137379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6dc49960bd2c9743bc29de2a802953c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalMoveDis: -100
+  horizontalMoveSpeed: -5
 --- !u!1001 &915427954
 Prefab:
   m_ObjectHideFlags: 0
@@ -2943,12 +2985,12 @@ RectTransform:
   m_Children:
   - {fileID: 1742322537}
   m_Father: {fileID: 328263703}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 846, y: 452}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1005663033
 MonoBehaviour:
@@ -3010,8 +3052,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 1caf2bd94fcf49f43a29d05e46ed1a68, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3404,7 +3446,7 @@ RectTransform:
   - {fileID: 386480228}
   - {fileID: 2092290085}
   m_Father: {fileID: 328263703}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
