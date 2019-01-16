@@ -109,11 +109,13 @@
     <Compile Include="Assets\Broyee\Monsters\Slime\SlimeAttack.cs" />
     <Compile Include="Assets\Broyee\Monsters\Slime\SlimeJump.cs" />
     <Compile Include="Assets\Broyee\Monsters\StoneGolem\StoneGolemAttack.cs" />
+    <Compile Include="Assets\Broyee\StageClear\EarnedStarNumber.cs" />
     <Compile Include="Assets\Broyee\StageClear\GameClear.cs" />
     <Compile Include="Assets\Broyee\StageClear\GameClearSpot.cs" />
     <Compile Include="Assets\Broyee\StageSelect\GoToMainGame.cs" />
     <Compile Include="Assets\Broyee\StageSelect\GoToStageSelect.cs" />
     <Compile Include="Assets\Broyee\StageSelect\MapData.cs" />
+    <Compile Include="Assets\Broyee\StageSelect\MovingButton.cs" />
     <Compile Include="Assets\Broyee\StageSelect\PlayerInStageSelect.cs" />
     <Compile Include="Assets\Broyee\StageSelect\ScrollArrow.cs" />
     <Compile Include="Assets\Broyee\StageSelect\StageButton.cs" />
@@ -121,6 +123,8 @@
     <Compile Include="Assets\Broyee\StageSelect\StageManager.cs" />
     <Compile Include="Assets\Broyee\StageSelect\StageSave.cs" />
     <Compile Include="Assets\Broyee\StageSelect\StageStart.cs" />
+    <Compile Include="Assets\Broyee\StageSelect\Star.cs" />
+    <Compile Include="Assets\Broyee\StageSelect\Stars.cs" />
     <Compile Include="Assets\Script\Camera\CameraController.cs" />
     <Compile Include="Assets\Script\ChangeColorObj.cs" />
     <Compile Include="Assets\Script\DSPixelPerfectCamera.cs" />
