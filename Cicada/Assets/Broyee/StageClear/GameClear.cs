@@ -36,13 +36,38 @@ public class GameClear : MonoBehaviour {
             transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
         else
             transform.GetChild(0).GetChild(1).gameObject.SetActive(true);
-
+        
         // Stars
         for (int i = 0; i < star; i++)
         {
             transform.GetChild(0).GetChild(2).GetChild(i + 3).gameObject.SetActive(true);
         }
 
+        StageManager stageManager = GameObject.Find("StageManager").GetComponent<StageManager>();
+        int currentStageOrder = (stageManager.GetMap() - 1) * 5 + stageManager.GetStage() - 1;
+
+        int stageStars = PlayerPrefs.GetInt("StageStars");
+        int[] dividedStageStars = new int[stageManager.stageNum];
+        for (int i = 0; stageStars != 0; i++)
+        {
+            Debug.Log("i : " + i);
+            if (currentStageOrder == i)
+            {
+                dividedStageStars[i] = star;
+                Debug.Log("StarNum : " + star);
+            }
+            else dividedStageStars[i] = stageStars % 10;
+            stageStars /= 10;
+        }
+
+        for (int i = 0; i < stageManager.stageNum; i++)
+        {
+            stageStars += dividedStageStars[i] * (int)(Mathf.Pow(10.0f, 1.0f * i));
+        }
+
+        PlayerPrefs.SetInt("StageStars", stageStars);
+        Debug.Log("StageStars after game clear : " + stageStars);
+        
 
         //transform.GetChild(0).GetChild(3).GetComponent<Text>().text = "Score : " + score.ToString();
 

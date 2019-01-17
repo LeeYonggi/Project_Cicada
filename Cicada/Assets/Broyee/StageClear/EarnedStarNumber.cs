@@ -9,10 +9,15 @@ public class EarnedStarNumber : MonoBehaviour {
 
     public int earnedStarNum;
 
-	// Use this for initialization
-	void Start () {
+    private void OnLevelWasLoaded(int level)
+    {
+        stages = GameObject.Find("Stages").transform;
+    }
 
-        for (int i = 0; i < stages.childCount - 2; i++)
+    // Use this for initialization
+    void Start () {
+
+        for (int i = 0; i < stages.childCount - 3; i++)
         {
             earnedStarNum += stages.GetChild(i).GetChild(0).GetComponent<Stars>().enabledStarNum;
         }

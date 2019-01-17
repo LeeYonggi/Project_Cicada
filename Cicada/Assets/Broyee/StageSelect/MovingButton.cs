@@ -36,7 +36,7 @@ public class MovingButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         {
             if (fullyMoved) return;
 
-            Debug.Log("ButtonMove");
+            //Debug.Log("ButtonMove");
             transform.Translate(horizontalMoveSpeed, 0, 0);
 
             if (transform.position.x * dir > (basicXPos + horizontalMoveDis) * dir)
@@ -79,7 +79,7 @@ public class MovingButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("OnPointerEnter");
+        //Debug.Log("OnPointerEnter");
         mouseIsOver = true;
     }
 

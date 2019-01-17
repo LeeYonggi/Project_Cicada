@@ -13,6 +13,18 @@ public class StageManager : MonoBehaviour {
 
     public int stageStars;
 
+    public int stageNum;
+
+    private void OnLevelWasLoaded(int level)
+    {
+        if (level == 1)
+        {
+            stages = GameObject.Find("Stages").transform;
+
+            SetStageStars();
+        }
+    }
+
     private void Awake()
     {
         if (stageManager == null)
@@ -28,7 +40,7 @@ public class StageManager : MonoBehaviour {
             }
         }
 
-        PlayerPrefs.SetInt("StageStars", stageStars);
+        
     }
 
     // Use this for initialization
@@ -36,11 +48,10 @@ public class StageManager : MonoBehaviour {
         map = 1;
         stage = 1;
 
-        for (int i = 0; i < stages.childCount - 2; i++)
-        {
-            stages.GetChild(i).GetChild(0).GetComponent<Stars>().enabledStarNum = PlayerPrefs.GetInt("StageStars") / (10 ^ stages.childCount- 2 - i);
-        }
-	}
+        PlayerPrefs.SetInt("StageStars", stageStars);
+
+        SetStageStars();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -74,4 +85,20 @@ public class StageManager : MonoBehaviour {
 
         Debug.Log("Map : " + map.ToString() + "  " + "Stage : " + stage.ToString());
     }
+
+    private void SetStageStars()
+    {
+        int temp = PlayerPrefs.GetInt("StageStars");
+        Debug.Log("StageStars : " + temp);
+
+        for (int i = 0; i < stages.childCount - 3; i++)
+        {
+            //Debug.Log("i : " + i + ", EnabledStarNum : " + temp % 10);//PlayerPrefs.GetInt("StageStars") / (10 ^ stages.childCount - 2 - i));
+            stages.GetChild(i).GetChild(0).GetComponent<Stars>().enabledStarNum = temp % 10;
+
+            temp /= 10;
+        }
+    }
+
 }
+
