@@ -6,7 +6,10 @@ public class Eel : MonoBehaviour {
 
     public Transform playerTrans;
 
-    public float knockBackDis;
+    public float knockBackSpeed;
+
+    private float knockBackDisX;
+    private float knockBackDisY;
 
     private bool attacked;
     private bool appeared;
@@ -35,6 +38,13 @@ public class Eel : MonoBehaviour {
         if (appeared && col.CompareTag("Player"))
         {
             Debug.Log("Push player");
+
+            knockBackDisX = transform.position.x - playerTrans.position.x;
+            knockBackDisY = transform.position.y - playerTrans.position.y;
+
+            Debug.Log("KnockBackDisX : " + knockBackDisX);
+            Debug.Log("KnockBackDisY : " + knockBackDisY);
+
             int xDir = -1;
             int yDir = -1;
             if (playerTrans.position.x > transform.position.x) xDir = 1;
@@ -64,13 +74,20 @@ public class Eel : MonoBehaviour {
 
     IEnumerator KnockBack(int xDir, int yDir)
     {
+        if (playerTrans.GetComponent<PlayerController>().isGrounded)
+        {
+            Debug.Log("Grounded");
+            yield break;
+        }
+
+
         bool fullyMoved;
 
         while (true)
         {
             fullyMoved = true;
 
-            if (playerTrans.position.x * xDir < (basicPlayerPos.x + (knockBackDis * xDir)) * xDir)
+            if (playerTrans.position.x * xDir < (basicPlayerPos.x + (knockBackDisX * knockBackSpeed * xDir)) * xDir)
             {
                 playerTrans.Translate(0.1f * xDir, 0, 0);
                 yield return new WaitForEndOfFrame();
@@ -78,7 +95,7 @@ public class Eel : MonoBehaviour {
                 fullyMoved = false;
             }
 
-            if (playerTrans.position.y * yDir < (basicPlayerPos.y + (knockBackDis * yDir)) * yDir)
+            if (playerTrans.position.y * yDir < (basicPlayerPos.y + (knockBackDisY * knockBackSpeed * yDir)) * yDir)
             {
                 playerTrans.Translate(0, 0.1f * yDir, 0);
                 yield return new WaitForEndOfFrame();
@@ -89,7 +106,7 @@ public class Eel : MonoBehaviour {
             if (fullyMoved)
             {
                 Debug.Log("FullyMoved");
-                yield return 0;
+                yield break;
             }
         }
 

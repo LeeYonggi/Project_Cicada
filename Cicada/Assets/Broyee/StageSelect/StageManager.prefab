@@ -51,4 +51,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b38a032ea8fe714dbbcb8614391d23a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxStage: 3
+  stages: {fileID: 0}
+  stageStars: 44444
+  stageNum: 5

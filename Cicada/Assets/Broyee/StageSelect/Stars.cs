@@ -15,6 +15,7 @@ public class Stars : MonoBehaviour {
             transform.GetChild(i).GetComponent<Star>().starOn = false;
         }
 
+        if (enabledStarNum == 4) return;
         for (int i = enabledStarNum - 1; i >= 0; i--)
         {
             transform.GetChild(i).GetComponent<Star>().starOn = true;

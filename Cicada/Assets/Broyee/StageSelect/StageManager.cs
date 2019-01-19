@@ -83,13 +83,13 @@ public class StageManager : MonoBehaviour {
         map = _map;
         stage = _stage;
 
-        Debug.Log("Map : " + map.ToString() + "  " + "Stage : " + stage.ToString());
+        //Debug.Log("Map : " + map.ToString() + "  " + "Stage : " + stage.ToString());
     }
 
     private void SetStageStars()
     {
         int temp = PlayerPrefs.GetInt("StageStars");
-        Debug.Log("StageStars : " + temp);
+        //Debug.Log("StageStars : " + temp);
 
         for (int i = 0; i < stages.childCount - 3; i++)
         {

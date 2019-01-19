@@ -30,6 +30,7 @@ public class PlayerController : PhysicsObject{
     private bool isAttacked;
     private bool isClimbing;
     private bool isTouched;
+    public  bool isGrounded;
 
     private SpriteRenderer spriteRenderer;
     private Animator m_Animator;
@@ -59,6 +60,7 @@ public class PlayerController : PhysicsObject{
         isAttacked = false;
         isClimbing = false;
         isClimbJump = false;
+        isGrounded = false;
         pastMove = Vector2.zero;
         player_weapon_state = PLAYER_WEAPON_STATE.PICKEL;
     }
@@ -282,8 +284,18 @@ public class PlayerController : PhysicsObject{
     {
         if(collision.gameObject.tag == "Ground")
         {
+            isGrounded = true;
+
             GameObject obj = Instantiate(landingEffect, new Vector3(transform.position.x, transform.position.y - 0.45f), Quaternion.identity);
             Destroy(obj, 0.3f);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            isGrounded = false;
         }
     }
 
