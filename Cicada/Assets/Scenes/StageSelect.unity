@@ -173,12 +173,12 @@ Prefab:
     - target: {fileID: 224320514608211374, guid: 4863e75843f26084a90b4ba866ca8312,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 248
       objectReference: {fileID: 0}
     - target: {fileID: 224320514608211374, guid: 4863e75843f26084a90b4ba866ca8312,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 224320514608211374, guid: 4863e75843f26084a90b4ba866ca8312,
         type: 2}
@@ -212,7 +212,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1561622932781196, guid: 4863e75843f26084a90b4ba866ca8312, type: 2}
       propertyPath: m_Name
-      value: Stage_6
+      value: Stage2_1
       objectReference: {fileID: 0}
     - target: {fileID: 114192471407706052, guid: 4863e75843f26084a90b4ba866ca8312,
         type: 2}
@@ -223,11 +223,11 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300028, guid: 8d9ca9ff4971a00499e66b787da5d0c1,
+      objectReference: {fileID: 21300000, guid: 4058f37576137fd47813921cfa31fae2,
         type: 3}
     - target: {fileID: 1561622932781196, guid: 4863e75843f26084a90b4ba866ca8312, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4863e75843f26084a90b4ba866ca8312, type: 2}
@@ -1494,7 +1494,7 @@ GameObject:
   - component: {fileID: 837237717}
   - component: {fileID: 837237716}
   m_Layer: 5
-  m_Name: Stage_3
+  m_Name: Stage1_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1724,7 +1724,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1561622932781196, guid: 4863e75843f26084a90b4ba866ca8312, type: 2}
       propertyPath: m_Name
-      value: Stage_4
+      value: Stage1_4
       objectReference: {fileID: 0}
     - target: {fileID: 114192471407706052, guid: 4863e75843f26084a90b4ba866ca8312,
         type: 2}
@@ -2459,7 +2459,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1561622932781196, guid: 4863e75843f26084a90b4ba866ca8312, type: 2}
       propertyPath: m_Name
-      value: Stage_5
+      value: Stage1_5
       objectReference: {fileID: 0}
     - target: {fileID: 114192471407706052, guid: 4863e75843f26084a90b4ba866ca8312,
         type: 2}
@@ -2795,7 +2795,7 @@ GameObject:
   - component: {fileID: 1384379120}
   - component: {fileID: 1384379119}
   m_Layer: 5
-  m_Name: Stage_2
+  m_Name: Stage1_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2925,6 +2925,81 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1384379117}
+  m_CullTransparentMesh: 0
+--- !u!1 &1387587643
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1387587644}
+  - component: {fileID: 1387587646}
+  - component: {fileID: 1387587645}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1387587644
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1387587643}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 263055767}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 248, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1387587645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1387587643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: eccf24a28997ccf4eb948b42b3362a80, type: 3}
+    m_FontSize: 90
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 100
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 1
+--- !u!222 &1387587646
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1387587643}
   m_CullTransparentMesh: 0
 --- !u!1 &1651855091
 GameObject:
@@ -3460,7 +3535,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1561622932781196, guid: 4863e75843f26084a90b4ba866ca8312, type: 2}
       propertyPath: m_Name
-      value: Stage_1
+      value: Stage1_1
       objectReference: {fileID: 0}
     - target: {fileID: 114667068176073612, guid: 4863e75843f26084a90b4ba866ca8312,
         type: 2}
