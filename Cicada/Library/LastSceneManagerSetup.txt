@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/broyee/Stage1_5.unity
+=======
+- path: Assets/Scenes/broyee/StageClearTest.unity
+>>>>>>> 8b1971653939009d477505dd1eedb030d6213fd2
   isLoaded: 1
   isActive: 1
