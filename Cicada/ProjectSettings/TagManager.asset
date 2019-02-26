@@ -11,6 +11,9 @@ TagManager:
   - BossMonster
   - UI
   - MonsterCol
+  - PlayerAttack
+  - Monsters
+  - Rock
   layers:
   - Default
   - TransparentFX

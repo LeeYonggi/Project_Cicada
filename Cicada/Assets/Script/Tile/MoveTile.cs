@@ -18,7 +18,7 @@ public class MoveTile : MonoBehaviour {
     public float moveSpeed;
     public bool isCircle;
     public float radius;
-    public GameObject player;
+    private GameObject player;
     public float runningTime;
 
 
@@ -31,6 +31,7 @@ public class MoveTile : MonoBehaviour {
         moveVec2 = new Vector2(0, 0);
         m_BoxCollider = GetComponent<BoxCollider2D>();
         initPosition = transform.position;
+        player = GameObject.FindGameObjectsWithTag("Player")[0];
     }
 	
 	// Update is called once per frame
@@ -75,10 +76,10 @@ public class MoveTile : MonoBehaviour {
                 switch (direction)
                 {
                     case (int)DIRECTION.LEFT:
-                        player.transform.Translate(new Vector2(-moveSpeed * Time.deltaTime, 0));
+                        player.GetComponent<PlayerController>().TileMoveVector = new Vector2(-moveSpeed, 0);
                         break;
                     case (int)DIRECTION.RIGHT:
-                        player.transform.Translate(new Vector2(moveSpeed * Time.deltaTime, 0));
+                        player.GetComponent<PlayerController>().TileMoveVector = new Vector2(moveSpeed, 0);
                         break;
                     case (int)DIRECTION.UP:
                         player.transform.Translate(new Vector2(0, moveSpeed * Time.deltaTime));

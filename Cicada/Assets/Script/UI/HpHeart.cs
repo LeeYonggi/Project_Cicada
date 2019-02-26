@@ -34,6 +34,8 @@ public class HpHeart : MonoBehaviour {
         {
             if (player.GetComponent<PlayerInfo>().Hp <= i)
                 m_lHpUI[i].GetComponent<Heart>().IsDamaged = true;
+            else
+                m_lHpUI[i].GetComponent<Heart>().IsDamaged = false;
         }
     }
 }

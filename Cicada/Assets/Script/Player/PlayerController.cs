@@ -17,7 +17,8 @@ public class PlayerController : PhysicsObject{
     enum PLAYER_WEAPON_STATE
     {
         SPEAR,
-        PICKEL
+        PICKEL,
+        SNORKEL
     }
     private DIRECTION moveDirection;
     private PLAYER_WEAPON_STATE player_weapon_state;
@@ -31,6 +32,7 @@ public class PlayerController : PhysicsObject{
     private bool isClimbing;
     private bool isTouched;
     public  bool isGrounded;
+    private bool isPushing;
     [HideInInspector] public  bool isInvincible;
 
     private SpriteRenderer spriteRenderer;
@@ -45,10 +47,27 @@ public class PlayerController : PhysicsObject{
     private float attackedMoveX;
     private bool climbingFlip;
     private bool isClimbJump;
+    private bool pushingFlip;
 
     private Vector2 pastMove;
+    private Vector2 tileMoveVector;
     public Camera mainCamera;
     public GameObject landingEffect;
+
+    #region GETSET
+    public Vector2 TileMoveVector
+    {
+        get
+        {
+            return tileMoveVector;
+        }
+
+        set
+        {
+            tileMoveVector = value;
+        }
+    }
+    #endregion
     //EventTrigger uievent;
 
     // Use this for initialization
@@ -63,9 +82,11 @@ public class PlayerController : PhysicsObject{
         isClimbJump = false;
         isGrounded = false;
         isInvincible = false;
+        isPushing = false;
 
+        tileMoveVector = Vector2.zero;
         pastMove = Vector2.zero;
-        player_weapon_state = PLAYER_WEAPON_STATE.PICKEL;
+        player_weapon_state = PLAYER_WEAPON_STATE.SPEAR;
     }
 	
 	// Update is called once per frame
@@ -96,11 +117,13 @@ public class PlayerController : PhysicsObject{
             PlayerAttack();
         }
 
-        //if(isAttacked)
-        //{
-        //    attackedMoveX -= attackedMoveX * 0.2f;
-        //    transform.Translate(new Vector2(attackedMoveX, 0));
-        //}
+        if(isPushing)
+        {
+            if (pushingFlip != spriteRenderer.flipX ||
+                isJump)
+                isPushing = false;
+                
+        }
 
         if(grounded)
         {
@@ -120,6 +143,7 @@ public class PlayerController : PhysicsObject{
         m_Animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
         m_Animator.SetBool("isAttack", isAttack);
         m_Animator.SetBool("isClimbing", isClimbing);
+        m_Animator.SetBool("isPushing", isPushing);
     }
 
     #region Player_Attack
@@ -198,9 +222,10 @@ public class PlayerController : PhysicsObject{
                 spriteRenderer.flipX = true;
             }
         }
-        targetVelocity = move * maxSpeed;
+        targetVelocity = move * maxSpeed + tileMoveVector;
         if (isAttack)
             targetVelocity = Vector2.zero;
+        tileMoveVector = Vector2.zero;
     }
 
     public void MoveLeft()
@@ -323,6 +348,16 @@ public class PlayerController : PhysicsObject{
                 isJump = false;
                 
             }
+        }
+        if(collision.gameObject.tag == "Rock")
+        {
+            Vector3 distance = collision.gameObject.transform.position;
+            distance = distance - transform.position;
+            distance.y = 0;
+            Vector3.Normalize(distance);
+            collision.GetComponent<Rigidbody2D>().velocity = distance * 4;
+            isPushing = true;
+            pushingFlip = spriteRenderer.flipX;
         }
     }
 
