@@ -8,8 +8,11 @@ public class ReviveButton : MonoBehaviour {
 
     public void Revive()
     {
+        transform.parent.parent.GetComponent<GameClear>().alreadyRevived = true;
+
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInfo>().SetHp(3);
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().BeInvincibleForSec(5.0f);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().BeInvincibleForSec(4.0f);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().CallAttackedCoroutine(11);
 
         Time.timeScale = 1;
 

@@ -5,10 +5,13 @@ using UnityEngine.UI;
 
 public class GameClear : MonoBehaviour {
 
+    public bool alreadyRevived;
+
 	// Use this for initialization
 	void Start () {
-		
-	}
+        alreadyRevived = false;
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -37,7 +40,7 @@ public class GameClear : MonoBehaviour {
         else
         {
             transform.GetChild(0).GetChild(1).gameObject.SetActive(true);
-            transform.GetChild(0).GetChild(7).gameObject.SetActive(true);
+            if (!alreadyRevived) transform.GetChild(0).GetChild(7).gameObject.SetActive(true);
         }
         
         // Stars

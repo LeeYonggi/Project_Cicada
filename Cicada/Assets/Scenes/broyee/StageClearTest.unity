@@ -18284,12 +18284,12 @@ Prefab:
     - target: {fileID: 224766554641190134, guid: 3ebc4cb75cf87044ca51dba995ed60e0,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -1
+      value: 290
       objectReference: {fileID: 0}
     - target: {fileID: 224766554641190134, guid: 3ebc4cb75cf87044ca51dba995ed60e0,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 77
+      value: -54
       objectReference: {fileID: 0}
     - target: {fileID: 224766554641190134, guid: 3ebc4cb75cf87044ca51dba995ed60e0,
         type: 2}
@@ -18346,6 +18346,10 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 904253640}
+    - target: {fileID: 1940693010046772, guid: 3ebc4cb75cf87044ca51dba995ed60e0, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ebc4cb75cf87044ca51dba995ed60e0, type: 2}
   m_IsPrefabAsset: 0

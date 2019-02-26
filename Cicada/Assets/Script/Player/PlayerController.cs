@@ -279,11 +279,16 @@ public class PlayerController : PhysicsObject{
         }
     }
 
-    IEnumerator AttackedCoroutine()
+    public void CallAttackedCoroutine(int time)
+    {
+        StartCoroutine(AttackedCoroutine(time));
+    }
+
+    IEnumerator AttackedCoroutine(int time)
     {
         isAttacked = true;
         
-        for(int i = 0; i < 3; i++)
+        for(int i = 0; i < time; i++)
         {
             if(i % 2 == 0)
                 spriteRenderer.color = new Color(1, 1, 1, 0.5f);
@@ -301,7 +306,7 @@ public class PlayerController : PhysicsObject{
 
         if (isAttacked || isInvincible) return;
         GetComponent<PlayerInfo>().AddAttacked(damage);
-        StartCoroutine(AttackedCoroutine());
+        StartCoroutine(AttackedCoroutine(3));
         if (targetPos.y <= transform.position.y + 0.1f && velocity.y <= 0.0f)
             velocity.y = jumpTakeOffSpeed * 0.4f;
 
