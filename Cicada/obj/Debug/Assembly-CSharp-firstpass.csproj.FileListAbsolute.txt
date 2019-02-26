@@ -686,3 +686,4 @@ C:\Users\qqas1\Documents\Unity Projects\Project_Cicada\Cicada\obj\Debug\Assembly
 C:\Users\qqas1\Documents\Unity Projects\Project_Cicada\Cicada\obj\Debug\Assembly-CSharp-firstpass.csproj.CopyComplete
 C:\Users\qqas1\Documents\Unity Projects\Project_Cicada\Cicada\obj\Debug\Assembly-CSharp-firstpass.dll
 C:\Users\qqas1\Documents\Unity Projects\Project_Cicada\Cicada\obj\Debug\Assembly-CSharp-firstpass.pdb
+D:\Programming\PJ\Project_Cicada\Cicada\Temp\bin\Debug\UnityEngine.Advertisements.dll

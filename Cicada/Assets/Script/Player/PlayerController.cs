@@ -17,7 +17,8 @@ public class PlayerController : PhysicsObject{
     enum PLAYER_WEAPON_STATE
     {
         SPEAR,
-        PICKEL
+        PICKEL,
+        SNORKEL
     }
     private DIRECTION moveDirection;
     private PLAYER_WEAPON_STATE player_weapon_state;
@@ -62,7 +63,7 @@ public class PlayerController : PhysicsObject{
         isClimbJump = false;
         isGrounded = false;
         pastMove = Vector2.zero;
-        player_weapon_state = PLAYER_WEAPON_STATE.PICKEL;
+        player_weapon_state = PLAYER_WEAPON_STATE.SPEAR;
     }
 	
 	// Update is called once per frame
