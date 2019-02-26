@@ -10,6 +10,7 @@ public class Flashlight : MonoBehaviour {
 
     private bool turnedOn;
     private bool coolDowning;
+    private bool decreasingBrightness;
 
     [SerializeField] private float duration;
     [SerializeField] private float coolDownTime;
@@ -17,6 +18,8 @@ public class Flashlight : MonoBehaviour {
     [SerializeField] private Color turnedOffColor;
     [SerializeField] private Color turnedOnColor;
     [SerializeField] private Color coolDownColor;
+
+    [SerializeField] private float brightnessDecreasingSpeed;
 
     private Light spotLight;
 
@@ -26,20 +29,18 @@ public class Flashlight : MonoBehaviour {
 	void Start () {
         turnedOn = false;
         coolDowning = false;
+        decreasingBrightness = false;
 
         spotLight = GetComponent<Light>();
     }
-	
-	// Update is called once per frame
-	void Update () {
-        if (turnedOn)
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (decreasingBrightness)
         {
-            spotLight.spotAngle = extendedViewRange;
-
+            spotLight.spotAngle -= brightnessDecreasingSpeed;
         }
-        else spotLight.spotAngle = basicViewRange;
-
-
     }
 
     public void TurnOn()
@@ -48,8 +49,11 @@ public class Flashlight : MonoBehaviour {
 
         flashLightButtonImage.color = turnedOnColor;
 
+        spotLight.spotAngle = extendedViewRange;
+
         turnedOn = true;
-        StartCoroutine(TurnOffAfter());
+        decreasingBrightness = true;
+        StartCoroutine(TurnOffAfter());        
     }
 
     private IEnumerator TurnOffAfter()
@@ -58,9 +62,12 @@ public class Flashlight : MonoBehaviour {
 
         flashLightButtonImage.color = coolDownColor;
 
+        spotLight.spotAngle = basicViewRange;
+
         turnedOn = false;
         coolDowning = true;
 
+        decreasingBrightness = false;
         StartCoroutine(CoolDown());
     }
 
