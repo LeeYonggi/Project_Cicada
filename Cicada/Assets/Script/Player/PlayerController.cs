@@ -32,6 +32,7 @@ public class PlayerController : PhysicsObject{
     private bool isClimbing;
     private bool isTouched;
     public  bool isGrounded;
+    private bool isPushing;
     [HideInInspector] public  bool isInvincible;
 
     private SpriteRenderer spriteRenderer;
@@ -46,6 +47,7 @@ public class PlayerController : PhysicsObject{
     private float attackedMoveX;
     private bool climbingFlip;
     private bool isClimbJump;
+    private bool pushingFlip;
 
     private Vector2 pastMove;
     public Camera mainCamera;
@@ -64,6 +66,7 @@ public class PlayerController : PhysicsObject{
         isClimbJump = false;
         isGrounded = false;
         isInvincible = false;
+        isPushing = false;
 
         pastMove = Vector2.zero;
         player_weapon_state = PLAYER_WEAPON_STATE.SPEAR;
@@ -97,11 +100,13 @@ public class PlayerController : PhysicsObject{
             PlayerAttack();
         }
 
-        //if(isAttacked)
-        //{
-        //    attackedMoveX -= attackedMoveX * 0.2f;
-        //    transform.Translate(new Vector2(attackedMoveX, 0));
-        //}
+        if(isPushing)
+        {
+            if (pushingFlip != spriteRenderer.flipX ||
+                isJump)
+                isPushing = false;
+                
+        }
 
         if(grounded)
         {
@@ -121,6 +126,7 @@ public class PlayerController : PhysicsObject{
         m_Animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
         m_Animator.SetBool("isAttack", isAttack);
         m_Animator.SetBool("isClimbing", isClimbing);
+        m_Animator.SetBool("isPushing", isPushing);
     }
 
     #region Player_Attack
@@ -324,6 +330,16 @@ public class PlayerController : PhysicsObject{
                 isJump = false;
                 
             }
+        }
+        if(collision.gameObject.tag == "Rock")
+        {
+            Vector3 distance = collision.gameObject.transform.position;
+            distance = distance - transform.position;
+            distance.y = 0;
+            Vector3.Normalize(distance);
+            collision.GetComponent<Rigidbody2D>().velocity = distance * 4;
+            isPushing = true;
+            pushingFlip = spriteRenderer.flipX;
         }
     }
 
