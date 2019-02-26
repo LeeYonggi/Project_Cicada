@@ -35,7 +35,10 @@ public class GameClear : MonoBehaviour {
         if (clear)
             transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
         else
+        {
             transform.GetChild(0).GetChild(1).gameObject.SetActive(true);
+            transform.GetChild(0).GetChild(7).gameObject.SetActive(true);
+        }
         
         // Stars
         for (int i = 0; i < star; i++)
@@ -74,5 +77,12 @@ public class GameClear : MonoBehaviour {
 
     }
 
+    public void Release()
+    {
+        transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
+        transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
+        transform.GetChild(0).GetChild(7).gameObject.SetActive(false);
 
+        transform.GetChild(0).gameObject.SetActive(false);
+    }
 }
