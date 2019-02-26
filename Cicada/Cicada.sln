@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{5AFF8B13-248F-870E-9307-33E3C758BB73}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cicada", "Assembly-CSharp.csproj", "{5AFF8B13-248F-870E-9307-33E3C758BB73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{8D49E31E-3FBC-BC78-B880-206F1054ABB5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cicada", "Assembly-CSharp-firstpass.csproj", "{8D49E31E-3FBC-BC78-B880-206F1054ABB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{7521A07D-902E-BB92-730C-463F0AD2540A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cicada", "Assembly-CSharp-Editor.csproj", "{7521A07D-902E-BB92-730C-463F0AD2540A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
