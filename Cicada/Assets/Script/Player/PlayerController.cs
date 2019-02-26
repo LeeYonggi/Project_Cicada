@@ -50,8 +50,24 @@ public class PlayerController : PhysicsObject{
     private bool pushingFlip;
 
     private Vector2 pastMove;
+    private Vector2 tileMoveVector;
     public Camera mainCamera;
     public GameObject landingEffect;
+
+    #region GETSET
+    public Vector2 TileMoveVector
+    {
+        get
+        {
+            return tileMoveVector;
+        }
+
+        set
+        {
+            tileMoveVector = value;
+        }
+    }
+    #endregion
     //EventTrigger uievent;
 
     // Use this for initialization
@@ -68,6 +84,7 @@ public class PlayerController : PhysicsObject{
         isInvincible = false;
         isPushing = false;
 
+        tileMoveVector = Vector2.zero;
         pastMove = Vector2.zero;
         player_weapon_state = PLAYER_WEAPON_STATE.SPEAR;
     }
@@ -205,9 +222,10 @@ public class PlayerController : PhysicsObject{
                 spriteRenderer.flipX = true;
             }
         }
-        targetVelocity = move * maxSpeed;
+        targetVelocity = move * maxSpeed + tileMoveVector;
         if (isAttack)
             targetVelocity = Vector2.zero;
+        tileMoveVector = Vector2.zero;
     }
 
     public void MoveLeft()
