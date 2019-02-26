@@ -51685,7 +51685,7 @@ Prefab:
     - target: {fileID: 114454999769910588, guid: 2bdba44b13a98ce438a2ca9c4924e82d,
         type: 2}
       propertyPath: moveSpeed
-      value: 1.2
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114454999769910588, guid: 2bdba44b13a98ce438a2ca9c4924e82d,
         type: 2}
@@ -55046,7 +55046,7 @@ Prefab:
     - target: {fileID: 114454999769910588, guid: 2bdba44b13a98ce438a2ca9c4924e82d,
         type: 2}
       propertyPath: moveSpeed
-      value: 1.2
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114454999769910588, guid: 2bdba44b13a98ce438a2ca9c4924e82d,
         type: 2}
@@ -55296,7 +55296,7 @@ Prefab:
     - target: {fileID: 114454999769910588, guid: 2bdba44b13a98ce438a2ca9c4924e82d,
         type: 2}
       propertyPath: moveSpeed
-      value: 1.2
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114454999769910588, guid: 2bdba44b13a98ce438a2ca9c4924e82d,
         type: 2}
@@ -55409,31 +55409,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 52
       objectReference: {fileID: 0}
-    - target: {fileID: 114454999769910588, guid: 2bdba44b13a98ce438a2ca9c4924e82d,
-        type: 2}
-      propertyPath: isCircle
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114454999769910588, guid: 2bdba44b13a98ce438a2ca9c4924e82d,
-        type: 2}
-      propertyPath: radius
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 114587856674423238, guid: 2bdba44b13a98ce438a2ca9c4924e82d,
         type: 2}
       propertyPath: playerPhysics
       value: 
       objectReference: {fileID: 1015680782}
-    - target: {fileID: 114454999769910588, guid: 2bdba44b13a98ce438a2ca9c4924e82d,
-        type: 2}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1015680782}
-    - target: {fileID: 114454999769910588, guid: 2bdba44b13a98ce438a2ca9c4924e82d,
-        type: 2}
-      propertyPath: moveSpeed
-      value: 0.8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bdba44b13a98ce438a2ca9c4924e82d, type: 2}
   m_IsPrefabAsset: 0

@@ -1155,6 +1155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c51b412b8685344478c44f6321b47bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reviveButton: {fileID: 0}
 --- !u!4 &560300766
 Transform:
   m_ObjectHideFlags: 0
@@ -3353,8 +3354,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   worldSprites:
   - {fileID: 21300000, guid: cef0cbdc197ce2a458bbe299ddb97fc6, type: 3}
-  - {fileID: 21300000, guid: bac1ec986840fc84298d510a2fddd09d, type: 3}
-  - {fileID: 21300000, guid: 446de3d3798fd2a489bb22d7d6a0c8f2, type: 3}
+  - {fileID: 21300000, guid: 96c66c29f39c816459aabf707926e034, type: 3}
+  - {fileID: 21300000, guid: 99c3f2d9cbbb6e349a103e50edeb8dd4, type: 3}
   dividingLines:
   - 1600
   - 400
