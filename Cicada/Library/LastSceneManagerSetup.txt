@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/yg/Stage1_4.unity
+- path: Assets/Scenes/broyee/Stage2_1.unity
   isLoaded: 1
   isActive: 1
