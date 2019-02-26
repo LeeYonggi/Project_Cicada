@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44921875, g: 0.49928886, b: 0.57571304, a: 1}
+  m_IndirectSpecularColor: {r: 0.4492191, g: 0.49928963, b: 0.57571393, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -18438,13 +18438,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1030162431}
   m_Script: {fileID: 11500000, guid: 1a27b57326e9f4f45aacaaa1d8c2acee, type: 3}
---- !u!81 &1015680784
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1015680782}
-  m_Enabled: 1
 --- !u!1001 &1030162431
 Prefab:
   m_ObjectHideFlags: 0
@@ -18484,46 +18477,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 61443025391941450, guid: 8c46f818366afd64083253e701674981,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: -0.43479103
-      objectReference: {fileID: 0}
-    - target: {fileID: 61443025391941450, guid: 8c46f818366afd64083253e701674981,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 0.085259646
-      objectReference: {fileID: 0}
-    - target: {fileID: 61443025391941450, guid: 8c46f818366afd64083253e701674981,
-        type: 2}
-      propertyPath: m_Offset.x
-      value: -0.029365212
-      objectReference: {fileID: 0}
-    - target: {fileID: 61443025391941450, guid: 8c46f818366afd64083253e701674981,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 0.42749768
-      objectReference: {fileID: 0}
-    - target: {fileID: 61545415680018530, guid: 8c46f818366afd64083253e701674981,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: 0.05368118
-      objectReference: {fileID: 0}
-    - target: {fileID: 61545415680018530, guid: 8c46f818366afd64083253e701674981,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 0.8926376
-      objectReference: {fileID: 0}
     - target: {fileID: 114360761739073808, guid: 8c46f818366afd64083253e701674981,
         type: 2}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 534669904}
-    - target: {fileID: 114662424890195134, guid: 8c46f818366afd64083253e701674981,
-        type: 2}
-      propertyPath: maxHp
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c46f818366afd64083253e701674981, type: 2}
   m_IsPrefabAsset: 0
@@ -18947,6 +18905,10 @@ Prefab:
       value: 
       objectReference: {fileID: 1015680783}
     - target: {fileID: 1898334762635644, guid: 8e7c1fef3795c1647a066e5feff69ce8, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271651798697846, guid: 8e7c1fef3795c1647a066e5feff69ce8, type: 2}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}

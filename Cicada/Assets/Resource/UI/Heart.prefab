@@ -68,6 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emptyImage: {fileID: 21300000, guid: 08b38d1b6c07da04f8efe4f1fe93bb25, type: 3}
+  image: {fileID: 21300000, guid: 0e471a7c5a3e28a42a42533aeca580d3, type: 3}
 --- !u!222 &222468343754119664
 CanvasRenderer:
   m_ObjectHideFlags: 1

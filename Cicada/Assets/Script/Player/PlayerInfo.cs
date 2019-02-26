@@ -69,4 +69,9 @@ public class PlayerInfo : MonoBehaviour {
             StartCoroutine(GameObject.FindGameObjectWithTag("UI").transform.GetChild(5).GetComponent<GameClear>().ClearGame(false, 0, 0));
         }
     }
+
+    public void SetHp(int i)
+    {
+        hp = i;
+    }
 }

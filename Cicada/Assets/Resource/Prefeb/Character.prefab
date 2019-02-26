@@ -59,7 +59,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1975371588702580
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 61545415680018530}
   - component: {fileID: 50422450419300994}
   - component: {fileID: 114662424890195134}
-  - component: {fileID: 81690069440322304}
+  - component: {fileID: 81427009389211620}
   m_Layer: 11
   m_Name: Character
   m_TagString: Player
@@ -128,7 +128,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1975371588702580}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.15, y: 0.096119046, z: 0}
+  m_LocalPosition: {x: -0.713, y: -0.465, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4040860713667464}
@@ -169,7 +169,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.028800309, y: -0.45366365}
+  m_Offset: {x: -0.029365212, y: -0.43479103}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -180,7 +180,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4286275, y: 0.07456875}
+  m_Size: {x: 0.42749768, y: 0.085259646}
   m_EdgeRadius: 0
 --- !u!61 &61545415680018530
 BoxCollider2D:
@@ -194,7 +194,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.029519454, y: 0.041572183}
+  m_Offset: {x: -0.029519454, y: 0.05368118}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -205,9 +205,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4269825, y: 0.91685563}
+  m_Size: {x: 0.4269825, y: 0.8926376}
   m_EdgeRadius: 0
---- !u!81 &81690069440322304
+--- !u!81 &81427009389211620
 AudioListener:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -282,8 +282,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frontSprite: {fileID: 21300000, guid: b16d7343dde86f34da7c33b7d4e655c1, type: 3}
   sideSprite: {fileID: 21300000, guid: 0fca8162e32228a489175b152a67d7fa, type: 3}
-  initfrontPos: {x: 0.052, y: 0.24}
-  initSidePos: {x: 0.13, y: 0.245}
+  initfrontPos: {x: 0.052, y: 0.24, z: 0}
+  initSidePos: {x: 0.13, y: 0.245, z: 0}
   parent: {fileID: 1975371588702580}
 --- !u!114 &114360761739073808
 MonoBehaviour:
@@ -297,11 +297,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minGroundNormalY: 0.65
-  gravityModifier: 4
+  gravityModifier: 3
   velocity: {x: 0, y: 0}
   maxSpeed: 4.5
-  jumpTakeOffSpeed: 12.5
+  jumpTakeOffSpeed: 10
   attackDelay: 0.5
+  isGrounded: 0
   attackPrefeb: {fileID: 1549305453565282, guid: e951b800bdb9ec54fa6e47c55880d783,
     type: 2}
   mainCamera: {fileID: 0}

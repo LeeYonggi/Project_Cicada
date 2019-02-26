@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Heart : MonoBehaviour {
 
     public Sprite emptyImage;
+    public Sprite image;
 
     private bool isDamaged;
 
@@ -32,6 +33,10 @@ public class Heart : MonoBehaviour {
         if(IsDamaged)
         {
             GetComponent<Image>().sprite = emptyImage;
+        }
+        else
+        {
+            GetComponent<Image>().sprite = image;
         }
 
     }

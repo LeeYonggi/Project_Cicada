@@ -521,3 +521,4 @@ C:\Users\qqas1\Documents\Unity Projects\Project_Cicada\Cicada\obj\Debug\Assembly
 C:\Users\qqas1\Documents\Unity Projects\Project_Cicada\Cicada\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
 C:\Users\qqas1\Documents\Unity Projects\Project_Cicada\Cicada\obj\Debug\Assembly-CSharp.dll
 C:\Users\qqas1\Documents\Unity Projects\Project_Cicada\Cicada\obj\Debug\Assembly-CSharp.pdb
+D:\Programming\PJ\Project_Cicada\Cicada\Temp\bin\Debug\UnityEngine.Advertisements.dll

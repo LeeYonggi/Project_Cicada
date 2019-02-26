@@ -17,7 +17,8 @@ public class PlayerController : PhysicsObject{
     enum PLAYER_WEAPON_STATE
     {
         SPEAR,
-        PICKEL
+        PICKEL,
+        SNORKEL
     }
     private DIRECTION moveDirection;
     private PLAYER_WEAPON_STATE player_weapon_state;
@@ -31,6 +32,7 @@ public class PlayerController : PhysicsObject{
     private bool isClimbing;
     private bool isTouched;
     public  bool isGrounded;
+    [HideInInspector] public  bool isInvincible;
 
     private SpriteRenderer spriteRenderer;
     private Animator m_Animator;
@@ -61,8 +63,10 @@ public class PlayerController : PhysicsObject{
         isClimbing = false;
         isClimbJump = false;
         isGrounded = false;
+        isInvincible = false;
+
         pastMove = Vector2.zero;
-        player_weapon_state = PLAYER_WEAPON_STATE.PICKEL;
+        player_weapon_state = PLAYER_WEAPON_STATE.SPEAR;
     }
 	
 	// Update is called once per frame
@@ -270,7 +274,8 @@ public class PlayerController : PhysicsObject{
 
     public void PlayerAttacked(int damage, Vector2 targetPos)
     {
-        if (isAttacked) return;
+
+        if (isAttacked || isInvincible) return;
         GetComponent<PlayerInfo>().AddAttacked(damage);
         StartCoroutine(AttackedCoroutine());
         if (targetPos.y <= transform.position.y + 0.1f && velocity.y <= 0.0f)
@@ -328,5 +333,19 @@ public class PlayerController : PhysicsObject{
         {
             isClimbing = false;
         }
+    }
+
+    public void BeInvincibleForSec(float time)
+    {
+        StartCoroutine(_BeInvincibleForSec(time));
+    }
+
+    private IEnumerator _BeInvincibleForSec(float time)
+    {
+        isInvincible = true;
+
+        yield return new WaitForSeconds(time);
+
+        isInvincible = false;
     }
 }
