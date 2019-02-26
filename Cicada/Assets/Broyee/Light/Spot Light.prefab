@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4549942762460112}
   - component: {fileID: 108112615580818202}
+  - component: {fileID: 114686845903827558}
   - component: {fileID: 331493273228654022}
-  - component: {fileID: 114832101070229734}
   m_Layer: 11
   m_Name: Spot Light
   m_TagString: Untagged
@@ -79,7 +79,7 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114832101070229734
+--- !u!114 &114686845903827558
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,9 +94,9 @@ MonoBehaviour:
   extendedViewRange: 160
   duration: 2.5
   coolDownTime: 10
-  turnedOffColor: {r: 0.6603774, g: 0.63857245, b: 0.63857245, a: 1}
+  turnedOffColor: {r: 0.754717, g: 0.71555716, b: 0.71555716, a: 1}
   turnedOnColor: {r: 1, g: 1, b: 1, a: 1}
-  coolDownColor: {r: 0.59607846, g: 0.7556561, b: 0.8962264, a: 1}
+  coolDownColor: {r: 0.41006586, g: 0.73172945, b: 0.8962264, a: 1}
   brightnessDecreasingSpeed: 0.3
   flashLightButtonImage: {fileID: 0}
 --- !u!331 &331493273228654022

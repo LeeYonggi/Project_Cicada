@@ -66,7 +66,15 @@ public class PlayerInfo : MonoBehaviour {
 
         if (Hp <= 0)
         {
-            StartCoroutine(GameObject.FindGameObjectWithTag("UI").transform.GetChild(5).GetComponent<GameClear>().ClearGame(false, 0, 0));
+            Transform UI = GameObject.FindGameObjectWithTag("UI").transform;
+            for (int i = 0; i < UI.childCount; i++)
+            {
+                if (UI.GetChild(i).name == "GameClear")
+                {
+                    StartCoroutine(UI.GetChild(i).GetComponent<GameClear>().ClearGame(false, 0, 0));
+                    return;
+                }
+            }
         }
     }
 

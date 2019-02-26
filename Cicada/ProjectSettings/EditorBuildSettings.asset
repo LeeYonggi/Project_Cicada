@@ -11,25 +11,31 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StageSelect.unity
     guid: e93d3407a5daad44194788daf48884b7
-  - enabled: 0
-    path: Assets/Scenes/StageSelect_v2.unity
-    guid: f15b1c11ab46dd048925d7cd5af088cf
   - enabled: 1
-    path: Assets/Scenes/yg/Stage1_1.unity
-    guid: d5b6becc497485049b3786341fb08861
+    path: Assets/Scenes/rmfmd1345/Stage1_1.unity
+    guid: b053a1519629a504c89d8e0742d64e52
   - enabled: 1
-    path: Assets/Scenes/yg/Stage1_2.unity
-    guid: 4b26cfe13cab1a649a7fa6ff482c219a
+    path: Assets/Scenes/rmfmd1345/Stage1_2.unity
+    guid: c8d036439b85fbb4484eec1478eeeb4e
   - enabled: 1
-    path: Assets/Scenes/yg/Stage1_3.unity
-    guid: fb34a65f5cce23e4397ea0f29cc347ec
+    path: Assets/Scenes/rmfmd1345/Stage1_3.unity
+    guid: b017d799299767545b1c4dbb7aa9f666
   - enabled: 1
-    path: Assets/Scenes/yg/Stage1_4.unity
-    guid: 680ed7609a9ac5245b481ea3beed3286
+    path: Assets/Scenes/rmfmd1345/Stage1_4.unity
+    guid: 24879c5af2bb521478192e39dfd95b57
   - enabled: 1
-    path: Assets/Scenes/broyee/Stage1_5.unity
-    guid: 49b35c73539366d4a83cc43c698c37ac
+    path: Assets/Scenes/rmfmd1345/Stage1_5.unity
+    guid: 47950021ce0e80d4f8a7b788f9f39b15
   - enabled: 1
-    path: Assets/Scenes/yg/Stage2_1.unity
-    guid: 8c4d3e1f33a83b54c8770af0b7a49e3b
+    path: Assets/Scenes/rmfmd1345/Stage2_1.unity
+    guid: f2f879a98a5db6f458bb5f3f4c8aa656
+  - enabled: 1
+    path: Assets/Scenes/rmfmd1345/Stage2_2.unity
+    guid: dfb863fa554d6e442ad4efa262f8234c
+  - enabled: 1
+    path: Assets/Scenes/rmfmd1345/Stage2_3.unity
+    guid: ca53b92fa8b81214b80fdb3d8227c5cc
+  - enabled: 1
+    path: Assets/Scenes/rmfmd1345/Stage2_4.unity
+    guid: ecac4d2f68b97fe478f4f396f4738bf2
   m_configObjects: {}
