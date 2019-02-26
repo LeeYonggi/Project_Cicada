@@ -10,6 +10,10 @@ public class UnityAdsHelper : MonoBehaviour {
 
     private const string rewarded_video_id = "rewardedVideo";
 
+    private bool reviving;
+
+    public ReviveButton reviveButton;
+
     void Start()
     {
         Initialize();
@@ -42,8 +46,12 @@ public class UnityAdsHelper : MonoBehaviour {
                 {
                     Debug.Log("The ad was successfully shown.");
 
-                    // to do ...
-                    // 광고 시청이 완료되었을 때 처리
+                    if (reviving)
+                    {
+                        reviveButton.Revive();
+
+                        reviving = false;
+                    }
 
                     break;
                 }
@@ -66,5 +74,10 @@ public class UnityAdsHelper : MonoBehaviour {
                     break;
                 }
         }
+    }
+
+    public void ReviveStart()
+    {
+        reviving = true;
     }
 }
