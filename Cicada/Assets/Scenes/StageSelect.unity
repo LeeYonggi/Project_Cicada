@@ -168,7 +168,7 @@ Prefab:
     - target: {fileID: 224320514608211374, guid: 4863e75843f26084a90b4ba866ca8312,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 1650
+      value: 1800
       objectReference: {fileID: 0}
     - target: {fileID: 224320514608211374, guid: 4863e75843f26084a90b4ba866ca8312,
         type: 2}
@@ -302,7 +302,7 @@ Prefab:
     - target: {fileID: 224320514608211374, guid: 4863e75843f26084a90b4ba866ca8312,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 154
+      value: 304
       objectReference: {fileID: 0}
     - target: {fileID: 224320514608211374, guid: 4863e75843f26084a90b4ba866ca8312,
         type: 2}
@@ -1167,7 +1167,7 @@ Prefab:
     - target: {fileID: 224320514608211374, guid: 4863e75843f26084a90b4ba866ca8312,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 1150
+      value: 1300
       objectReference: {fileID: 0}
     - target: {fileID: 224320514608211374, guid: 4863e75843f26084a90b4ba866ca8312,
         type: 2}
@@ -3595,7 +3595,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 5ac05d6c3a417534dbc76bf5f2bf6c5c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1165eecc4e6a9ae4781a26b4c42dfc43, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3628,7 +3628,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1726694624
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3899,7 +3899,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 96c66c29f39c816459aabf707926e034, type: 3}
   - {fileID: 21300000, guid: 99c3f2d9cbbb6e349a103e50edeb8dd4, type: 3}
   dividingLines:
-  - -300
+  - 0
   - -3000
   - -5000
   stages: {fileID: 328263702}
@@ -3958,7 +3958,7 @@ Prefab:
     - target: {fileID: 224320514608211374, guid: 4863e75843f26084a90b4ba866ca8312,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 650
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 224320514608211374, guid: 4863e75843f26084a90b4ba866ca8312,
         type: 2}
