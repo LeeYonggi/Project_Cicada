@@ -20,6 +20,7 @@ public class ReviveButton : MonoBehaviour {
         {
             transform.parent.parent.parent.GetChild(i).gameObject.SetActive(true);
         }
+        transform.parent.parent.parent.GetChild(2).gameObject.SetActive(false);
         transform.parent.parent.GetComponent<GameClear>().Release();
     }
 }

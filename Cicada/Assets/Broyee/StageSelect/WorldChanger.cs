@@ -25,12 +25,12 @@ public class WorldChanger : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log("Stage y : " + stages.position.y);
+        //Debug.Log("Stage y : " + stages.position.y);
         for (int i = 0; i < worldSprites.Capacity; i++)
         {            
             if (stages.position.y > dividingLines[i])
             {
-                Debug.Log("World " + (i + 1));
+                //Debug.Log("World " + (i + 1));
 
                 image.sprite = worldSprites[i];
                 break;

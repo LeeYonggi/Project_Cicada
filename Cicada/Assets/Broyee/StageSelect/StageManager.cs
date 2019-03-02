@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
+using UnityEditor;
 
 public class StageManager : MonoBehaviour {
 
@@ -15,13 +17,15 @@ public class StageManager : MonoBehaviour {
 
     public int stageNum;
 
+    private string textPath;    
+
     private void OnLevelWasLoaded(int level)
     {
         if (level == 1)
         {
             stages = GameObject.Find("Stages").transform;
 
-            SetStageStars();
+            PutStarsToStages();
         }
     }
 
@@ -31,6 +35,8 @@ public class StageManager : MonoBehaviour {
         {
             DontDestroyOnLoad(gameObject);
             stageManager = this;
+
+            PlayerPrefs.SetInt("StageStars", stageStars);
         }
         else
         {
@@ -48,15 +54,16 @@ public class StageManager : MonoBehaviour {
         map = 1;
         stage = 1;
 
-        PlayerPrefs.SetInt("StageStars", stageStars);
+        //PlayerPrefs.SetInt("StageStars", stageStars);
+        //SetStageStars();
 
-        SetStageStars();
+        PutStarsToStages();
     }
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+
+    }
 
     public int GetMap()
     {
@@ -86,10 +93,10 @@ public class StageManager : MonoBehaviour {
         //Debug.Log("Map : " + map.ToString() + "  " + "Stage : " + stage.ToString());
     }
 
-    private void SetStageStars()
+    private void PutStarsToStages()
     {
         int temp = PlayerPrefs.GetInt("StageStars");
-        //Debug.Log("StageStars : " + temp);
+        //temp = GetStageStars();
 
         for (int i = 0; i < stages.childCount - 3; i++)
         {
@@ -99,6 +106,39 @@ public class StageManager : MonoBehaviour {
             temp /= 10;
         }
     }
+
+    private void SetStageStars()
+    {
+        string temp = stageStars.ToString();
+
+        string path = "Assets/resources/Stagestars.txt";
+
+        //Write some text to the test.txt file
+        StreamWriter writer = new StreamWriter(path, true);
+        writer.Write(temp);
+        writer.Close();
+
+        //Re-import the file to update the reference in the editor
+        AssetDatabase.ImportAsset(path);
+        TextAsset asset = Resources.Load("StageStars") as TextAsset;
+
+        //Print the text from the file
+        Debug.Log(asset.text);
+    }
+
+    private int GetStageStars()
+    {
+        string path = "Assets/resources/Stagestars.txt";
+
+        //Read the text from directly from the test.txt file
+        StreamReader reader = new StreamReader(path);
+        int temp = int.Parse(reader.ReadToEnd());
+        reader.Close();
+
+        return temp;
+    }
+
+
 
 }
 
