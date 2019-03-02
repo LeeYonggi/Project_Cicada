@@ -36,6 +36,7 @@ public class StageManager : MonoBehaviour {
             DontDestroyOnLoad(gameObject);
             stageManager = this;
 
+            if (!PlayerPrefs.HasKey("StageStars"))
             PlayerPrefs.SetInt("StageStars", stageStars);
         }
         else
