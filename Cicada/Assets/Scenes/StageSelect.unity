@@ -1390,7 +1390,12 @@ Prefab:
     - target: {fileID: 114098686475984800, guid: 8579825a962b7504187c10dc53d29bdf,
         type: 2}
       propertyPath: stageStars
-      value: 44444
+      value: 444444444
+      objectReference: {fileID: 0}
+    - target: {fileID: 114098686475984800, guid: 8579825a962b7504187c10dc53d29bdf,
+        type: 2}
+      propertyPath: stageNum
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8579825a962b7504187c10dc53d29bdf, type: 2}

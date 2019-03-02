@@ -117,13 +117,6 @@ public class StageManager : MonoBehaviour {
         StreamWriter writer = new StreamWriter(path, true);
         writer.Write(temp);
         writer.Close();
-
-        //Re-import the file to update the reference in the editor
-        AssetDatabase.ImportAsset(path);
-        TextAsset asset = Resources.Load("StageStars") as TextAsset;
-
-        //Print the text from the file
-        Debug.Log(asset.text);
     }
 
     private int GetStageStars()
