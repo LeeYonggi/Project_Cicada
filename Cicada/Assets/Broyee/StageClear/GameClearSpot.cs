@@ -8,7 +8,9 @@ public class GameClearSpot : MonoBehaviour {
     {
         if (col.CompareTag("Player"))
         {
-            StartCoroutine(GameObject.FindGameObjectWithTag("UI").transform.GetChild(5).GetComponent<GameClear>().ClearGame(true, col.GetComponent<PlayerInfo>().Hp, 0));
+            Transform canvas = GameObject.FindGameObjectWithTag("UI").transform;
+            
+            StartCoroutine(canvas.Find("GameClear").GetComponent<GameClear>().ClearGame(true, col.GetComponent<PlayerInfo>().Hp, 0));
         }
     }
 }
