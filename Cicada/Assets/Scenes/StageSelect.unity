@@ -2486,8 +2486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moving: 0
-  jumpingTime: 0
-  fallTime: 0
+  moveTime: 3
   spotLight: {fileID: 215922451}
 --- !u!212 &929477385
 SpriteRenderer:

@@ -6,8 +6,7 @@ public class PlayerInStageSelect : MonoBehaviour {
 
     [HideInInspector] public bool moving;
 
-    public float jumpingTime;
-    public float fallTime;
+    public float moveTime;
 
     private Transform destinationTrans;
 
@@ -68,10 +67,13 @@ public class PlayerInStageSelect : MonoBehaviour {
         //Debug.Log("Jump");
         GetComponent<Animator>().SetBool("Jump", true);
         audioSources[0].Play();
+        float speed = (destinationTrans.position.y - transform.position.y) / moveTime / 10;
+        Debug.Log("Distance J : " + (destinationTrans.position.y - transform.position.y));
+        //Debug.Log("JumpSpeed : " + speed);
         while (transform.position.y < destinationTrans.position.y + 200 + 30)
         {
             //Debug.Log("Jumping");
-            transform.Translate(0, 15, 0);
+            transform.Translate(0, speed, 0);
             yield return new WaitForSeconds(0.001f);
         }
 
@@ -106,9 +108,12 @@ public class PlayerInStageSelect : MonoBehaviour {
         //Debug.Log("Fall");
         GetComponent<Animator>().SetBool("Fall", true);
         audioSources[1].Play();
+        float speed = (destinationTrans.position.y - transform.position.y + 360) / moveTime / 10;
+        Debug.Log("Distance F : " + (destinationTrans.position.y - transform.position.y));
+        //Debug.Log("FallSpeed : " + speed);
         while (transform.position.y > destinationTrans.position.y + 200)
         {
-            transform.Translate(0, -15, 0);
+            transform.Translate(0, speed, 0);
             yield return new WaitForSeconds(0.001f);
         }
         spotLight.transform.position = destinationTrans.position;
