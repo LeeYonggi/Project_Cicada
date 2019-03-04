@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerInfo : MonoBehaviour {
+public class PlayerInfo : MonoBehaviour
+{
 
     [SerializeField]
     private int maxHp;
     private int attack;
 
     private int hp;
+
+    private Vector3 lastSafePos;
 
     #region GetSet
     public int Attack
@@ -51,14 +54,16 @@ public class PlayerInfo : MonoBehaviour {
     }
     #endregion
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         hp = maxHp;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     public void AddAttacked(int damage)
     {
@@ -81,5 +86,20 @@ public class PlayerInfo : MonoBehaviour {
     public void SetHp(int i)
     {
         hp = i;
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        Debug.Log("Player collided with " + col.name);
+        if (col.gameObject.name == "ReviveTile")
+        {
+            Debug.Log("Asdasd");
+            lastSafePos = col.transform.position;
+        }
+    }
+
+    public void MoveToLastSafePlace()
+    {
+        transform.position = lastSafePos;
     }
 }

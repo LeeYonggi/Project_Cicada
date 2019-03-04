@@ -10,9 +10,12 @@ public class ReviveButton : MonoBehaviour {
     {
         transform.parent.parent.GetComponent<GameClear>().alreadyRevived = true;
 
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInfo>().SetHp(3);
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().BeInvincibleForSec(4.0f);
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().CallAttackedCoroutine(11);
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player.GetComponent<PlayerInfo>().SetHp(3);
+        player.GetComponent<PlayerController>().BeInvincibleForSec(4.0f);
+        player.GetComponent<PlayerController>().CallAttackedCoroutine(11);
+        player.GetComponent<PlayerInfo>().MoveToLastSafePlace();
+
 
         Time.timeScale = 1;
 
