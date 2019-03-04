@@ -472,12 +472,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   basicViewRange: 130
   extendedViewRange: 200
-  duration: 2.5
+  duration: 3.5
   coolDownTime: 5
   turnedOffColor: {r: 1, g: 1, b: 1, a: 1}
   turnedOnColor: {r: 1, g: 1, b: 1, a: 1}
   coolDownColor: {r: 0.4339623, g: 0.31041172, b: 0.30090782, a: 1}
-  brightnessDecreasingSpeed: 0.5
+  brightnessDecreasingSpeed: 0.22
   flashLightButtonImage: {fileID: 0}
 --- !u!212 &212275449109253518
 SpriteRenderer:
