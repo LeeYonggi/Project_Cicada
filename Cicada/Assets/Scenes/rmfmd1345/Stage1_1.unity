@@ -327,6 +327,11 @@ Prefab:
       propertyPath: m_Name
       value: MoveTile
       objectReference: {fileID: 0}
+    - target: {fileID: 114454999769910588, guid: 2bdba44b13a98ce438a2ca9c4924e82d,
+        type: 2}
+      propertyPath: moveSpeed
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bdba44b13a98ce438a2ca9c4924e82d, type: 2}
   m_IsPrefabAsset: 0
@@ -40275,6 +40280,11 @@ Prefab:
       propertyPath: radius
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114454999769910588, guid: 2bdba44b13a98ce438a2ca9c4924e82d,
+        type: 2}
+      propertyPath: moveSpeed
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bdba44b13a98ce438a2ca9c4924e82d, type: 2}
   m_IsPrefabAsset: 0
@@ -42801,13 +42811,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1030162431}
   m_Script: {fileID: 11500000, guid: 1a27b57326e9f4f45aacaaa1d8c2acee, type: 3}
---- !u!81 &1015680784
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1015680782}
-  m_Enabled: 1
 --- !u!1001 &1019137837
 Prefab:
   m_ObjectHideFlags: 0
@@ -42889,55 +42892,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 61443025391941450, guid: 8c46f818366afd64083253e701674981,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: -0.43479103
-      objectReference: {fileID: 0}
-    - target: {fileID: 61443025391941450, guid: 8c46f818366afd64083253e701674981,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 0.085259646
-      objectReference: {fileID: 0}
-    - target: {fileID: 61443025391941450, guid: 8c46f818366afd64083253e701674981,
-        type: 2}
-      propertyPath: m_Offset.x
-      value: -0.029365212
-      objectReference: {fileID: 0}
-    - target: {fileID: 61443025391941450, guid: 8c46f818366afd64083253e701674981,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 0.42749768
-      objectReference: {fileID: 0}
-    - target: {fileID: 61545415680018530, guid: 8c46f818366afd64083253e701674981,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: 0.05368118
-      objectReference: {fileID: 0}
-    - target: {fileID: 61545415680018530, guid: 8c46f818366afd64083253e701674981,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 0.8926376
-      objectReference: {fileID: 0}
     - target: {fileID: 114360761739073808, guid: 8c46f818366afd64083253e701674981,
         type: 2}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 534669904}
-    - target: {fileID: 114662424890195134, guid: 8c46f818366afd64083253e701674981,
-        type: 2}
-      propertyPath: maxHp
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 212658841482768074, guid: 8c46f818366afd64083253e701674981,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1522631321089492, guid: 8c46f818366afd64083253e701674981, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c46f818366afd64083253e701674981, type: 2}
   m_IsPrefabAsset: 0
@@ -44450,6 +44409,11 @@ Prefab:
       propertyPath: m_Volume
       value: 0.35
       objectReference: {fileID: 0}
+    - target: {fileID: 82548963809465420, guid: a4934165780343949ab15774d9250de7,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2a3d07016c77f354bb41bb00eaf7365e, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4934165780343949ab15774d9250de7, type: 2}
   m_IsPrefabAsset: 0

@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 61545415680018530}
   - component: {fileID: 50422450419300994}
   - component: {fileID: 114662424890195134}
-  - component: {fileID: 81177677950945376}
+  - component: {fileID: 81046129986666738}
   m_Layer: 11
   m_Name: Character
   m_TagString: Player
@@ -271,7 +271,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4269825, y: 0.8926376}
   m_EdgeRadius: 0
---- !u!81 &81177677950945376
+--- !u!81 &81046129986666738
 AudioListener:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -305,10 +305,10 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 0
-  m_Color: {r: 0.93681234, g: 0.9528302, b: 0.7505785, a: 1}
+  m_Color: {r: 0.7028302, g: 0.7082333, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 500
-  m_SpotAngle: 114
+  m_SpotAngle: 130
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -418,7 +418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76602519cf1e40f42bd4bef5631ce1f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frontSprite: {fileID: 21300000, guid: b16d7343dde86f34da7c33b7d4e655c1, type: 3}
+  frontSprite: {fileID: 21300000, guid: 0fca8162e32228a489175b152a67d7fa, type: 3}
   sideSprite: {fileID: 21300000, guid: 0fca8162e32228a489175b152a67d7fa, type: 3}
   initfrontPos: {x: 0.052, y: 0.24, z: 0}
   initSidePos: {x: 0.13, y: 0.245, z: 0}
@@ -435,7 +435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minGroundNormalY: 0.65
-  gravityModifier: 3
+  gravityModifier: 3.5
   velocity: {x: 0, y: 0}
   maxSpeed: 4.5
   jumpTakeOffSpeed: 11
@@ -470,14 +470,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5e66ecb384ddd246967fccedc3f3f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basicViewRange: 114
-  extendedViewRange: 160
+  basicViewRange: 130
+  extendedViewRange: 200
   duration: 2.5
-  coolDownTime: 10
-  turnedOffColor: {r: 0.754717, g: 0.71555716, b: 0.71555716, a: 1}
+  coolDownTime: 5
+  turnedOffColor: {r: 1, g: 1, b: 1, a: 1}
   turnedOnColor: {r: 1, g: 1, b: 1, a: 1}
-  coolDownColor: {r: 0.41006586, g: 0.73172945, b: 0.8962264, a: 1}
-  brightnessDecreasingSpeed: 0.3
+  coolDownColor: {r: 0.4339623, g: 0.31041172, b: 0.30090782, a: 1}
+  brightnessDecreasingSpeed: 0.5
   flashLightButtonImage: {fileID: 0}
 --- !u!212 &212275449109253518
 SpriteRenderer:

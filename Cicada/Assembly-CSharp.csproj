@@ -73,6 +73,7 @@
     <Compile Include="Assets\Broyee\GamePause\ContinueButton.cs" />
     <Compile Include="Assets\Broyee\GamePause\ExitButton.cs" />
     <Compile Include="Assets\Broyee\GamePause\PauseButton.cs" />
+    <Compile Include="Assets\Broyee\Light\Flashlight.cs" />
     <Compile Include="Assets\Broyee\Light\MaterialFlip.cs" />
     <Compile Include="Assets\Broyee\MainGameUI\PlaySoundWhenEnabled.cs" />
     <Compile Include="Assets\Broyee\MainMenu\GoToMainMenu.cs" />
@@ -173,6 +174,7 @@
     <None Include="Assets\Tiled2Unity\Shaders\shaDepth-Instanced.shader" />
     <None Include="Assets\Tiled2Unity\Prefabs\_ReadMe.txt" />
     <None Include="Assets\Tiled2Unity\Shaders\Tiled2Unity.cginc" />
+    <None Include="Assets\RPG Album - 022417\Tracks List.txt" />
     <None Include="Assets\Tiled2Unity\Tiled2Unity.export.txt" />
     <None Include="Assets\Tiled2Unity\Shaders\shaDepth.shader" />
     <None Include="Assets\Tiled2Unity\Shaders\shaDiffuseDepth.shader" />
@@ -183,6 +185,7 @@
     <None Include="Assets\Broyee\Monsters\EarthWorm\EarthWorm.txt" />
     <None Include="Assets\Tiled2Unity\Textures\_ReadMe.txt" />
     <None Include="Assets\Tiled2Unity\Shaders\shaDefault-Instanced.shader" />
+    <None Include="Assets\RPG Album - 022417\A promoted note.txt" />
     <None Include="Assets\Tiled2Unity\Shaders\shaColorKey-Instanced.shader" />
     <None Include="Assets\Tiled2Unity\Shaders\shaColorKey.shader" />
     <None Include="Assets\Tiled2Unity\Shaders\shaDepthColorKey.shader" />
