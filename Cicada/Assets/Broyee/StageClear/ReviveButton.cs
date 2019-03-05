@@ -14,6 +14,7 @@ public class ReviveButton : MonoBehaviour {
         player.GetComponent<PlayerInfo>().SetHp(3);
         player.GetComponent<PlayerController>().BeInvincibleForSec(4.0f);
         player.GetComponent<PlayerController>().CallAttackedCoroutine(11);
+        player.GetComponent<PlayerController>().StopMove();
         player.GetComponent<PlayerInfo>().MoveToLastSafePlace();
 
 

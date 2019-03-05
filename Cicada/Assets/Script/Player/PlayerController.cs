@@ -54,6 +54,8 @@ public class PlayerController : PhysicsObject{
     public Camera mainCamera;
     public GameObject landingEffect;
 
+    private AudioSource[] audioSources;
+
     #region GETSET
     public Vector2 TileMoveVector
     {
@@ -87,6 +89,8 @@ public class PlayerController : PhysicsObject{
         tileMoveVector = Vector2.zero;
         pastMove = Vector2.zero;
         player_weapon_state = PLAYER_WEAPON_STATE.SPEAR;
+
+        audioSources = GetComponents<AudioSource>();
     }
 	
 	// Update is called once per frame
@@ -96,12 +100,17 @@ public class PlayerController : PhysicsObject{
         horizontal.x = Input.GetAxis("Horizontal");
         if (horizontal.x != 0.0f)
         {
+            if (!audioSources[0].isPlaying) audioSources[0].Play();
+
             move = horizontal;
             MovePlayer();
             move = Vector2.zero;
         }
         else
+        {
+            audioSources[0].Stop();
             MovePlayer();
+        }
 
         if (Input.GetButtonDown("Jump"))
         {
@@ -186,8 +195,11 @@ public class PlayerController : PhysicsObject{
             else
                 isTouched = true;
         }
-        else 
+        else
+        {
+            audioSources[1].Play();
             JumpPlayer();
+        }
     }
 
     public void JumpEnd()
@@ -287,6 +299,8 @@ public class PlayerController : PhysicsObject{
     IEnumerator AttackedCoroutine(int time)
     {
         isAttacked = true;
+
+        audioSources[3].Play();
         
         for(int i = 0; i < time; i++)
         {
@@ -319,6 +333,8 @@ public class PlayerController : PhysicsObject{
         if(collision.gameObject.tag == "Ground")
         {
             isGrounded = true;
+
+            audioSources[2].Play();
 
             GameObject obj = Instantiate(landingEffect, new Vector3(transform.position.x, transform.position.y - 0.45f), Quaternion.identity);
             Destroy(obj, 0.3f);
