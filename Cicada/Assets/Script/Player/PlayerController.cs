@@ -149,10 +149,11 @@ public class PlayerController : PhysicsObject{
         m_Animator.SetInteger("Weapon_State", (int)player_weapon_state);
         m_Animator.SetBool("isJump", isJump);
         m_Animator.SetBool("grounded", grounded);
-        m_Animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
+        m_Animator.SetFloat("velocityX", Mathf.Abs(targetVelocity.x - tileMoveVector.x) / maxSpeed);
         m_Animator.SetBool("isAttack", isAttack);
         m_Animator.SetBool("isClimbing", isClimbing);
         m_Animator.SetBool("isPushing", isPushing);
+        tileMoveVector = Vector2.zero;
     }
 
     #region Player_Attack
@@ -237,7 +238,6 @@ public class PlayerController : PhysicsObject{
         targetVelocity = move * maxSpeed + tileMoveVector;
         if (isAttack)
             targetVelocity = Vector2.zero;
-        tileMoveVector = Vector2.zero;
     }
 
     public void MoveLeft()

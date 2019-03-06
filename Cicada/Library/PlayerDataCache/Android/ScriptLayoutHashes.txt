@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/qqas1/Desktop/test3.apk
+C:/Users/qqas1/Desktop/2019_3_6 Build.apk
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/StageSelect.unity
