@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class RolyPolyRoll : MonoBehaviour
 {
-
     public int rollDamage;
     public float rollSpeed;
     private float basicSpeed;

@@ -10,21 +10,10 @@ public class StageGenerator : MonoBehaviour {
         int map = stageManager.GetMap();
         int stage = stageManager.GetStage();
 
-
         string levelName = "Stage" + map.ToString() + "_" + stage.ToString();
 
         Time.timeScale = 1;
         UnityEngine.SceneManagement.SceneManager.LoadScene(levelName);
-
-        //var mapData = MapData.Load("Assets/Resource/Xml/" + levelName + ".xml");
-
-        //Debug.Log(Application.dataPath);
-        //Instantiate(Resources.Load("Prefabs/LevelDesigns/" + levelName + "/" + levelName + "Map"));
-        //for (int i = 0; i < mapData.monsters.Length; i++)
-        //{
-        //    Debug.Log(mapData.monsters[i].name);
-        //    Instantiate(Resources.Load("Prefabs/Monsters/" + mapData.monsters[i].name) as GameObject, mapData.monsters[i].pos, Quaternion.identity);
-        //}
     }
 
     public void GenerateNextStage()
@@ -34,10 +23,6 @@ public class StageGenerator : MonoBehaviour {
         int stage = stageManager.GetStage();
 
         int stageNum = (map - 1) * 5 + stage;
-
-        Debug.Log("Map : " + map + " Stage : " + stage);
-        Debug.Log("StageNum :" + stageNum);
-        //if (stageNum >= stageManager.maxStage) return;
 
         stage++;
 

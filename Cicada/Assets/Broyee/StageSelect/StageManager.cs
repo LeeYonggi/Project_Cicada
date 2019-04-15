@@ -14,10 +14,9 @@ public class StageManager : MonoBehaviour {
     private int stage;
 
     public int stageStars;
-
     public int stageNum;
 
-    private string textPath;    
+    private string textPath;
 
     private void OnLevelWasLoaded(int level)
     {
@@ -45,25 +44,16 @@ public class StageManager : MonoBehaviour {
             {
                 Destroy(gameObject);
             }
-        }
-
-        
+        }        
     }
-
-    // Use this for initialization
+    
     void Start () {
         map = 1;
         stage = 1;
 
-        //PlayerPrefs.SetInt("StageStars", stageStars);
-        //SetStageStars();
-
         PutStarsToStages();
-    }
-	
-	// Update is called once per frame
-	void Update () {
 
+        textPath = "Assets/resources/Stagestars.txt";
     }
 
     public int GetMap()
@@ -90,42 +80,29 @@ public class StageManager : MonoBehaviour {
     {
         map = _map;
         stage = _stage;
-
-        //Debug.Log("Map : " + map.ToString() + "  " + "Stage : " + stage.ToString());
     }
 
     private void PutStarsToStages()
     {
         int temp = PlayerPrefs.GetInt("StageStars");
-        //temp = GetStageStars();
 
         for (int i = 0; i < stages.childCount - 3; i++)
         {
-            //Debug.Log("i : " + i + ", EnabledStarNum : " + temp % 10);//PlayerPrefs.GetInt("StageStars") / (10 ^ stages.childCount - 2 - i));
             stages.GetChild(i).GetChild(0).GetComponent<Stars>().enabledStarNum = temp % 10;
-
             temp /= 10;
         }
     }
 
     private void SetStageStars()
     {
-        string temp = stageStars.ToString();
-
-        string path = "Assets/resources/Stagestars.txt";
-
-        //Write some text to the test.txt file
-        StreamWriter writer = new StreamWriter(path, true);
-        writer.Write(temp);
+        StreamWriter writer = new StreamWriter(textPath, true);
+        writer.Write(stageStars.ToString());
         writer.Close();
     }
 
     private int GetStageStars()
     {
-        string path = "Assets/resources/Stagestars.txt";
-
-        //Read the text from directly from the test.txt file
-        StreamReader reader = new StreamReader(path);
+        StreamReader reader = new StreamReader(textPath);
         int temp = int.Parse(reader.ReadToEnd());
         reader.Close();
 

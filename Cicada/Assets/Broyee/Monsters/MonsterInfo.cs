@@ -8,18 +8,16 @@ public class MonsterInfo : MonoBehaviour {
     [HideInInspector] public int hp;
     [HideInInspector] public bool dead;
     public bool invincible;
+    public bool landMonster;
     [HideInInspector] public bool basicMoving;
     [HideInInspector] public bool attacking;
     [HideInInspector] public bool stunned;
+
     private bool playerIsInView;
     [HideInInspector] public bool playerRecognized;
-
-
     public float loseRecogOfPlayerTime;
 
     public float dyingDur;
-
-    public bool landMonster;
 
     public GameObject hittedEffect;
 
@@ -31,24 +29,22 @@ public class MonsterInfo : MonoBehaviour {
 
     private void Awake()
     {
-        Debug.Log("InitialPos : " + initialPos);
         initialPos = transform.position;
     }
-
-    // Use this for initialization
+    
     void Start () {
 
         maxHp = hp;
 
-        if (playerIsInView)
-            playerRecognized = true;
+        if (playerIsInView) playerRecognized = true;
 
         invincible = false;
-        dead = false;
-        
+        dead = false;        
         attacking = false;
+
         if (landMonster) basicMoving = false;
         else basicMoving = true;
+
         stunned = false;
         
         idleSound = GetComponents<AudioSource>()[0];
@@ -57,7 +53,6 @@ public class MonsterInfo : MonoBehaviour {
         if (dyingDur <= 0) dyingDur = 0.5f;
     }
 	
-	// Update is called once per frame
 	void Update () {
 
         if (dead) return;
@@ -65,7 +60,6 @@ public class MonsterInfo : MonoBehaviour {
         if (hp <= 0 && !dead)
         {
             hp = 0;
-            //Die();
         }
 
         if (basicMoving)
@@ -124,17 +118,33 @@ public class MonsterInfo : MonoBehaviour {
         StartCoroutine(Stun(dur));
     }
 
+    public void Die()
+    {
+        if (!invincible)
+            StartCoroutine(_Die());
+    }
+
+    private IEnumerator _Die()
+    {
+        dead = true;
+        GetComponent<Animator>().SetBool("Die", true);
+        Instantiate(hittedEffect, transform.position, Quaternion.identity);
+        dieSound.Play();
+
+        yield return new WaitForSeconds(dyingDur);
+
+        GetComponent<Animator>().SetBool("Die", false);
+        gameObject.SetActive(false);
+    }
+
+
     public IEnumerator BossMonsterHitted(float dur)
     {
-        //bool tempAttacking = GetComponent<Animator>().GetBool("Uppercut");
-        //GetComponent<Animator>().SetBool("Uppercut", false);
         GetComponent<Animator>().SetBool("Hitted", true);
 
         yield return new WaitForSeconds(dur);
         
         GetComponent<Animator>().SetBool("Hitted", false);
-        //if (tempAttacking)
-        //    GetComponent<Animator>().SetBool("Uppercut", true);
     }
 
     private IEnumerator Stun(float dur)
@@ -150,27 +160,5 @@ public class MonsterInfo : MonoBehaviour {
             attacking = false;
             GetComponent<Animator>().SetBool("Hitted", false);
         }
-    }
-
-    private IEnumerator _Die()
-    {
-        dead = true;
-        GetComponent<Animator>().SetBool("Die", true);
-        Instantiate(hittedEffect, transform.position, Quaternion.identity);
-        dieSound.Play();
-
-        yield return new WaitForSeconds(dyingDur);
-
-        GetComponent<Animator>().SetBool("Die", false);
-        gameObject.SetActive(false);
-        //GameObject obj = GameObject.FindGameObjectWithTag("Player");
-        //obj.GetComponent<PlayerState>().AbilityState = (AbilityState)monsterState;
-
-    }
-
-    public void Die()
-    {
-        if (!invincible)
-            StartCoroutine(_Die());
     }
 }

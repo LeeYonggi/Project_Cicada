@@ -7,41 +7,37 @@ public class HorizontalMonsterMove : MonoBehaviour {
     [HideInInspector] public bool turnBackEnabled;
 
     public int direction;
+    // Alterable movement speed
     public float moveSpeed;
     [HideInInspector] public float fixedMoveSpeed;
 
+    // When it is true check whether it is possible to move then move
     public bool moveCheckEnabled;
 
+    // Used for adjust little collider miss
     public float colDis;
 
     [HideInInspector] public bool grounded;
 
+    // True when this monster is turning
     private bool turningBack;
 
+    // True when player is behind of itself
     [HideInInspector] public bool playerIsInBackView;
+    // Distance of view when it see behind
     public float backViewDis;
 
+    // normaly used for flying monsters 
     public float groundCheckHeight;
 
     public float turnBackTime;
-
-    public GameObject _fallColStart;
-    public GameObject _fallColEnd;
-
-    //public float climbableHeight;
-    //public float fallableHeight;
-
-	// Use this for initialization
+    
 	void Start () {
 
         moveCheckEnabled = true;
-
         grounded = false;
-
         turningBack = false;
-
         turnBackEnabled = true;
-
         playerIsInBackView = false;
 
         if (transform.localScale.x > 0) direction = 1;
@@ -51,26 +47,21 @@ public class HorizontalMonsterMove : MonoBehaviour {
     private void OnEnable()
     {
         moveCheckEnabled = true;
-
         grounded = false;
-
         turningBack = false;
-
         turnBackEnabled = true;
-
         playerIsInBackView = false;
     }
-
-    // Update is called once per frame
+    
     void Update () {
 
         if (GetComponent<MonsterInfo>().dead) return;
-
+        
         if (!GetComponent<MonsterInfo>().stunned)
         {
+            // Move
             if (GetComponent<MonsterInfo>().basicMoving)
             {
-                //Debug.Log("BasicMoving on");
                 if (!turningBack)
                 {
                     if (moveCheckEnabled)
@@ -90,16 +81,10 @@ public class HorizontalMonsterMove : MonoBehaviour {
                         GetComponent<Animator>().SetBool("Hitted", false);
                         transform.Translate(moveSpeed * direction * Time.deltaTime, 0, 0);
                     }
-
                 }
-                //else if (!turningBack)
-                //{
-                //    StartCoroutine(TurnBack(0.0f));
-                //}
             }
-            //else Debug.Log("BasicMoving off");
 
-
+            // Turn back
             playerIsInBackView = false;
 
             if (!GetComponent<MonsterInfo>().GetPlayerIsInView() && GetComponent<MonsterInfo>().GetPlayerRecognized() && !turningBack)
@@ -125,28 +110,23 @@ public class HorizontalMonsterMove : MonoBehaviour {
 
             }
         }
-
-        //Debug.Log("Walled : " + walled.ToString());
     }
 
     public bool MoveCheck()
-    {        
-
+    {
+        // Vector2s for collision check of falling
         Vector2 fallColStart = new Vector2(transform.position.x + (transform.lossyScale.x / 2 - (colDis * direction)), transform.position.y - transform.lossyScale.y / 2 + colDis);
         Vector2 fallColEnd = new Vector2(fallColStart.x + 0.001f, fallColStart.y - groundCheckHeight);
-
+        // Vector2s for checking collision with wall
         Vector2 wallColStart = new Vector2(fallColStart.x, transform.position.y + (transform.lossyScale.y / 2));
         Vector2 wallColEnd = new Vector2(wallColStart.x + 0.001f, wallColStart.y - transform.lossyScale.y / 2);
 
-        //Instantiate(_fallColStart, wallColStart, Quaternion.identity);
-        //Instantiate(_fallColEnd, wallColEnd, Quaternion.identity);
-
+        // Wall check
         if (Physics2D.OverlapArea(wallColStart, wallColEnd) != null)
         {
             Collider2D[] wallObj = Physics2D.OverlapAreaAll(wallColStart, wallColEnd);
             for (int i = 0; i < wallObj.Length; i++)
             {
-                //Debug.Log("WallObj tag : " + wallObj[i].tag);
                 if (wallObj[i].CompareTag("Ground"))
                 {
                     return false;
@@ -154,8 +134,8 @@ public class HorizontalMonsterMove : MonoBehaviour {
             }
         }
 
+        // Falling check
         if (!GetComponent<MonsterInfo>().landMonster) return true;
-
         if (Physics2D.OverlapArea(fallColStart, fallColEnd) != null)
         {
             Collider2D[] groundObj = Physics2D.OverlapAreaAll(fallColStart, fallColEnd);
@@ -167,8 +147,7 @@ public class HorizontalMonsterMove : MonoBehaviour {
                 }
             }
         }
-
-        //Debug.Log("Move Check returned false");
+                
         return false;
     }
 
@@ -180,16 +159,6 @@ public class HorizontalMonsterMove : MonoBehaviour {
             grounded = true;
             GetComponent<MonsterInfo>().basicMoving = true;
         }
-        //if (col.gameObject.CompareTag("Ground"))
-        //{
-        //    if (turnBackEnabled)
-        //    {
-        //        if (gameObject.CompareTag("BossMonster") && col.gameObject.CompareTag("Block"))
-        //            return;
-
-        //        StartCoroutine(TurnBack(0.0f));
-        //    }
-        //}
     }
 
     private void OnCollisionExit2D(Collision2D col)
@@ -206,16 +175,14 @@ public class HorizontalMonsterMove : MonoBehaviour {
         {
             if (turnBackEnabled)
             {
-                //Debug.Log("LiterallyTurnBack");
                 GetComponent<Animator>().SetBool("Hitted", false);
-
                 turningBack = true;
+
                 yield return new WaitForSeconds(time);
 
                 GetComponent<Animator>().SetBool("Hitted", false);
                 turningBack = false;
                 direction = -direction;
-
                 transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1);
             }
         }
@@ -223,6 +190,7 @@ public class HorizontalMonsterMove : MonoBehaviour {
 
     public bool LookAtPlayer()
     {
+        // if this monster is not looking at player
         if (direction != transform.GetChild(0).GetComponent<MonsterView>().PlayerIsOnRight())
         {
             StartCoroutine(TurnBack(0.0f));

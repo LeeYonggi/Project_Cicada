@@ -247,8 +247,8 @@ PlayerSettings:
   AndroidTargetArchitectures: 5
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: C:/Users/qqas1/Documents/Unity Projects/Project_Cicada/Cicada/cicada.keystore
+  AndroidKeyaliasName: keycada
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
@@ -756,7 +756,7 @@ PlayerSettings:
   apiCompatibilityLevel: 2
   cloudProjectId: 007135c4-6313-4222-a943-a0e23fb29540
   projectName: Cicada
-  organizationId: steinsbeta
+  organizationId: advergamekorea
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Flashlight : MonoBehaviour
-{
-
+{    
     [SerializeField] private float basicViewRange;
     [SerializeField] private float extendedViewRange;
 
@@ -16,6 +15,7 @@ public class Flashlight : MonoBehaviour
     [SerializeField] private float duration;
     [SerializeField] private float coolDownTime;
 
+    // Colors of flashlight button according to its state
     [SerializeField] private Color turnedOffColor;
     [SerializeField] private Color turnedOnColor;
     [SerializeField] private Color coolDownColor;
@@ -41,6 +41,7 @@ public class Flashlight : MonoBehaviour
     {
         if (decreasingBrightness)
         {
+            // Decrease brightness of flashlight
             spotLight.spotAngle -= brightnessDecreasingSpeed;
         }
     }
@@ -51,10 +52,12 @@ public class Flashlight : MonoBehaviour
 
         flashLightButtonImage.color = turnedOnColor;
 
+        // Increase brightness of flashlight to its max
         spotLight.spotAngle = extendedViewRange;
 
         turnedOn = true;
         decreasingBrightness = true;
+
         StartCoroutine(TurnOffAfter());
     }
 
@@ -64,12 +67,13 @@ public class Flashlight : MonoBehaviour
 
         flashLightButtonImage.color = coolDownColor;
 
+        // Decrease brightness of flashlight to its min
         spotLight.spotAngle = basicViewRange;
 
         turnedOn = false;
         coolDowning = true;
-
         decreasingBrightness = false;
+        
         StartCoroutine(CoolDown());
     }
 
