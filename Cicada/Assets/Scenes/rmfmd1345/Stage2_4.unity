@@ -71956,6 +71956,26 @@ Prefab:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: JumpStart
       objectReference: {fileID: 0}
+    - target: {fileID: 224534463808421000, guid: 1ff492d7876f08e4abb8b5b13372adb8,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0.58925396
+      objectReference: {fileID: 0}
+    - target: {fileID: 224534463808421000, guid: 1ff492d7876f08e4abb8b5b13372adb8,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.7145352
+      objectReference: {fileID: 0}
+    - target: {fileID: 224534463808421000, guid: 1ff492d7876f08e4abb8b5b13372adb8,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224534463808421000, guid: 1ff492d7876f08e4abb8b5b13372adb8,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -53.99997
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ff492d7876f08e4abb8b5b13372adb8, type: 2}
   m_IsPrefabAsset: 0
